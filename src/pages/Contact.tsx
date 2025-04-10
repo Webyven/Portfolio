@@ -11,7 +11,7 @@ function Contact() {
   }
 
   return (
-    <div>
+    <div className='h-screen flex flex-col items-center justify-center'>
       <h1>Contacto</h1>
       <form onSubmit={handleSubmit}>
         <label>Nombre:</label>

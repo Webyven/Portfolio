@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 function Projects(): React.ReactElement {
   return (
-    <div className='projects'>
+    <div className='projects h-screen flex flex-col items-center justify-center'>
       <h1>Projects</h1>
       <p>This is the Projects page.</p>
       <Link to='/'>Go back to Home</Link>

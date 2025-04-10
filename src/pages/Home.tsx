@@ -2,6 +2,7 @@ import React from 'react'
 import AvatarImage from '../assets/images/AvatarLaptopBackground.png'
 import {Download, GraduationCap} from 'lucide-react'
 import ButtonCut from '../components/common/ButtonCut'
+import {motion} from 'framer-motion'
 
 function Home(): React.ReactElement {
   function handleDownloadCV(): void {
@@ -15,8 +16,12 @@ function Home(): React.ReactElement {
 
   return (
     <>
-      <div className='text-end w-full h-9/12 flex flex-row items-center justify-center gap-15'>
-        <div className='flex flex-col items-end gap-10'>
+      <div className='text-end w-full h-screen flex flex-row items-center justify-center gap-15'>
+        <motion.div
+          initial={{x: -100}}
+          animate={{x: 0}}
+          className='flex flex-col items-end gap-10'
+        >
           <p className='uppercase font-bold leading-4 text-[12px] tracking-[5px] text-[#0fa]'>
             Software Developer
           </p>
@@ -54,15 +59,24 @@ function Home(): React.ReactElement {
           >
             My Resume
           </ButtonCut>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div initial={{x: 100}} animate={{x: 0}}>
           <img
             src={AvatarImage}
-            className='rounded-tl-[75px] rounded-br-[75px] w-80 h-115 object-cover border-16 hover:border-0 transition-all border-neutral-900 shadow-2xl shadow-neutral-500/50'
+            className='rounded-tl-[75px] rounded-br-[75px] w-80 h-115 object-cover object-[45%_50%] border-16 hover:border-0 transition-all border-neutral-900 shadow-2xl shadow-neutral-500/50'
             style={{boxShadow: '0px 0px 0px 2px #ccc'}}
             alt='Avatar'
           />
-        </div>
+        </motion.div>
+      </div>
+      <div>
+        <h2 className='uppercase h2 font-black oswald-regular'>About me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+          massa, varius a, semper congue, euismod non, mi.
+        </p>
       </div>
     </>
   )

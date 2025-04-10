@@ -25,7 +25,7 @@ function App(): React.ReactElement {
       <Router>
         <div className='app-container'>
           <Header />
-          <main className='container mx-auto pt-23 h-200'>
+          <main className='container mx-auto'>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/projects' element={<Projects />} />
@@ -33,7 +33,7 @@ function App(): React.ReactElement {
               <Route path='/contact' element={<Contact />} />
             </Routes>
           </main>
-          <Footer />
+          {/*<Footer />*/}
         </div>
       </Router>
     </>
