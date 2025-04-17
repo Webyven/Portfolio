@@ -47,7 +47,7 @@ export default function ButtonCut({
           backgroundColor: backgroundColor,
           transform: isHovered ? 'scale(1.15)' : 'scale(1)',
         }}
-        className='absolute left-[10px] p-[5px] rounded-full transition-transform duration-200 transform-origin-center'
+        className='absolute left-[13px] p-[5px] rounded-full transition-transform duration-200 transform-origin-center'
       >
         {icon}
       </div>
