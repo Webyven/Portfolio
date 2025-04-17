@@ -225,9 +225,9 @@ function Home(): React.ReactElement {
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
                 <h3 className='text-xl'>01</h3>
-                <h2 className='text-[#0fa] text-xs font-[500]'>
+                <p className='text-[#0fa] text-xs font-[500]'>
                   WEB DEVELOPMENT
-                </h2>
+                </p>
               </div>
               <div className='border-3 border-[#121212] rounded-xl w-12 h-12 flex justify-center items-center'>
                 <Globe />
@@ -255,9 +255,9 @@ function Home(): React.ReactElement {
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
                 <h3 className='text-xl'>02</h3>
-                <h2 className='text-[#0fa] text-xs font-[500]'>
+                <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
-                </h2>
+                </p>
               </div>
               <div className='border-3 border-[#121212] rounded-xl w-12 h-12 flex justify-center items-center'>
                 <Monitor />
@@ -279,9 +279,9 @@ function Home(): React.ReactElement {
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
                 <h3 className='text-xl'>03</h3>
-                <h2 className='text-[#0fa] text-xs font-[500]'>
+                <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
-                </h2>
+                </p>
               </div>
               <div className='border-3 border-[#121212] rounded-xl w-12 h-12 flex justify-center items-center'>
                 <Monitor />
@@ -303,9 +303,9 @@ function Home(): React.ReactElement {
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
                 <h3 className='text-xl'>04</h3>
-                <h2 className='text-[#0fa] text-xs font-[500]'>
+                <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
-                </h2>
+                </p>
               </div>
               <div className='border-3 border-[#121212] rounded-xl w-12 h-12 flex justify-center items-center'>
                 <Monitor />

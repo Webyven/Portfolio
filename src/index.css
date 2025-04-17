@@ -11,14 +11,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Variables de color */
-  --primary-color: #0fa;
-  --secondary-color: #121212;
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #121212;
-  --hover-color: #0fa;
-  --transition-duration: 300ms;
 }
 
 #root {
@@ -48,15 +40,11 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  margin: 0;
-  padding: 0;
 }
 
 h2 {
@@ -80,14 +68,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--secondary-color);
+  background-color: #1a1a1a;
   cursor: pointer;
-  transition: all var(--transition-duration) ease-in-out;
+  transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: var(--hover-color);
-  transform: translateY(-2px);
+  border-color: #fff;
 }
 
 button:focus,
@@ -127,12 +114,10 @@ a:hover {
   :root {
     color: #213547;
     background-color: #ffffff;
-    --text-color: #213547;
-    --background-color: #ffffff;
   }
 
   a:hover {
-    color: var(--hover-color);
+    color: #747bff;
   }
 
   button {

@@ -54,58 +54,79 @@ function Header(): React.ReactElement {
         style={{
           width: isScrolled ? '100%' : '80%',
           maxWidth: isScrolled ? '100vw' : '1200px',
-          transition: 'all 500ms cubic-bezier(0.4, 0, 0.2, 1)',
+          transition: 'all 300ms ease-in-out',
         }}
         className='mx-auto'
       >
         <nav
-          className={`transition-all duration-700 ease-in-out h-22 flex flex-row items-center justify-between overflow-hidden ring-3 ring-[#000]/25 uppercase min-w-[320px] ${
+          className={`transition-all duration-500 ease-in-out h-22 flex flex-row items-center justify-between overflow-hidden ring-3 ring-[#000]/25 uppercase min-w-[320px] ${
             isScrolled ? 'rounded-none' : 'rounded-lg'
           }`}
         >
           <div className='flex flex-row items-center justify-center overflow-hidden h-22 min-w-[180px] flex-shrink-0'>
             <div
               onClick={(e) => handleSmoothScroll(e, 'home')}
-              className='cursor-pointer anton-regular p-4 pb-5 w-12 h-full flex flex-row items-center bg-white/85 text-neutral-900 text-xl hover:bg-white transition-colors duration-300'
-              aria-label='Home'
+              className='cursor-pointer anton-regular p-4 pb-5 w-12 h-full flex flex-row items-center bg-white/85 text-neutral-900 text-xl'
             >
               ;
             </div>
             <div
               onClick={(e) => handleSmoothScroll(e, 'home')}
-              className='cursor-pointer anton-regular relative h-min -left-[16px] bg-neutral-900 text-white rounded leading-none text-center m-0 p-2 font-bold text-3xl z-5 hover:bg-neutral-800 transition-colors duration-300'
-              aria-label='Home'
+              className='cursor-pointer anton-regular relative h-min -left-[16px] bg-neutral-900 text-white rounded leading-none text-center m-0 p-2 font-bold text-3xl z-5'
             >
               NL
             </div>
             <div
               onClick={(e) => handleSmoothScroll(e, 'home')}
-              className='cursor-pointer relative flex border-y border-y-white items-center -left-[44px] p-4 ps-9 pe-10 text-start uppercase h-full bg-white text-neutral-900 font-bold leading-4 text-[10px] tracking-[4px] hover:bg-gray-100 transition-colors duration-300'
-              aria-label='Home'
+              className='cursor-pointer relative flex border-y border-y-white items-center -left-[44px] p-4 ps-9 pe-10 text-start uppercase h-full bg-white text-neutral-900 font-bold leading-4 text-[10px] tracking-[4px]'
             >
               Nicolas
               <br />
               Llamazares
             </div>
             <ul className='flex flex-row h-full font-bold text-[14px] relative -left-[15px] flex-shrink-0 overflow-visible'>
-              {['about', 'projects', 'contact'].map((section) => (
-                <li
-                  key={section}
-                  className={`h-full flex items-center hover:bg-neutral-900 transition-all cursor-pointer ${
-                    activeSection === section ? 'border-b-2 border-[#0fa]' : ''
+              <li
+                className={`h-full flex items-center hover:bg-neutral-900 transition-all cursor-pointer ${
+                  activeSection === 'about' ? 'border-b-2 border-[#0fa]' : ''
+                }`}
+              >
+                <div
+                  className={`flex items-center px-8 h-full whitespace-nowrap ${
+                    activeSection === 'about' ? 'text-[#0fa]' : ''
                   }`}
+                  onClick={(e) => handleSmoothScroll(e, 'about')}
                 >
-                  <div
-                    className={`flex items-center px-8 h-full whitespace-nowrap ${
-                      activeSection === section ? 'text-[#0fa]' : ''
-                    }`}
-                    onClick={(e) => handleSmoothScroll(e, section)}
-                    aria-label={t(`nav.${section}`)}
-                  >
-                    {t(`nav.${section}`)}
-                  </div>
-                </li>
-              ))}
+                  {t('nav.about')}
+                </div>
+              </li>
+              <li
+                className={`h-full flex items-center hover:bg-neutral-900 transition-all cursor-pointer ${
+                  activeSection === 'projects' ? 'border-b-2 border-[#0fa]' : ''
+                }`}
+              >
+                <div
+                  className={`flex items-center px-8 h-full whitespace-nowrap ${
+                    activeSection === 'projects' ? 'text-[#0fa]' : ''
+                  }`}
+                  onClick={(e) => handleSmoothScroll(e, 'projects')}
+                >
+                  {t('nav.projects')}
+                </div>
+              </li>
+              <li
+                className={`h-full flex items-center hover:bg-neutral-900 transition-all cursor-pointer ${
+                  activeSection === 'contact' ? 'border-b-2 border-[#0fa]' : ''
+                }`}
+              >
+                <div
+                  className={`flex items-center px-8 h-full whitespace-nowrap ${
+                    activeSection === 'contact' ? 'text-[#0fa]' : ''
+                  }`}
+                  onClick={(e) => handleSmoothScroll(e, 'contact')}
+                >
+                  {t('nav.contact')}
+                </div>
+              </li>
             </ul>
           </div>
 
