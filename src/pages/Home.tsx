@@ -221,10 +221,10 @@ function Home(): React.ReactElement {
         className='min-h-[85vh] grid grid-cols-4 grid-rows-9 gap-5 pt-25 pb-15'
       >
         <div style={{gridArea: '1 / 1 / 10 / 2'}}>
-          <div className='oswald-regular bg-[#000]/25 h-full rounded-lg border border-[#000]/35 hover:ring-4 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
+          <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 hover:ring-3 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
-                <h3 className='text-xl'>01</h3>
+                <h3 className='text-xl'>#01</h3>
                 <p className='text-[#0fa] text-xs font-[500]'>
                   WEB DEVELOPMENT
                 </p>
@@ -233,11 +233,23 @@ function Home(): React.ReactElement {
                 <Globe />
               </div>
             </div>
-            <img
-              src={NoiteIcon}
-              className='w-full h-auto p-6 border-9 border-[#fff] rounded-2xl object-cover object-center bg-neutral- mt-6'
-              alt='Noche de cine - Logo'
-            />
+            <div
+              className='w-full h-fit bg-[#070707] p-2 mt-6'
+              style={{
+                clipPath:
+                  'polygon(0 0, 83% 0, 100% 17%, 100% 100%, 17% 100%, 0 83%)',
+              }}
+            >
+              <img
+                src={NoiteIcon}
+                className='w-full h-79 bg-[#0a0a0a] object-contain object-center px-5'
+                alt='Noche de cine - Logo'
+                style={{
+                  clipPath:
+                    'polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%)',
+                }}
+              />
+            </div>
             <h5 className='mt-6 uppercase'>Noche de cine</h5>
             <p className='mt-2 font-light'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -251,10 +263,10 @@ function Home(): React.ReactElement {
           <h1>PROJECTS //</h1>
         </div>
         <div style={{gridArea: '2 / 2 / 10 / 3'}}>
-          <div className='oswald-regular bg-[#000]/25 h-full rounded-lg border border-[#000]/35 hover:ring-4 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
+          <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 hover:ring-3 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
-                <h3 className='text-xl'>02</h3>
+                <h3 className='text-xl'>#02</h3>
                 <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
                 </p>
@@ -263,11 +275,23 @@ function Home(): React.ReactElement {
                 <Monitor />
               </div>
             </div>
-            <img
-              src={PoolCountersIcon}
-              className='w-full h-auto border-9 border-[#fff] rounded-2xl object-cover object-center bg-neutral- mt-6'
-              alt='Pool Counters - Logo'
-            />
+            <div
+              className='w-full h-fit bg-[#070707] p-2 mt-6'
+              style={{
+                clipPath:
+                  'polygon(0 0, 83% 0, 100% 17%, 100% 100%, 17% 100%, 0 83%)',
+              }}
+            >
+              <img
+                src={PoolCountersIcon}
+                className='w-full h-62 object-cover object-center '
+                alt='Pool Counters - Logo'
+                style={{
+                  clipPath:
+                    'polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%)',
+                }}
+              />
+            </div>
             <h5 className='mt-6 uppercase'>Pool Counters</h5>
             <p className='mt-2 font-light'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -275,10 +299,10 @@ function Home(): React.ReactElement {
           </div>
         </div>
         <div style={{gridArea: '3 / 3 / 10 / 4'}}>
-          <div className='oswald-regular bg-[#000]/25 h-full rounded-lg border border-[#000]/35 hover:ring-4 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
+          <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 hover:ring-3 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
-                <h3 className='text-xl'>03</h3>
+                <h3 className='text-xl'>#03</h3>
                 <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
                 </p>
@@ -287,11 +311,23 @@ function Home(): React.ReactElement {
                 <Monitor />
               </div>
             </div>
-            <img
-              src={MultiTwitchIcon}
-              className='w-full h-auto p-8 border-9 border-[#fff] rounded-2xl object-cover object-center bg-neutral- mt-6'
-              alt='Multi-Twitch - Logo'
-            />
+            <div
+              className='w-full h-fit bg-[#070707] p-2 mt-6'
+              style={{
+                clipPath:
+                  'polygon(0 0, 83% 0, 100% 17%, 100% 100%, 17% 100%, 0 83%)',
+              }}
+            >
+              <img
+                src={MultiTwitchIcon}
+                className='w-full h-46 p-4 bg-[#0a0a0a] object-cover object-center '
+                alt='Multi Twitch - Logo'
+                style={{
+                  clipPath:
+                    'polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%)',
+                }}
+              />
+            </div>
             <h5 className='mt-6 uppercase'>Multi-Twitch</h5>
             <p className='mt-2 font-light'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -299,10 +335,10 @@ function Home(): React.ReactElement {
           </div>
         </div>
         <div style={{gridArea: '3 / 4 / 10 / 5'}}>
-          <div className='oswald-regular bg-[#000]/25 h-full rounded-lg border border-[#000]/35 hover:ring-4 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
+          <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 hover:ring-3 ring-[#0fa] transition-all duration-400 text-start p-6 px-8'>
             <div className='flex flex-row w-full justify-between items-center'>
               <div className='flex flex-col'>
-                <h3 className='text-xl'>04</h3>
+                <h3 className='text-xl'>#04</h3>
                 <p className='text-[#0fa] text-xs font-[500]'>
                   DESKTOP DEVELOPMENT
                 </p>
@@ -311,11 +347,27 @@ function Home(): React.ReactElement {
                 <Monitor />
               </div>
             </div>
-            <img
-              src={BTCTrackerIcon}
-              className='w-full h-auto border-9 border-[#fff] rounded-2xl object-cover object-center bg-neutral-900 mt-6'
-              alt='BTC Tracker - Logo'
-            />
+            <div
+              className='w-full h-fit bg-[#070707] p-2 mt-6'
+              style={{
+                clipPath:
+                  'polygon(0 0, 83% 0, 100% 17%, 100% 100%, 17% 100%, 0 83%)',
+              }}
+            >
+              <img
+                src={BTCTrackerIcon}
+                className='w-full h-46 bg-[#0a0a0a] object-cover object-center '
+                alt='BTC Tracker - Logo'
+                style={{
+                  clipPath:
+                    'polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%)',
+                }}
+              />
+            </div>
+            <h5 className='mt-6 uppercase'>BTC Tracker</h5>
+            <p className='mt-2 font-light'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
         </div>
       </div>
