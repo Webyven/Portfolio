@@ -39,6 +39,27 @@ const translations: Record<Language, Record<string, string>> = {
       'In my free time, I explore new technologies and apply them to personal projects like "Noche de cine" an app that reflects my interest in collaboration and practical problem-solving.',
     'about.p4':
       'Having recently graduated as a University Programmer Analyst from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge, and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
+
+    // Projects section
+    'projects.title': 'PROJECTS //',
+    'projects.desktopDevelopment': 'DESKTOP DEVELOPMENT',
+    'projects.webDevelopment': 'WEB DEVELOPMENT',
+
+    'projects.cinemaNight': 'Cinema Night',
+    'projects.cinemaNight.p1':
+      'Voting organizer for movies with friends. Allows proposing, vetting and managing watched/unwatched lists. Made with love and care for my friends and me.',
+
+    'projects.poolCounters': 'Pool Counters',
+    'projects.poolCounters.p1':
+      'App for LoL players. Helps choosing champions, tracks enemy spells and offers customizable stats.',
+
+    'projects.multiTwitch': 'Multi Twitch',
+    'projects.multiTwitch.p1':
+      'Allows viewing multiple Twitch streams at once, with keyboard shortcuts and customizable design.',
+
+    'projects.btcTracker': 'BTC Tracker',
+    'projects.btcTracker.p1':
+      'Tracks the price of Bitcoin from Binance, saves local history and allows customizing alerts.',
   },
   es: {
     // Navbar
@@ -62,6 +83,27 @@ const translations: Record<Language, Record<string, string>> = {
       'En mi tiempo libre, exploro nuevas tecnologías y las aplico a proyectos personales como "Noche de cine", una aplicación que refleja mi interés en la colaboración y la resolución práctica de problemas.',
     'about.p4':
       'Habiéndome graduado recientemente como Analista Programador Universitario de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
+
+    // Projects section
+    'projects.title': 'PROYECTOS //',
+    'projects.desktopDevelopment': 'APLICACIÓN DE ESCRITORIO',
+    'projects.webDevelopment': 'APLICACIÓN WEB',
+
+    'projects.cinemaNight': 'Noche de cine',
+    'projects.cinemaNight.p1':
+      'Organizador de votaciones para ver películas con amigos. Permite proponer, vetar y gestionar listas de vistas/no vistas. Hecha con mucho amor y cariño para mis amigos y yo.',
+
+    'projects.poolCounters': 'Pool Counters',
+    'projects.poolCounters.p1':
+      'App para jugadores de LoL. Ayuda a elegir campeones, trackea hechizos enemigos y ofrece stats personalizables.',
+
+    'projects.multiTwitch': 'Multi Twitch',
+    'projects.multiTwitch.p1':
+      'Permite ver múltiples streamings de Twitch a la vez, con atajos de teclado y opciones de diseño personalizadas.',
+
+    'projects.btcTracker': 'BTC Tracker',
+    'projects.btcTracker.p1':
+      'Trackea el precio del Bitcoin desde Binance, guarda historial local y permite configurar alertas personalizadas.',
   },
 }
 
