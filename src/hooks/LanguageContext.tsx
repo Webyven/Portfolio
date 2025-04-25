@@ -60,6 +60,27 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.btcTracker': 'BTC Tracker',
     'projects.btcTracker.p1':
       'Tracks the price of Bitcoin from Binance, saves local history and allows customizing alerts.',
+
+    'contact.title': 'Contact',
+    'contact.info.title': 'Contact Information',
+
+    'contact.info.location': 'Location',
+    'contact.info.location.p1': 'La Plata, Argentina',
+    'contact.info.phone': 'Phone',
+    'contact.info.phone.p1': '+54 9 221 632-5117',
+    'contact.info.email': 'Email',
+    'contact.info.email.p1': 'llamazares.nico@gmail.com',
+
+    'contact.message.title': 'Send me a message',
+    'contact.message.name': 'Name',
+    'contact.message.email': 'Email',
+    'contact.message.message': 'Message',
+    'contact.message.send': 'Send',
+
+    'contact.p1':
+      'I am interested in freelance web development opportunities, either full-time or part-time.',
+    'contact.p2':
+      'Do you have a proposal or inquiry? Feel free to write me, I will be happy to answer.',
   },
   es: {
     // Navbar
@@ -104,6 +125,27 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.btcTracker': 'BTC Tracker',
     'projects.btcTracker.p1':
       'Trackea el precio del Bitcoin desde Binance, guarda historial local y permite configurar alertas personalizadas.',
+
+    'contact.title': 'Contacto',
+    'contact.info.title': 'Información de contacto',
+
+    'contact.info.location': 'Ubicación',
+    'contact.info.location.p1': 'La Plata, Argentina',
+    'contact.info.phone': 'Teléfono',
+    'contact.info.phone.p1': '+54 9 221 632-5117',
+    'contact.info.email': 'Email',
+    'contact.info.email.p1': 'llamazares.nico@gmail.com',
+
+    'contact.message.title': 'Envíame un mensaje',
+    'contact.message.name': 'Nombre',
+    'contact.message.email': 'Correo electrónico',
+    'contact.message.message': 'Mensaje',
+    'contact.message.send': 'Enviar',
+
+    'contact.p1':
+      'Estoy interesado en oportunidades de desarrollo web, tanto freelance como en relación de dependencia.',
+    'contact.p2':
+      '¿Tenés una propuesta o consulta? No dudes en escribirme, estaré encantado de responder.',
   },
 }
 
