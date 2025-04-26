@@ -4,7 +4,6 @@ import './App.css'
 
 // Importaciones de componentes de layout
 import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
 
 // Importaciones de páginas
 import Home from './pages/Home'

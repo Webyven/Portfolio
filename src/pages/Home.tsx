@@ -26,8 +26,9 @@ function Home(): React.ReactElement {
   const [nameInputValue, setNameInputValue] = useState('')
   const [emailInputValue, setEmailInputValue] = useState('')
   const [messageInputValue, setMessageInputValue] = useState('')
-  const [isSending, setIsSending] = useState(false)
-  const [sendStatus, setSendStatus] = useState<'idle' | 'success' | 'error'>(
+  // These state variables are used in the handleSendMessage function
+  const [_isSending, setIsSending] = useState(false)
+  const [_sendStatus, setSendStatus] = useState<'idle' | 'success' | 'error'>(
     'idle'
   )
   // Refs para detectar cuando los elementos están en el viewport
