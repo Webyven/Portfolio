@@ -26,6 +26,10 @@ function Home(): React.ReactElement {
   const [nameInputValue, setNameInputValue] = useState('')
   const [emailInputValue, setEmailInputValue] = useState('')
   const [messageInputValue, setMessageInputValue] = useState('')
+  const [isSending, setIsSending] = useState(false)
+  const [sendStatus, setSendStatus] = useState<'idle' | 'success' | 'error'>(
+    'idle'
+  )
   // Refs para detectar cuando los elementos están en el viewport
   const aboutRef = useRef(null)
   const isAboutInView = useInView(aboutRef, {
@@ -51,6 +55,54 @@ function Home(): React.ReactElement {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+  }
+
+  async function handleSendMessage(): Promise<void> {
+    if (!nameInputValue || !emailInputValue || !messageInputValue) {
+      // Mostrar algún tipo de alerta o mensaje si los campos están vacíos
+      setSendStatus('error')
+      return
+    }
+
+    try {
+      setIsSending(true)
+      setSendStatus('idle')
+
+      // Crear el objeto con los datos del formulario
+      const formData = {
+        name: nameInputValue,
+        email: emailInputValue,
+        message: messageInputValue,
+        date: new Date().toISOString(),
+      }
+
+      // Reemplazar esta URL con la URL de tu webhook
+      const webhookUrl = 'https://tu-webhook-url.com/endpoint'
+
+      // Enviar los datos al webhook
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el mensaje')
+      }
+
+      // Limpiar los campos después de enviar exitosamente
+      setNameInputValue('')
+      setEmailInputValue('')
+      setMessageInputValue('')
+      setSendStatus('success')
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error)
+      setSendStatus('error')
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
@@ -521,124 +573,180 @@ function Home(): React.ReactElement {
           </div>
         </div>
       </div>
-      <div id='contact' className='h-[80vh] flex w-full mt-25'>
-        <div
-          className='bg-[#000]/60 w-full h-full p-1'
-          style={{
-            clipPath:
-              'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
-          }}
-        >
+      <div
+        id='contact'
+        className='h-[80vh] items-center justify-center flex w-full mt-25'
+      >
+        <div className='h-fit w-full'>
           <div
-            className='bg-[#0C0C0C] h-full w-full p-16 flex flex-col gap-14'
+            className='bg-[#000]/60 w-full h-full p-1'
             style={{
               clipPath:
                 'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
             }}
           >
-            <div className='flex flex-col'>
-              <h1 className='uppercase font-bold oswald-regular'>
-                {t('contact.title')}
-              </h1>
-              <p className='mt-4'>{t('contact.p2')}</p>
-              <div className='w-24 bg-[#0fa]/75 h-0.5 mt-6 mx-auto rounded'></div>
-            </div>
-            <div className='flex flex-row gap-10 h-fit'>
-              <div className='grow-1 text-start max-w-3/8 flex flex-col gap-3'>
-                <h3 className='uppercase oswald-regular' style={{fontSize: 30}}>
-                  {t('contact.info.title')}
-                </h3>
-                <p className='font-light'>{t('contact.p1')}</p>
-                <div className='flex flex-col gap-4 py-3'>
-                  <div className='flex flex-row items-center gap-4'>
-                    <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
-                      <MapPin size={26} />
-                    </div>
-                    <div className='flex flex-col gap-0'>
-                      <p className='uppercase oswald-regular'>
-                        {t('contact.info.location')}
-                      </p>
-                      <p className='font-light'>
-                        {t('contact.info.location.p1')}
-                      </p>
-                    </div>
-                  </div>
-                  <div className='flex flex-row items-center gap-4'>
-                    <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
-                      <Mail size={26} />
-                    </div>
-                    <div className='flex flex-col gap-0'>
-                      <p className='uppercase oswald-regular'>
-                        {t('contact.info.email')}
-                      </p>
-                      <a
-                        className='font-light'
-                        href='mailto:llamazares.nico@gmail.com'
-                      >
-                        {t('contact.info.email.p1')}
-                      </a>
-                    </div>
-                  </div>
-                  <div className='flex flex-row items-center gap-4'>
-                    <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
-                      <Phone size={26} />
-                    </div>
-                    <div className='flex flex-col gap-0'>
-                      <p className='uppercase oswald-regular'>
-                        {t('contact.info.phone')}
-                      </p>
-                      <a className='font-light' href='tel:5492216325117'>
-                        {t('contact.info.phone.p1')}
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div
+              className='bg-[#0C0C0C] h-full w-full p-16 py-12 flex flex-col gap-14'
+              style={{
+                clipPath:
+                  'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
+              }}
+            >
+              <div className='flex flex-col'>
+                <h1 className='uppercase font-bold oswald-regular'>
+                  {t('contact.title')}
+                </h1>
+                <p className='mt-4'>{t('contact.p2')}</p>
+                <div className='w-16 bg-[#0fa]/75 h-0.5 mt-6 mx-auto rounded'></div>
               </div>
-              <div className='grow-3 text-start flex flex-col gap-3'>
-                <h3 className='uppercase oswald-regular' style={{fontSize: 30}}>
-                  {t('contact.message.title')}
-                </h3>
-                <div className='w-full flex flex-col gap-3 pt-3'>
-                  <div className='flex flex-row gap-3'>
-                    <TextField
-                      id='standard-multiline-static'
-                      label={t('contact.message.name')}
-                      rows={1}
-                      variant='filled'
-                      sx={{
-                        width: '100%',
-                        '& .MuiFilledInput-root': {
-                          backgroundColor: '#00000045',
-                          '&:hover': {
-                            backgroundColor: '#00000075',
+              <div className='flex flex-row gap-8 h-fit'>
+                <div className='grow-1 text-start max-w-3/8 -mt-6 flex flex-col gap-3'>
+                  <h3
+                    className='uppercase oswald-regular'
+                    style={{fontSize: 30}}
+                  >
+                    {t('contact.info.title')}
+                  </h3>
+                  <p className='font-light'>{t('contact.p1')}</p>
+                  <div className='flex flex-col gap-4 py-3'>
+                    <div className='flex flex-row items-center gap-4'>
+                      <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
+                        <MapPin size={26} />
+                      </div>
+                      <div className='flex flex-col gap-0'>
+                        <p className='uppercase oswald-regular'>
+                          {t('contact.info.location')}
+                        </p>
+                        <p className='font-light'>
+                          {t('contact.info.location.p1')}
+                        </p>
+                      </div>
+                    </div>
+                    <div className='flex flex-row items-center gap-4'>
+                      <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
+                        <Mail size={26} />
+                      </div>
+                      <div className='flex flex-col gap-0'>
+                        <p className='uppercase oswald-regular'>
+                          {t('contact.info.email')}
+                        </p>
+                        <a
+                          className='font-light'
+                          href='mailto:llamazares.nico@gmail.com'
+                        >
+                          {t('contact.info.email.p1')}
+                        </a>
+                      </div>
+                    </div>
+                    <div className='flex flex-row items-center gap-4'>
+                      <div className='w-12 h-12 flex items-center justify-center bg-[#000]/25 border-1 border-neutral-900 text-[#0fa] rounded-lg'>
+                        <Phone size={26} />
+                      </div>
+                      <div className='flex flex-col gap-0'>
+                        <p className='uppercase oswald-regular'>
+                          {t('contact.info.phone')}
+                        </p>
+                        <a
+                          className='font-light'
+                          href='https://wa.me/5492216325117'
+                          target='_blank'
+                        >
+                          {t('contact.info.phone.p1')}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='grow-3 text-start flex flex-col gap-3'>
+                  <h3
+                    className='uppercase oswald-regular'
+                    style={{fontSize: 30}}
+                  >
+                    {t('contact.message.title')}
+                  </h3>
+                  <div className='w-full flex flex-col gap-3 pt-3'>
+                    <div className='flex flex-row gap-3'>
+                      <TextField
+                        id='standard-multiline-static'
+                        label={t('contact.message.name')}
+                        rows={1}
+                        variant='filled'
+                        value={nameInputValue}
+                        onChange={(e) => setNameInputValue(e.target.value)}
+                        sx={{
+                          width: '100%',
+                          '& .MuiFilledInput-root': {
+                            backgroundColor: '#00000045',
+                            '&:hover': {
+                              backgroundColor: '#00000075',
+                            },
+                            '&.Mui-focused': {
+                              backgroundColor: '#00000075',
+                            },
                           },
-                          '&.Mui-focused': {
-                            backgroundColor: '#00000075',
+                          '& .MuiFilledInput-underline:before': {
+                            borderBottomColor: '#222',
                           },
-                        },
-                        '& .MuiFilledInput-underline:before': {
-                          borderBottomColor: '#222',
-                        },
-                        '& .MuiFilledInput-underline:hover:not(.Mui-disabled):before':
-                          {
+                          '& .MuiFilledInput-underline:hover:not(.Mui-disabled):before':
+                            {
+                              borderBottomColor: '#0fa',
+                            },
+                          '& .MuiFilledInput-underline:after': {
                             borderBottomColor: '#0fa',
                           },
-                        '& .MuiFilledInput-underline:after': {
-                          borderBottomColor: '#0fa',
-                        },
-                        '& .MuiInputLabel-root': {
-                          color: '#888',
-                          fontFamily: 'Inria Sans',
-                        },
-                        '& .MuiInputLabel-root.Mui-focused': {color: '#0fa'},
-                        '& .MuiInputBase-input': {color: '#fff'},
-                      }}
-                    />
+                          '& .MuiInputLabel-root': {
+                            color: '#888',
+                            fontFamily: 'Inria Sans',
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {color: '#0fa'},
+                          '& .MuiInputBase-input': {color: '#fff'},
+                        }}
+                      />
+                      <TextField
+                        id='standard-multiline-static'
+                        label={t('contact.message.email')}
+                        rows={1}
+                        variant='filled'
+                        value={emailInputValue}
+                        onChange={(e) => setEmailInputValue(e.target.value)}
+                        sx={{
+                          width: '100%',
+                          '& .MuiFilledInput-root': {
+                            backgroundColor: '#00000045',
+                            '&:hover': {
+                              backgroundColor: '#00000075',
+                            },
+                            '&.Mui-focused': {
+                              backgroundColor: '#00000075',
+                            },
+                          },
+                          '& .MuiFilledInput-underline:before': {
+                            borderBottomColor: '#222',
+                          },
+                          '& .MuiFilledInput-underline:hover:not(.Mui-disabled):before':
+                            {
+                              borderBottomColor: '#0fa',
+                            },
+                          '& .MuiFilledInput-underline:after': {
+                            borderBottomColor: '#0fa',
+                          },
+                          '& .MuiInputLabel-root': {
+                            color: '#888',
+                            fontFamily: 'Inria Sans',
+                          },
+                          '& .MuiInputLabel-root.Mui-focused': {color: '#0fa'},
+                          '& .MuiInputBase-input': {color: '#fff'},
+                        }}
+                      />
+                    </div>
                     <TextField
                       id='standard-multiline-static'
-                      label={t('contact.message.email')}
-                      rows={1}
+                      label={t('contact.message.message')}
+                      multiline
+                      rows={5}
                       variant='filled'
+                      value={messageInputValue}
+                      onChange={(e) => setMessageInputValue(e.target.value)}
                       sx={{
                         width: '100%',
                         '& .MuiFilledInput-root': {
@@ -669,59 +777,27 @@ function Home(): React.ReactElement {
                       }}
                     />
                   </div>
-                  <TextField
-                    id='standard-multiline-static'
-                    label={t('contact.message.message')}
-                    multiline
-                    rows={5}
-                    variant='filled'
-                    sx={{
-                      width: '100%',
-                      '& .MuiFilledInput-root': {
-                        backgroundColor: '#00000045',
-                        '&:hover': {
-                          backgroundColor: '#00000075',
-                        },
-                        '&.Mui-focused': {
-                          backgroundColor: '#00000075',
-                        },
-                      },
-                      '& .MuiFilledInput-underline:before': {
-                        borderBottomColor: '#222',
-                      },
-                      '& .MuiFilledInput-underline:hover:not(.Mui-disabled):before':
-                        {
-                          borderBottomColor: '#0fa',
-                        },
-                      '& .MuiFilledInput-underline:after': {
-                        borderBottomColor: '#0fa',
-                      },
-                      '& .MuiInputLabel-root': {
-                        color: '#888',
-                        fontFamily: 'Inria Sans',
-                      },
-                      '& .MuiInputLabel-root.Mui-focused': {color: '#0fa'},
-                      '& .MuiInputBase-input': {color: '#fff'},
-                    }}
-                  />
-                </div>
-                <div className='cursor-pointer w-fit select-none p-0.5 self-end'>
                   <div
-                    className='w-full h-auto object-cover bg-[#222] hover:bg-[#0fa] transition-colors object-center p-[1px]'
-                    style={{
-                      clipPath:
-                        'polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 80%)',
-                    }}
+                    className='cursor-pointer w-fit select-none p-0.5 self-end'
+                    onClick={handleSendMessage}
                   >
                     <div
-                      className='w-full flex flex-row gap-3 items-center justify-center h-10 bg-[#090909] hover:bg-[#050505] transition-colors object-center px-4 pe-5'
+                      className='w-full h-auto object-cover bg-[#222] hover:bg-[#0fa] transition-colors object-center p-[1px]'
                       style={{
                         clipPath:
                           'polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 80%)',
                       }}
                     >
-                      <Send size={18} />
-                      {t('contact.message.send')}
+                      <div
+                        className='w-full flex flex-row gap-3 items-center justify-center h-10 bg-[#090909] hover:bg-[#050505] transition-colors object-center px-4 pe-5'
+                        style={{
+                          clipPath:
+                            'polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 80%)',
+                        }}
+                      >
+                        <Send size={18} />
+                        {t('contact.message.send')}
+                      </div>
                     </div>
                   </div>
                 </div>

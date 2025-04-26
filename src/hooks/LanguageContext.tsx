@@ -77,6 +77,9 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message.message': 'Message',
     'contact.message.send': 'Send',
 
+    'contact.message.success': 'Message sent!',
+    'contact.message.error': 'Error sending message.',
+
     'contact.p1':
       'I am interested in freelance web development opportunities, either full-time or part-time.',
     'contact.p2':
@@ -141,6 +144,9 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message.email': 'Correo electrónico',
     'contact.message.message': 'Mensaje',
     'contact.message.send': 'Enviar',
+
+    'contact.message.success': 'Mensaje enviado!',
+    'contact.message.error': 'Error al enviar el mensaje.',
 
     'contact.p1':
       'Estoy interesado en oportunidades de desarrollo web, tanto freelance como en relación de dependencia.',
