@@ -587,7 +587,7 @@ function Home(): React.ReactElement {
             }}
           >
             <div
-              className='bg-[#0C0C0C] h-full w-full p-16 py-12 flex flex-col gap-14'
+              className='bg-[#0C0C0C] h-full w-full p-16 pt-14 flex flex-col gap-12'
               style={{
                 clipPath:
                   'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
@@ -600,8 +600,8 @@ function Home(): React.ReactElement {
                 <p className='mt-4'>{t('contact.p2')}</p>
                 <div className='w-16 bg-[#0fa]/75 h-0.5 mt-6 mx-auto rounded'></div>
               </div>
-              <div className='flex flex-row gap-8 h-fit'>
-                <div className='grow-1 text-start max-w-3/8 -mt-6 flex flex-col gap-3'>
+              <div className='flex flex-row gap-8 h-fit px-4'>
+                <div className='grow-1 text-start max-w-3/8 -mt-4 flex flex-col gap-3'>
                   <h3
                     className='uppercase oswald-regular'
                     style={{fontSize: 30}}
