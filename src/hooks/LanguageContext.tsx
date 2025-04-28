@@ -84,6 +84,12 @@ const translations: Record<Language, Record<string, string>> = {
       'I am interested in freelance web development opportunities, either full-time or part-time.',
     'contact.p2':
       'Do you have a proposal or inquiry? Feel free to write me, I will be happy to answer.',
+
+    'footer.my': 'My',
+    'footer.portfolio': 'Portfolio',
+
+    'footer.message': 'Thanks for visiting my portfolio! ♡',
+    'footer.backToTop': 'Back to top',
   },
   es: {
     // Navbar
@@ -152,6 +158,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Estoy interesado en oportunidades de desarrollo web, tanto freelance como en relación de dependencia.',
     'contact.p2':
       '¿Tenés una propuesta o consulta? No dudes en escribirme, estaré encantado de responder.',
+
+    'footer.my': 'Mi',
+    'footer.portfolio': 'Portafolio',
+
+    'footer.message': 'Gracias por visitar mi portafolio! ♡',
+    'footer.backToTop': 'Volver arriba',
   },
 }
 

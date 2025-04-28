@@ -33,13 +33,29 @@ function Home(): React.ReactElement {
   )
   // Refs para detectar cuando los elementos están en el viewport
   const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
+  // Configuración de detección de visibilidad para cada sección
   const isAboutInView = useInView(aboutRef, {
     once: true,
     amount: 0.3,
   })
-  const aboutControls = useAnimation()
+  const isProjectsInView = useInView(projectsRef, {
+    once: true,
+    amount: 0.2,
+  })
+  const isContactInView = useInView(contactRef, {
+    once: true,
+    amount: 0.3,
+  })
 
-  // Efecto para controlar la animación basada en la visibilidad
+  // Controles de animación para cada sección
+  const aboutControls = useAnimation()
+  const projectsControls = useAnimation()
+  const contactControls = useAnimation()
+
+  // Efectos para controlar las animaciones basadas en la visibilidad
   useEffect(() => {
     if (isAboutInView) {
       aboutControls.start('visible')
@@ -48,6 +64,22 @@ function Home(): React.ReactElement {
       aboutControls.start('hidden')
     }
   }, [isAboutInView, aboutControls])
+
+  useEffect(() => {
+    if (isProjectsInView) {
+      projectsControls.start('visible')
+    } else {
+      projectsControls.start('hidden')
+    }
+  }, [isProjectsInView, projectsControls])
+
+  useEffect(() => {
+    if (isContactInView) {
+      contactControls.start('visible')
+    } else {
+      contactControls.start('hidden')
+    }
+  }, [isContactInView, contactControls])
 
   function handleDownloadCV(): void {
     const link = document.createElement('a')
