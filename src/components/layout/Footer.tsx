@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import {useLanguage} from '../../hooks/LanguageContext'
-import {ArrowUp, ChevronUp, ChevronsUp} from 'lucide-react'
+import {ChevronsUp} from 'lucide-react'
 
 function Footer(): React.ReactElement {
   const {t} = useLanguage()
