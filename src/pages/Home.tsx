@@ -316,11 +316,38 @@ function Home(): React.ReactElement {
           </motion.div>
         </motion.div>
       </div>
-      <div
+      <motion.div
         id='projects'
-        className='min-h-[85vh] grid grid-cols-4 grid-rows-9 gap-5 pt-25 pb-15'
+        ref={projectsRef}
+        className='min-h-[85vh] grid grid-cols-4 grid-rows-9 gap-x-5 pt-25 pb-15 -me-5'
+        initial='hidden'
+        animate={projectsControls}
+        variants={{
+          hidden: {opacity: 0, y: 60},
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              staggerChildren: 0.18,
+              delayChildren: 0.2,
+              duration: 0.7,
+              ease: 'easeOut',
+            },
+          },
+        }}
       >
-        <div className='relative' style={{gridArea: '1 / 1 / 10 / 2'}}>
+        <motion.div
+          className='relative'
+          style={{gridArea: '1 / 1 / 10 / 2'}}
+          variants={{
+            hidden: {opacity: 0, y: 60},
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {duration: 0.7, ease: 'easeOut'},
+            },
+          }}
+        >
           <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 transition-all duration-400 text-start py-6'>
             <div className='px-8'>
               <div className='flex flex-row w-full justify-between items-center'>
@@ -435,14 +462,33 @@ function Home(): React.ReactElement {
               </div>
             </div>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           style={{gridArea: '1 / 3 / 3 / 6'}}
-          className='text-end flex items-start pt-3 justify-end w-full h-full text-[#fff] font-bold oswald-regular'
+          className='text-end flex items-start pt-3 pe-5 justify-end w-full h-full text-[#fff] font-bold oswald-regular'
+          variants={{
+            hidden: {opacity: 0, x: 75},
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: {duration: 0.5, ease: 'easeOut'},
+            },
+          }}
         >
           <h1>{t('projects.title')}</h1>
-        </div>
-        <div style={{gridArea: '2 / 2 / 10 / 3'}}>
+        </motion.div>
+        <motion.div
+          className='relative'
+          style={{gridArea: '2 / 2 / 10 / 3'}}
+          variants={{
+            hidden: {opacity: 0, y: 60},
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {duration: 0.7, ease: 'easeOut'},
+            },
+          }}
+        >
           <div className='relative oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 transition-all duration-400 text-start py-6'>
             <div className='px-8'>
               <div className='flex flex-row w-full justify-between items-center'>
@@ -532,8 +578,19 @@ function Home(): React.ReactElement {
               </div>
             </div>
           </div>
-        </div>
-        <div style={{gridArea: '3 / 3 / 10 / 4'}}>
+        </motion.div>
+        <motion.div
+          className='relative'
+          style={{gridArea: '3 / 3 / 10 / 4'}}
+          variants={{
+            hidden: {opacity: 0, y: 60},
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {duration: 0.7, ease: 'easeOut'},
+            },
+          }}
+        >
           <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 transition-all duration-400 text-start py-6 pb-10'>
             <div className='px-8'>
               <div className='flex flex-row w-full justify-between items-center'>
@@ -568,8 +625,19 @@ function Home(): React.ReactElement {
               <p className='mt-2 font-light'>{t('projects.multiTwitch.p1')}</p>
             </div>
           </div>
-        </div>
-        <div style={{gridArea: '3 / 4 / 10 / 5'}}>
+        </motion.div>
+        <motion.div
+          className='relative'
+          style={{gridArea: '3 / 4 / 10 / 5'}}
+          variants={{
+            hidden: {opacity: 0, y: 60},
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {duration: 0.7, ease: 'easeOut'},
+            },
+          }}
+        >
           <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 transition-all duration-400 text-start py-6'>
             <div className='px-8'>
               <div className='flex flex-row w-full justify-between items-center'>
@@ -604,8 +672,8 @@ function Home(): React.ReactElement {
               <p className='mt-2 font-light'>{t('projects.btcTracker.p1')}</p>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div
         id='contact'
         className='h-[80vh] items-center justify-center flex w-full mt-25'
