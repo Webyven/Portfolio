@@ -71,7 +71,7 @@ function Footer(): React.ReactElement {
         </p>
         <div
           onClick={(e) => handleSmoothScroll(e, 'home')}
-          className='cursor-pointer text-[#999] absolute -end-5 flex bottom-0 top-0 text-md rounded leading-none m-0 p-3 pe-7 ps-4.5 pb-3.5 z-5 items-end bg-[#000]/60 hover:bg-[#000]/80 hover:text-white transition duration-300 ease-in-out'
+          className='cursor-pointer text-[#999] absolute -end-5 flex bottom-0 top-0 text-md leading-none m-0 p-3 pe-7 ps-4.5 pb-3.5 z-5 border-l-4 border-[#070707] items-end hover:bg-[#000]/25 hover:text-white transition duration-300 ease-in-out'
           style={{
             transform: 'skew(-15deg)',
           }}
@@ -82,7 +82,7 @@ function Footer(): React.ReactElement {
           >
             <motion.div
               animate={{
-                y: [0, -3, 0],
+                y: [1, -1, 1],
               }}
               transition={{
                 duration: 1,
