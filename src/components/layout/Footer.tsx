@@ -2,6 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import {useLanguage} from '../../hooks/LanguageContext'
 import {ChevronsUp} from 'lucide-react'
+import {fadeInUp} from '../../animations/variants'
 
 function Footer(): React.ReactElement {
   const {t} = useLanguage()
@@ -21,11 +22,15 @@ function Footer(): React.ReactElement {
   }
 
   return (
-    <div
+    <motion.div
+      variants={fadeInUp}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{once: true, amount: 0.3}}
       className='w-full -mt-28 pt-1 h-28 bg-[#000]/60 overflow-hidden'
       style={{
         clipPath:
-          'polygon(0% 0%, calc(13% + 35px) 0, 19.5% 59%, 100% 59%, 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
+          'polygon(0% 0%, 275px 0, 375px 59%, 100% 59%, 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
         color: '#fff',
         textAlign: 'center',
       }}
@@ -34,7 +39,7 @@ function Footer(): React.ReactElement {
         className='w-full h-full relative flex flex-row bg-[#111]/60'
         style={{
           clipPath:
-            'polygon(0% 0%, calc(13% + 32px) 0, calc(19.5% - 2px) calc(59% + 2px), 100% calc(59% + 2px), 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
+            'polygon(0% 0%, 275px 0, 375px calc(59% + 2px), 100% calc(59% + 2px), 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
           color: '#fff',
           textAlign: 'center',
         }}
@@ -96,7 +101,7 @@ function Footer(): React.ReactElement {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
