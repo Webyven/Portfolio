@@ -5,9 +5,11 @@ import {downloadCV} from '../../utils/downloadCV'
 import ButtonCut from '../common/ButtonCut'
 import {motion} from 'framer-motion'
 import {useLanguage} from '../../hooks/LanguageContext'
+import {useWindowSize} from 'react-use'
 
 const HeroSection: React.FC = () => {
   const {t, language} = useLanguage()
+  const {width} = useWindowSize()
 
   const handleDownload = () => {
     downloadCV(language)
@@ -45,9 +47,11 @@ const HeroSection: React.FC = () => {
               </a>
             </p>
           </div>
-          <div className='rounded-full border-1 border-white p-2'>
-            <GraduationCap color='#0d9' strokeWidth={1} size={28} />
-          </div>
+          {width > 768 && (
+            <div className='rounded-full border-1 border-white p-2'>
+              <GraduationCap color='#0d9' strokeWidth={1} size={28} />
+            </div>
+          )}
         </div>
         <ButtonCut
           onClick={handleDownload}
@@ -61,14 +65,20 @@ const HeroSection: React.FC = () => {
           {t('home.resume')}
         </ButtonCut>
       </motion.div>
-      <motion.div initial={{x: 100}} animate={{x: 0}}>
-        <img
-          src={AvatarImage}
-          className='rounded-tl-[75px] rounded-br-[75px] w-80 h-115 object-cover object-[45%_50%] border-16 hover:border-0 transition-all border-neutral-900 shadow-2xl shadow-neutral-500/50'
-          style={{boxShadow: '0px 0px 0px 2px #ccc'}}
-          alt='Avatar'
-        />
-      </motion.div>
+      {width > 700 && (
+        <motion.div initial={{x: 100}} animate={{x: 0}}>
+          <img
+            src={AvatarImage}
+            className={`rounded-tl-[75px] rounded-br-[75px] w-80 h-115 object-cover object-[45%_50%] ${
+              width > 768 ? 'border-16' : 'border-0'
+            } hover:border-0 transition-all border-neutral-900`}
+            style={{
+              boxShadow: '0px 0px 0px 2px #ccc',
+            }}
+            alt='Avatar'
+          />
+        </motion.div>
+      )}
     </div>
   )
 }
