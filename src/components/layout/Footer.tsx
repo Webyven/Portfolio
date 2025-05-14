@@ -27,10 +27,10 @@ function Footer(): React.ReactElement {
       initial='hidden'
       whileInView='visible'
       viewport={{once: true, amount: 0.3}}
-      className='w-full -mt-28 pt-1 h-28 bg-[#000]/60 overflow-hidden'
+      className='w-full -mt-28 pt-1 h-28 bg-[#000]/60 overflow-hidden hidden 2xl:block'
       style={{
         clipPath:
-          'polygon(0% 0%, 275px 0, 375px 59%, 100% 59%, 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
+          'polygon(0% 0%, 275px 0, 375px 62%, 100% 62%, 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
         color: '#fff',
         textAlign: 'center',
       }}
@@ -39,7 +39,7 @@ function Footer(): React.ReactElement {
         className='w-full h-full relative flex flex-row bg-[#111]/60'
         style={{
           clipPath:
-            'polygon(0% 0%, 275px 0, 375px calc(59% + 2px), 100% calc(59% + 2px), 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
+            'polygon(0% 0%, 275px 0, 375px calc(62% + 2px), 100% calc(62% + 2px), 100% 100%, 100% 100%, 0% 100%, 0% 100%)',
           color: '#fff',
           textAlign: 'center',
         }}

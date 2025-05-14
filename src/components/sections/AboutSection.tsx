@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
         }}
         initial='hidden'
         whileInView='visible'
-        className='space-y-10 mx-auto relative w-full bg-[#0c0c0c] border-2 border-[#000]/60 p-16 shadow-xl shadow-black/30'
+        className='space-y-10 mx-auto relative w-full bg-[#0c0c0c] border-2 border-[#000]/60 px-8 py-12 md:p-16 md:shadow-xl shadow-black/30'
       >
         <motion.div
           className='flex flex-row items-center justify-between'
@@ -70,6 +70,7 @@ const AboutSection: React.FC = () => {
                 },
               },
             }}
+            className='hidden md:block'
           >
             <div className='flex flex-row h-16 items-center'>
               <div className='anton-regular relative h-min text-neutral-900 bg-white rounded leading-none text-center m-0 p-2 font-bold text-3xl z-5'>
@@ -94,7 +95,7 @@ const AboutSection: React.FC = () => {
               },
             },
           }}
-          className='border-l-4 border-[#0fa]/50 pl-6'
+          className='md:border-l-4 border-[#0fa]/50 md:pl-6'
         >
           <motion.p
             className='text-start text-[18px] leading-[1.75]'

@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
   return (
     <div
       id='contact'
-      className='h-[80vh] items-center justify-center flex w-full mt-25'
+      className='h-[80vh] items-center justify-center flex mt-25 mx-6 lg:mx-0'
     >
       <div className='h-fit w-full'>
         <div
@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
           }}
         >
           <div
-            className='bg-[#0C0C0C] h-full w-full p-16 pt-14 flex flex-col gap-12'
+            className='bg-[#0C0C0C] h-full w-full p-12 md:px-14 lg:p-16 lg:pt-14 flex flex-col gap-6 lg:gap-12'
             style={{
               clipPath:
                 'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
@@ -65,11 +65,11 @@ const ContactSection: React.FC = () => {
               initial='hidden'
               whileInView='visible'
               viewport={{once: true, amount: 0.3}}
-              className='flex flex-row gap-8 h-fit px-4'
+              className='flex flex-row gap-8 h-fit lg:px-4'
             >
               <motion.div
                 variants={slideFromLeft}
-                className='grow-1 text-start max-w-3/8 -mt-4 flex flex-col gap-3'
+                className='grow-1 text-start max-w-3/8 -mt-4 flex-col gap-3 hidden lg:flex'
               >
                 <h3 className='uppercase oswald-regular' style={{fontSize: 30}}>
                   {t('contact.info.title')}
@@ -137,7 +137,10 @@ const ContactSection: React.FC = () => {
                 variants={slideFromRight}
                 className='grow-3 text-start flex flex-col gap-3'
               >
-                <h3 className='uppercase oswald-regular' style={{fontSize: 30}}>
+                <h3
+                  className='uppercase oswald-regular hidden lg:block'
+                  style={{fontSize: 30}}
+                >
                   {t('contact.message.title')}
                 </h3>
                 <div className='w-full flex flex-col gap-3 pt-3'>
