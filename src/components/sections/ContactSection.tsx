@@ -26,15 +26,13 @@ const ContactSection: React.FC = () => {
         <div
           className='bg-[#000]/60 w-full h-full p-1'
           style={{
-            clipPath:
-              'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
+            clipPath: `polygon(0% 0%, var(--clip-right-top, 93%) 0%, 100% var(--clip-angle-top, 10%), 100% 100%, var(--clip-left-bottom, 7%) 100%, 0% var(--clip-angle-bottom, 90%))`,
           }}
         >
           <div
             className='bg-[#0C0C0C] h-full w-full p-12 md:px-14 lg:p-16 lg:pt-14 flex flex-col gap-6 lg:gap-12'
             style={{
-              clipPath:
-                'polygon(0 0, 93% 0, 100% 10%, 100% 100%, 7% 100%, 0 90%)',
+              clipPath: `polygon(0% 0%, var(--clip-right-top, 93%) 0%, 100% var(--clip-angle-top, 10%), 100% 100%, var(--clip-left-bottom, 7%) 100%, 0% var(--clip-angle-bottom, 90%))`,
             }}
           >
             <motion.div

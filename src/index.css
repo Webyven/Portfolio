@@ -11,10 +11,33 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --clip-right-top: 93%;
+  --clip-angle-top: 10%;
+  --clip-left-bottom: 7%;
+  --clip-angle-bottom: 90%;
 }
 
 #root {
   padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --clip-right-top: 92%;
+    --clip-angle-top: 10%;
+    --clip-left-bottom: 8%;
+    --clip-angle-bottom: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --clip-right-top: 90%;
+    --clip-angle-top: 8%;
+    --clip-left-bottom: 10%;
+    --clip-angle-bottom: 92%;
+  }
 }
 
 .inria-regular {
