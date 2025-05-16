@@ -48,7 +48,7 @@ function Header(): React.ReactElement {
 
   return (
     <header
-      className={`fixed select-none w-full z-10 bg-[#121212]/95 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 ${
+      className={`fixed select-none w-full z-10 bg-white lg:bg-[#121212]/95 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 ${
         isScrolled || width < 1024
           ? 'top-0 shadow-lg border-b-2 border-[#000]/50'
           : 'top-10'
@@ -60,7 +60,7 @@ function Header(): React.ReactElement {
           maxWidth: isScrolled || width < 1024 ? '100vw' : '1200px',
           transition: 'all 300ms ease-in-out',
         }}
-        className='mx-auto'
+        className='lg:mx-auto'
       >
         <nav
           className={`transition-all duration-500 ease-in-out h-22 flex flex-row items-center justify-between overflow-hidden ring-3 ring-[#000]/25 uppercase min-w-[320px] ${
@@ -82,7 +82,7 @@ function Header(): React.ReactElement {
             </div>
             <div
               onClick={(e) => handleSmoothScroll(e, 'home')}
-              className='cursor-pointer relative flex border-y border-y-white items-center -left-[35px] sm:-left-[40px] lg:-left-[44px] p-4 ps-9 pe-10 text-start uppercase h-full bg-white text-neutral-900 font-bold leading-4 text-[10px] tracking-[4px]'
+              className='cursor-pointer relative flex border-y border-y-white border-l-2 border-l-[#111] lg:border-l-0 items-center -left-[35px] sm:-left-[40px] lg:-left-[44px] p-4 ps-9 pe-10 text-start uppercase h-full bg-white text-neutral-900 font-bold leading-4 text-[10px] tracking-[4px]'
             >
               Nicolas
               <br />

@@ -1,6 +1,5 @@
 import React from 'react'
 import {useWindowSize} from 'react-use'
-import {Github, Globe, BookOpen} from 'lucide-react'
 
 interface ProjectCardProps {
   number: string

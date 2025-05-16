@@ -11,7 +11,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <div
       onClick={toggleLanguage}
-      className='rounded-full w-8 h-8 bg-[#000]/10 text-gray-400 border-2 border-[#000]/15 hover:text-[#fff] hover:border-[#0fa] transition-colors duration-300 cursor-pointer overflow-hidden relative'
+      className='rounded-full w-8 h-8 bg-[#000]/10 lg:text-gray-400 border-2 border-[#222] text-[#222] lg:border-[#000]/15 lg:hover:text-[#fff] lg:hover:border-[#0fa] hover:border-[#000] hover:text-[#000] transition-colors duration-300 cursor-pointer overflow-hidden relative'
       style={{padding: 0}}
     >
       <div
@@ -20,10 +20,10 @@ const LanguageSwitcher: React.FC = () => {
           transform: language === 'en' ? 'translateX(0px)' : 'translateX(-50%)',
         }}
       >
-        <div className='w-[50%]'>
+        <div className='w-[50%] mb-0.5'>
           <span>EN</span>
         </div>
-        <div className='w-[50%]'>
+        <div className='w-[50%] mb-0.5'>
           <span>ES</span>
         </div>
       </div>
