@@ -48,10 +48,8 @@ function Header(): React.ReactElement {
 
   return (
     <header
-      className={`fixed select-none w-full z-10 bg-white lg:bg-[#121212]/95 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 ${
-        isScrolled || width < 1024
-          ? 'top-0 shadow-lg border-b-2 border-[#000]/50'
-          : 'top-10'
+      className={`fixed select-none border-[#000]/50 w-full z-10 bg-white lg:bg-[#121212]/95 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 ${
+        isScrolled || width < 1024 ? 'top-0 shadow-lg' : 'top-10'
       }`}
     >
       <div
