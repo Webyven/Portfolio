@@ -9,7 +9,10 @@ interface ProjectCardProps {
   imageAlt: string
   title: React.ReactNode
   description: React.ReactNode
-  links?: Array<{icon: React.ReactNode; onClick?: () => void}>
+  links?: Array<{
+    icon: React.ReactNode
+    onClick?: (e: React.MouseEvent) => void
+  }>
   imgStyle?: React.CSSProperties
 }
 

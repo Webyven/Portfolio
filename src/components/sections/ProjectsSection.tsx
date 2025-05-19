@@ -1,20 +1,15 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import NoiteIcon from '../../assets/projects/Noite.png'
-import PoolCountersIcon from '../../assets/projects/PoolCounters.png'
-import MultiTwitchIcon from '../../assets/projects/MultiTwitch.png'
-import BTCTrackerIcon from '../../assets/projects/BTC Tracker.png'
 import {stagger, fadeInUp} from '../../animations/variants'
-import {Github, Globe, Monitor, BookOpen, ExternalLink} from 'lucide-react'
+import {ExternalLink} from 'lucide-react'
 import {useLanguage} from '../../hooks/LanguageContext'
 import ProjectCard from './ProjectCard'
 import {useWindowSize} from 'react-use'
 import Modal from '../common/Modal'
+import {projectsData} from '../../data/projects'
 
-// Definir la interfaz para los proyectos
 interface Project {
   id: number
-  number: string
   category: string
   icon: React.ReactNode
   image: string
@@ -26,7 +21,7 @@ interface Project {
   links?: Array<{
     icon: React.ReactNode
     url?: string
-    onClick?: () => void
+    onClick?: (e: React.MouseEvent) => void
     label?: string
   }>
   imgStyle?: React.CSSProperties
@@ -40,120 +35,31 @@ const ProjectsSection: React.FC = () => {
   )
   const isMobile = width <= 768
 
-  // Definir todos los proyectos en un solo lugar
-  const projects: Project[] = [
-    {
-      id: 1,
-      number: '#01',
-      category: t('projects.webDevelopment'),
-      icon: <Globe />,
-      image: NoiteIcon,
-      imageAlt: 'Noche de cine - Logo',
-      title: t('projects.cinemaNight'),
-      description: t('projects.cinemaNight.p1'),
-      longDescription:
-        'Una descripción más detallada del proyecto Noche de Cine, incluyendo sus características principales y el proceso de desarrollo.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      links: [
-        {
-          icon: <Github size={20} />,
-          label: 'GitHub',
-          url: 'https://github.com/tuusuario/noche-de-cine',
-        },
-        {
-          icon: <Globe size={20} />,
-          label: 'Demo',
-          url: 'https://noche-de-cine.example.com',
-        },
-        {
-          icon: <BookOpen size={20} />,
-          label: 'Documentación',
-          url: 'https://docs.noche-de-cine.example.com',
-        },
-      ],
-    },
-    {
-      id: 2,
-      number: '#02',
-      category: t('projects.desktopDevelopment'),
-      icon: <Monitor />,
-      image: PoolCountersIcon,
-      imageAlt: 'Pool Counters - Logo',
-      title: 'Pool Counters',
-      description: t('projects.poolCounters.p1'),
-      longDescription:
-        'Pool Counters es una aplicación de escritorio para llevar el conteo de juegos de billar, con estadísticas y seguimiento de jugadores.',
-      technologies: ['Electron', 'React', 'TypeScript', 'SQLite'],
-      links: [
-        {
-          icon: <Github size={20} />,
-          label: 'GitHub',
-          url: 'https://github.com/tuusuario/pool-counters',
-        },
-        {
-          icon: <BookOpen size={20} />,
-          label: 'Documentación',
-          url: 'https://docs.pool-counters.example.com',
-        },
-      ],
-      imgStyle: {padding: 0},
-    },
-    {
-      id: 3,
-      number: '#03',
-      category: t('projects.desktopDevelopment'),
-      icon: <Monitor />,
-      image: MultiTwitchIcon,
-      imageAlt: 'Multi Twitch - Logo',
-      title: 'Multi-Twitch',
-      description: t('projects.multiTwitch.p1'),
-      longDescription:
-        'Multi-Twitch permite ver múltiples streams de Twitch simultáneamente en una sola ventana, optimizando la experiencia de visualización.',
-      technologies: ['Electron', 'Vue.js', 'Twitch API'],
-    },
-    {
-      id: 4,
-      number: '#04',
-      category: t('projects.desktopDevelopment'),
-      icon: <Monitor />,
-      image: BTCTrackerIcon,
-      imageAlt: 'BTC Tracker - Logo',
-      title: 'BTC Tracker',
-      description: t('projects.btcTracker.p1'),
-      longDescription:
-        'BTC Tracker es una aplicación para seguir el precio del Bitcoin en tiempo real, con alertas y análisis histórico.',
-      technologies: ['React Native', 'Redux', 'Cryptocurrency API'],
-      imgStyle: {padding: 0},
-    },
-    // Proyectos adicionales que solo se mostrarán en el modal
-    {
-      id: 5,
-      number: '#05',
-      category: t('projects.webDevelopment'),
-      icon: <Globe />,
-      image: NoiteIcon, // Usar una imagen existente como placeholder
-      imageAlt: 'Portfolio - Logo',
-      title: 'Portfolio Personal',
-      description:
-        'Mi sitio web personal para mostrar mis proyectos y habilidades.',
-      longDescription:
-        'Este portfolio fue desarrollado con React y TypeScript, utilizando Framer Motion para animaciones y Tailwind CSS para estilos.',
-      technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-    },
-    {
-      id: 6,
-      number: '#06',
-      category: t('projects.mobileDevelopment'),
-      icon: <Monitor />,
-      image: BTCTrackerIcon, // Usar una imagen existente como placeholder
-      imageAlt: 'App Móvil - Logo',
-      title: 'Aplicación Móvil',
-      description: 'Una aplicación móvil para gestión de tareas diarias.',
-      longDescription:
-        'Aplicación móvil desarrollada con React Native para la gestión eficiente de tareas diarias, con sincronización en la nube.',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-    },
-  ]
+  const projects: Project[] = projectsData.map((p) => ({
+    ...p,
+    category: t(p.categoryKey),
+    title: t(p.titleKey),
+    description: t(p.descriptionKey),
+    longDescription: p.longDescriptionKey
+      ? t(p.longDescriptionKey)
+      : t(p.descriptionKey),
+    links: p.links?.map((link) => ({
+      ...link,
+      icon: link.icon || <></>,
+      label: link.label || '',
+      onClick:
+        link.onClick ||
+        ((e: React.MouseEvent) => {
+          e.stopPropagation() // Evita que el clic se propague al contenedor
+          if (link.url) {
+            window.open(link.url, '_blank')
+          }
+        }),
+    })),
+  }))
+
+  console.log(projects)
+  console.log(projectsData)
 
   // Encontrar el proyecto seleccionado
   const selectedProjectData =
@@ -206,7 +112,7 @@ const ProjectsSection: React.FC = () => {
             onClick={() => setSelectedProject(project.id)}
           >
             <ProjectCard
-              number={project.number}
+              number={`#${project.id.toString().padStart(2, '0')}`}
               category={project.category}
               icon={project.icon}
               image={project.image}
@@ -240,7 +146,7 @@ const ProjectsSection: React.FC = () => {
           variants={fadeInUp}
         >
           <ProjectCard
-            number={projects[0]?.number || '#00'}
+            number={'#01'}
             category={projects[0]?.category || ''}
             icon={projects[0]?.icon || <></>}
             image={projects[0]?.image || ''}
@@ -278,7 +184,7 @@ const ProjectsSection: React.FC = () => {
           }}
         >
           <ProjectCard
-            number={projects[1]?.number || '#00'}
+            number={'#02'}
             category={projects[1]?.category || ''}
             icon={projects[1]?.icon || <></>}
             image={projects[1]?.image || ''}
@@ -303,14 +209,14 @@ const ProjectsSection: React.FC = () => {
           }}
         >
           <ProjectCard
-            number={projects[2]?.number || '#00'}
+            number={'#03'}
             category={projects[2]?.category || ''}
             icon={projects[2]?.icon || <></>}
             image={projects[2]?.image || ''}
             imageAlt={projects[2]?.imageAlt || ''}
             title={projects[2]?.title || ''}
             description={projects[2]?.description || ''}
-            links={projects[2]?.links || []}
+            links={[]}
           />
         </motion.div>
         <motion.div
@@ -327,14 +233,14 @@ const ProjectsSection: React.FC = () => {
           }}
         >
           <ProjectCard
-            number={projects[3]?.number || '#00'}
+            number={'#04'}
             category={projects[3]?.category || ''}
             icon={projects[3]?.icon || <></>}
             image={projects[3]?.image || ''}
             imageAlt={projects[3]?.imageAlt || ''}
             title={projects[3]?.title || ''}
             description={projects[3]?.description || ''}
-            links={projects[3]?.links || []}
+            links={[]}
             imgStyle={projects[3]?.imgStyle}
           />
         </motion.div>

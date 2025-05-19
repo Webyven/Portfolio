@@ -1,3 +1,4 @@
+import {X} from 'lucide-react'
 import React, {useEffect, useState} from 'react'
 import {createPortal} from 'react-dom'
 
@@ -48,7 +49,7 @@ const Modal = ({children, onClose}: ModalProps) => {
         }`}
         onClick={onClose}
       >
-        x
+        <X size={36} strokeWidth={3} />
       </div>
     </div>,
     document.getElementById('portal-root') || document.body
