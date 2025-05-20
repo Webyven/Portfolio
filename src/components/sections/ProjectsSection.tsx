@@ -1,7 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import {stagger, fadeInUp} from '../../animations/variants'
-import {ExternalLink} from 'lucide-react'
 import {useLanguage} from '../../hooks/LanguageContext'
 import ProjectCard from './ProjectCard'
 import {useWindowSize} from 'react-use'
@@ -57,9 +56,6 @@ const ProjectsSection: React.FC = () => {
         }),
     })),
   }))
-
-  console.log(projects)
-  console.log(projectsData)
 
   // Encontrar el proyecto seleccionado
   const selectedProjectData =
@@ -249,93 +245,104 @@ const ProjectsSection: React.FC = () => {
       {/* Modal mejorado con detalles del proyecto y lista de otros proyectos */}
       {selectedProject !== null && selectedProjectData && (
         <Modal onClose={() => setSelectedProject(null)}>
-          <div className='p-8'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              {/* Columna izquierda: Detalles del proyecto seleccionado */}
-              <div className='md:col-span-2'>
-                <h2 className='text-3xl oswald-regular uppercase mb-4'>
-                  {selectedProjectData.title}
-                </h2>
-                <div className='flex items-center gap-2 mb-4'>
-                  <span className='text-[#0fa] text-sm'>
-                    {selectedProjectData.category}
-                  </span>
-                </div>
-
-                <div className='mb-6'>
-                  <h3 className='text-xl oswald-regular mb-2'>Descripción</h3>
-                  <p>
-                    {selectedProjectData.longDescription ||
-                      selectedProjectData.description}
-                  </p>
-                </div>
-
-                {selectedProjectData.technologies && (
-                  <div className='mb-6'>
-                    <h3 className='text-xl oswald-regular mb-2'>Tecnologías</h3>
-                    <div className='flex flex-wrap gap-2'>
-                      {selectedProjectData.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className='bg-[#000]/25 border border-[#000]/35 px-3 py-1 rounded-md text-sm'
-                        >
-                          {tech}
-                        </span>
-                      ))}
+          <div className='p-0 h-[100dvh]'>
+            <div className='h-full flex flex-col justify-between'>
+              {/* Header: Título e imagen del proyecto seleccionado */}
+              <div className='bg-[#121212] px-2 pb-2'>
+                <div className='flex flex-row items-center gap-5 bg-[#0C0C0C]'>
+                  <img
+                    src={selectedProjectData.image}
+                    alt={selectedProjectData.imageAlt}
+                    className='w-26 h-26 p-3 object-cover border-r-2 border-[#121212] bg-[#000]/35'
+                  />
+                  <div className='flex flex-col grow'>
+                    <h2 className='text-3xl oswald-regular uppercase'>
+                      {selectedProjectData.title}
+                    </h2>
+                    <div className='flex items-center gap-2'>
+                      <span className='text-[#0fa] text-sm'>
+                        {selectedProjectData.category}
+                      </span>
                     </div>
                   </div>
-                )}
-
-                {selectedProjectData.links &&
-                  selectedProjectData.links.length > 0 && (
-                    <div className='flex gap-4 mt-4'>
-                      {selectedProjectData.links.map((link, index) => (
-                        <a
-                          key={index}
-                          href={link.url}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          className='flex items-center gap-2 bg-[#070707] hover:bg-[#0fa]/20 transition-colors px-4 py-2 rounded-md'
-                        >
-                          {link.icon}
-                          {link.label && <span>{link.label}</span>}
-                        </a>
-                      ))}
+                </div>
+              </div>
+              <div className='flex'>
+                <div></div>
+                <div>
+                  <div className='mb-6'>
+                    <h3 className='text-xl oswald-regular mb-2'>Descripción</h3>
+                    <p>
+                      {selectedProjectData.longDescription ||
+                        selectedProjectData.description}
+                    </p>
+                  </div>
+                  {selectedProjectData.technologies && (
+                    <div className='mb-6'>
+                      <h3 className='text-xl oswald-regular mb-2'>
+                        Tecnologías
+                      </h3>
+                      <div className='flex flex-wrap gap-2'>
+                        {selectedProjectData.technologies.map((tech, index) => (
+                          <span
+                            key={index}
+                            className='bg-[#000]/25 border border-[#000]/35 px-3 py-1 rounded-md text-sm'
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   )}
+                  {selectedProjectData.links &&
+                    selectedProjectData.links.length > 0 && (
+                      <div className='flex gap-4 mt-4'>
+                        {selectedProjectData.links.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='flex items-center gap-2 bg-[#070707] hover:bg-[#0fa]/20 transition-colors px-4 py-2 rounded-md'
+                          >
+                            {link.icon}
+                            {link.label && <span>{link.label}</span>}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                </div>
               </div>
 
               {/* Columna derecha: Lista de otros proyectos */}
-              <div className='border-l border-[#222] pl-6'>
-                <h3 className='text-xl oswald-regular mb-4'>Otros Proyectos</h3>
-                <div className='flex flex-col gap-4'>
-                  {projects
-                    .filter((project) => project.id !== selectedProject)
-                    .map((project) => (
+              <div className='bg-[#121212] px-2 pt-2'>
+                <div className='bg-[#0C0C0C] p-2 px-5'>
+                  <h3 className='oswald-regular uppercase'>
+                    Todos mis proyectos
+                  </h3>
+                  <div className='flex flex-row gap-3 overflow-x-scroll'>
+                    {projects.map((project) => (
                       <div
                         key={project.id}
-                        className='flex items-center gap-4 p-3 cursor-pointer hover:bg-[#000]/25 transition-colors rounded-md'
+                        className='flex items-center gap-4 p-2 cursor-pointer hover:bg-[#000]/25 transition-colors'
                         onClick={() => setSelectedProject(project.id)}
                       >
                         <div className='w-16 h-16 overflow-hidden rounded-md'>
                           <img
                             src={project.image}
                             alt={project.imageAlt}
-                            className='w-full h-full object-cover'
+                            className='w-16 h-16 object-cover'
                           />
                         </div>
                         <div>
                           <h4 className='font-medium'>{project.title}</h4>
-                          <p className='text-sm text-[#0fa]'>
+                          <p className='text-[10px] text-[#0fa]'>
                             {project.category}
                           </p>
                         </div>
-                        <ExternalLink
-                          size={16}
-                          className='ml-auto text-[#555]'
-                        />
                       </div>
                     ))}
+                  </div>
                 </div>
               </div>
             </div>

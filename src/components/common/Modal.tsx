@@ -22,11 +22,17 @@ const Modal = ({children, onClose}: ModalProps) => {
       }
     }
 
+    // Deshabilitar el scroll del body cuando el modal está abierto
+    document.body.style.overflow = 'hidden'
+
     document.addEventListener('keydown', handleEscapeKey)
 
     return () => {
       clearTimeout(timer)
       document.removeEventListener('keydown', handleEscapeKey)
+
+      // Restaurar el scroll del body cuando el modal se cierra
+      document.body.style.overflow = 'auto'
     }
   }, [onClose])
 
@@ -37,7 +43,7 @@ const Modal = ({children, onClose}: ModalProps) => {
       }`}
     >
       <div
-        className={`relative bg-[#0C0C0C] border-2 border-[#000]/60 max-w-5xl w-full mx-4 overflow-auto transition-all duration-300 ${
+        className={`relative max-w-5xl w-full mx-4 overflow-auto transition-all duration-300 ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
