@@ -9,7 +9,7 @@ import AutocompleteShortcutsIcon from '../assets/projects/AutocompleteShortcuts.
 import FilenameChangerIcon from '../assets/projects/FilenameChanger.png'
 import ReworkedTuduIcon from '../assets/projects/ReworkedTudu.png'
 import CopaPistonIcon from '../assets/projects/CopaPiston.png'
-import GithubIcon from '../assets/projects/Github.png'
+import GithubIcon from '../assets/projects/GitHub.png'
 import GoogleCloneIcon from '../assets/projects/Google.png'
 import PokeduxIcon from '../assets/projects/Pokedux.svg'
 import AlternateIcon from '../assets/projects/Alternate.webp'
