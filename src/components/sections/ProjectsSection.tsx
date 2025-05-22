@@ -6,6 +6,7 @@ import ProjectCard from './ProjectCard'
 import {useWindowSize} from 'react-use'
 import Modal from '../common/Modal'
 import {projectsData} from '../../data/projects'
+import {ChevronLeft, ChevronRight} from 'lucide-react'
 
 interface Project {
   id: number
@@ -267,11 +268,37 @@ const ProjectsSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex'>
-                <div></div>
-                <div>
+              <div className='flex flex-row justify-center items-center w-full h-full overflow-hidden mx-auto'>
+                <div className='h-full w-[70%] bg-[#0A0A0A] border-l-10 border-[#0C0C0C]'>
+                  <img
+                    src='https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2021/03/wide-angle-images-15-1.jpg?resize=600%2C400&ssl=1'
+                    alt='Placeholder photo'
+                    className='w-full h-[85%] object-cover'
+                  />
+                  <div className='h-[15%] w-full flex flex-row justify-between'>
+                    <div className='h-full bg px-2 cursor-pointer bg-[#070707] hover:bg-[#090909] transition-all flex justify-center items-center'>
+                      <ChevronLeft />
+                    </div>
+                    <div className='p-6 flex flex-row gap-4 h-full items-center justify-center'>
+                      {[1, 2, 3, 4, 5, 6].map((index) => (
+                        <img
+                          key={index}
+                          src={'https://picsum.photos/400/300' + index}
+                          alt='Placeholder'
+                          className='w-24 h-14 border-2 border-[#252525] object-cover'
+                        />
+                      ))}
+                    </div>
+                    <div className='h-full bg px-2 cursor-pointer bg-[#070707] hover:bg-[#090909] transition-all flex justify-center items-center'>
+                      <ChevronRight />
+                    </div>
+                  </div>
+                </div>
+                <div className='h-full w-[30%] bg-[#070707] backdrop-blur-2xl overflow-y-scroll p-4 border-l-6 border-[#0C0C0C]'>
                   <div className='mb-6'>
-                    <h3 className='text-xl oswald-regular mb-2'>Descripción</h3>
+                    <h3 className='text-xl oswald-regular uppercase mb-2'>
+                      Descripción
+                    </h3>
                     <p>
                       {selectedProjectData.longDescription ||
                         selectedProjectData.description}
@@ -279,7 +306,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                   {selectedProjectData.technologies && (
                     <div className='mb-6'>
-                      <h3 className='text-xl oswald-regular mb-2'>
+                      <h3 className='text-xl oswald-regular uppercase mb-2'>
                         Tecnologías
                       </h3>
                       <div className='flex flex-wrap gap-2'>
