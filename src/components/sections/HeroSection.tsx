@@ -1,5 +1,5 @@
 import React from 'react'
-import AvatarImage from '../../assets/images/AvatarLaptopBackground.png'
+import AvatarImage from '../../assets/images/AvatarLaptopBackground.webp'
 import {Download, GraduationCap} from 'lucide-react'
 import {downloadCV} from '../../utils/downloadCV'
 import ButtonCut from '../common/ButtonCut'

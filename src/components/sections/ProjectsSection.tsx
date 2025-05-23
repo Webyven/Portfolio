@@ -268,7 +268,7 @@ const ProjectsSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex flex-row justify-center items-center w-full h-full overflow-hidden mx-auto'>
+              <div className='flex flex-row justify-center items-center w-[99%] h-full overflow-hidden mx-auto'>
                 <div className='h-full w-[70%] bg-[#0A0A0A] border-l-10 border-[#0C0C0C]'>
                   <img
                     src='https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2021/03/wide-angle-images-15-1.jpg?resize=600%2C400&ssl=1'
@@ -285,7 +285,7 @@ const ProjectsSection: React.FC = () => {
                           key={index}
                           src={'https://picsum.photos/400/300' + index}
                           alt='Placeholder'
-                          className='w-24 h-14 border-2 border-[#252525] object-cover'
+                          className='w-24 h-14 cursor-pointer border-2 border-[#252525] hover:border-[#aaa] transition-all object-cover'
                         />
                       ))}
                     </div>
@@ -297,7 +297,7 @@ const ProjectsSection: React.FC = () => {
                 <div className='h-full w-[30%] bg-[#070707] backdrop-blur-2xl overflow-y-scroll p-4 border-l-6 border-[#0C0C0C]'>
                   <div className='mb-6'>
                     <h3 className='text-xl oswald-regular uppercase mb-2'>
-                      Descripción
+                      {t('projects.description')}
                     </h3>
                     <p>
                       {selectedProjectData.longDescription ||
@@ -307,7 +307,7 @@ const ProjectsSection: React.FC = () => {
                   {selectedProjectData.technologies && (
                     <div className='mb-6'>
                       <h3 className='text-xl oswald-regular uppercase mb-2'>
-                        Tecnologías
+                        {t('projects.technologies')}
                       </h3>
                       <div className='flex flex-wrap gap-2'>
                         {selectedProjectData.technologies.map((tech, index) => (
@@ -344,28 +344,47 @@ const ProjectsSection: React.FC = () => {
               {/* Columna derecha: Lista de otros proyectos */}
               <div className='bg-[#121212] px-2 pt-2'>
                 <div className='bg-[#0C0C0C] p-2 px-5'>
-                  <h3 className='oswald-regular uppercase'>
-                    Todos mis proyectos
+                  <h3 className='oswald-regular uppercase mt-1 text-[22px]'>
+                    {t('projects.allOfMyProjects')}
                   </h3>
-                  <div className='flex flex-row gap-3 overflow-x-scroll'>
+                  <div className='flex flex-row gap-3 overflow-x-scroll py-2'>
                     {projects.map((project) => (
                       <div
                         key={project.id}
-                        className='flex items-center gap-4 p-2 cursor-pointer hover:bg-[#000]/25 transition-colors'
+                        className={`flex items-center gap-4 p-0.5 cursor-pointer transition-colors ${
+                          selectedProject === project.id
+                            ? 'bg-[#0fa]/75'
+                            : 'bg-[#070707] hover:bg-[#777]'
+                        }`}
                         onClick={() => setSelectedProject(project.id)}
+                        style={{
+                          clipPath:
+                            'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
+                        }}
                       >
-                        <div className='w-16 h-16 overflow-hidden rounded-md'>
-                          <img
-                            src={project.image}
-                            alt={project.imageAlt}
-                            className='w-16 h-16 object-cover'
-                          />
-                        </div>
-                        <div>
-                          <h4 className='font-medium'>{project.title}</h4>
-                          <p className='text-[10px] text-[#0fa]'>
-                            {project.category}
-                          </p>
+                        <div
+                          className='flex flex-row w-50 items-center gap-2 bg-[#121212]'
+                          style={{
+                            clipPath:
+                              'polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 8px 100%, 0 calc(100% - 8px))',
+                          }}
+                        >
+                          <div className='w-12 h-12 overflow-hidden'>
+                            <img
+                              src={project.image}
+                              alt={project.imageAlt}
+                              style={project.imgStyle || {}}
+                              className='w-12 h-12 object-cover border-[#070707] border-r-1'
+                            />
+                          </div>
+                          <div className='max-w-34'>
+                            <h5 className='font-bold text-[16px] -mt-0.5 truncate uppercase'>
+                              {project.title}
+                            </h5>
+                            <p className='text-[10px] text-[#0fa] -mt-0.5'>
+                              {project.category}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     ))}

@@ -46,6 +46,10 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.webDevelopment': 'WEB DEVELOPMENT',
     'projects.gameDevelopment': 'GAME DEVELOPMENT',
 
+    'projects.description': 'Description',
+    'projects.allOfMyProjects': 'All my projects',
+    'projects.technologies': 'Technologies',
+
     'projects.cinemaNight': 'Cinema Night',
     'projects.cinemaNight.description':
       'Voting organizer for movies with friends. Allows proposing, vetting and managing watched/unwatched lists. Made with love and care for my friends and me.',
@@ -181,6 +185,10 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.desktopDevelopment': 'APLICACIÓN DE ESCRITORIO',
     'projects.webDevelopment': 'APLICACIÓN WEB',
     'projects.gameDevelopment': 'JUEGO',
+
+    'projects.description': 'Descripción',
+    'projects.allOfMyProjects': 'Todos mis proyectos',
+    'projects.technologies': 'Tecnologías',
 
     'projects.cinemaNight': 'Noche de cine',
     'projects.cinemaNight.description':
