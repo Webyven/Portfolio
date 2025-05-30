@@ -7,13 +7,13 @@ interface ProjectCardProps {
   icon: React.ReactNode
   image: string
   imageAlt: string
+  imgStyle?: React.CSSProperties
   title: React.ReactNode
   description: React.ReactNode
   links?: Array<{
     icon: React.ReactNode
     onClick?: (e: React.MouseEvent) => void
   }>
-  imgStyle?: React.CSSProperties
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -73,11 +73,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   }
 
   return (
-    <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 transition-all duration-400 text-start py-6'>
+    <div className='oswald-regular bg-[#000]/25 h-full border-2 border-[#000]/35 hover:ring-2 ring-[#0fa] transition-all duration-400 text-start py-6 select-none'>
       <div className='px-8'>
         <div className='flex flex-row w-full justify-between items-center'>
           <div className='flex flex-col'>
-            <h3 className='text-xl'>{number}</h3>
+            <h3 className='text-2xl'>{number}</h3>
             <p className='text-[#0fa] text-xs font-[500]'>{category}</p>
           </div>
           <div className='border-3 border-[#121212] rounded-xl w-12 h-12 flex justify-center items-center'>
@@ -102,8 +102,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             }}
           />
         </div>
-        <h4 className='mt-6 uppercase'>{title}</h4>
-        <p className='my-2 font-light'>{description}</p>
+        <h4 className='mt-6 text-lg uppercase'>{title}</h4>
+        <p className='mb-2 mt-1 font-light'>{description}</p>
       </div>
       {links.length > 0 && (
         <>

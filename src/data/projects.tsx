@@ -9,18 +9,26 @@ export interface ProjectLink {
   label?: string
 }
 
+export interface GalleryImage {
+  src: string
+  alt: string
+  descriptionKey?: string
+  style?: React.CSSProperties
+}
+
 export interface Project {
   id: number
   categoryKey: string
   icon: React.ReactNode
   image: string
   imageAlt: string
+  imgStyle?: React.CSSProperties
   titleKey: string
   descriptionKey: string
   longDescriptionKey?: string
   technologies?: string[]
   links?: ProjectLink[]
-  imgStyle?: React.CSSProperties
+  gallery?: GalleryImage[]
 }
 
 export const projectsData: Project[] = [
@@ -30,6 +38,7 @@ export const projectsData: Project[] = [
     icon: <Globe />,
     image: 'https://i.postimg.cc/kBrTRGGd/Noite.webp',
     imageAlt: 'Noche de cine - Logo',
+    imgStyle: {padding: 7},
     titleKey: 'projects.cinemaNight',
     descriptionKey: 'projects.cinemaNight.description',
     longDescriptionKey: 'projects.cinemaNight.longDescription',
@@ -47,7 +56,7 @@ export const projectsData: Project[] = [
       {
         icon: <Github size={20} />,
         label: 'GitHub',
-        url: 'https://github.com/Webyven/noche-de-cine',
+        url: 'https://github.com/Webyven/CinemaNight',
       },
       {
         icon: <Globe size={20} />,
@@ -55,7 +64,64 @@ export const projectsData: Project[] = [
         url: 'https://noche-de-cine.vercel.app',
       },
     ],
-    imgStyle: {padding: 7},
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/fWxDZy8Z/Screenshot-2025-05-29-at-00-06-17-Noche-de-cine.png',
+        alt: 'Noche de cine - Home',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/Fzg4xCY1/Screenshot-2025-05-29-at-00-06-29-Noche-de-cine.png',
+        alt: 'Noche de cine - User configuration',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionUserConfig',
+      },
+      {
+        src: 'https://i.postimg.cc/d1CvhVv2/Screenshot-2025-05-29-at-00-07-46-Noche-de-cine-Admin.png',
+        alt: 'Noche de cine - Admin Login Page',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionAdminLogin',
+        style: {objectFit: 'cover'},
+      },
+      {
+        src: 'https://i.postimg.cc/VNpmsCys/Screenshot-2025-05-29-at-00-08-58-Noche-de-cine-Admin.png',
+        alt: 'Noche de cine - Admin Users Page',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionAdminUsers',
+      },
+      {
+        src: 'https://i.postimg.cc/Z5fJgQVd/Screenshot-2025-05-29-at-00-09-57-Noche-de-cine-Admin.png',
+        alt: 'Noche de cine - Admin Movies Page',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionAdminMovies',
+      },
+      {
+        src: 'https://i.postimg.cc/13R9vScS/Screenshot-2025-05-29-at-00-21-19-Noche-de-cine.png',
+        alt: 'Noche de cine - Proposals',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionProposals',
+      },
+      {
+        src: 'https://i.postimg.cc/vHs86f4c/Screenshot-2025-05-29-at-00-23-16-Noche-de-cine.png',
+        alt: 'Noche de cine - Votation',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionVotation',
+      },
+      {
+        src: 'https://i.postimg.cc/bJZ0b4FH/Noche-de-cine-Pel-culas.png',
+        alt: 'Noche de cine - Movies',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies',
+      },
+      {
+        src: 'https://i.postimg.cc/vmqL4GXZ/Noche-de-cine-Pel-culas-3.png',
+        alt: 'Noche de cine - Movies',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies2',
+      },
+      {
+        src: 'https://i.postimg.cc/2yv49hY1/Noche-de-cine-Resultados.png',
+        alt: 'Noche de cine - Results',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults',
+      },
+      {
+        src: 'https://i.postimg.cc/k4LQyw0r/Noche-de-cine-Resultados-2.png',
+        alt: 'Noche de cine - Results',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults2',
+      },
+    ],
   },
   {
     id: 2,
@@ -63,6 +129,7 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: 'https://i.postimg.cc/s2dLv6GZ/Pool-Counters.webp',
     imageAlt: 'Pool Counters - Logo',
+    imgStyle: {padding: 0},
     titleKey: 'Pool Counters',
     descriptionKey: 'projects.poolCounters.description',
     longDescriptionKey: 'projects.poolCounters.longDescription',
@@ -79,7 +146,6 @@ export const projectsData: Project[] = [
         url: 'https://drive.google.com/file/d/1DekcVAHEMWxEllEVrDEmsMona_bAtInH/view?usp=drive_link',
       },
     ],
-    imgStyle: {padding: 0},
   },
   {
     id: 3,
@@ -87,6 +153,7 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: 'https://i.postimg.cc/HsFZhZ2P/Multi-Twitch.webp',
     imageAlt: 'Multi Twitch - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
     titleKey: 'Multi-Twitch',
     descriptionKey: 'projects.multiTwitch.description',
     longDescriptionKey: 'projects.multiTwitch.longDescription',
@@ -98,7 +165,6 @@ export const projectsData: Project[] = [
         url: 'https://drive.google.com/file/d/1jpAcCNzUgzaCoO17usvMSSw6_5yO5C6e/view?usp=drive_link',
       },
     ],
-    imgStyle: {padding: 3},
   },
   {
     id: 4,
@@ -106,10 +172,10 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: 'https://i.postimg.cc/V64ZZzGj/BTC-Tracker.webp',
     imageAlt: 'BTC Tracker - Logo',
+    imgStyle: {padding: 0},
     titleKey: 'BTC Tracker',
     descriptionKey: 'projects.btcTracker.description',
     longDescriptionKey: 'projects.btcTracker.longDescription',
-    imgStyle: {padding: 0},
     technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
   },
   // Los siguientes solo se mostrarán en el modal
@@ -119,6 +185,7 @@ export const projectsData: Project[] = [
     icon: <Globe />,
     image: 'https://i.postimg.cc/c1XPXB2V/My-Portfolio.webp',
     imageAlt: 'Portfolio - Logo',
+    imgStyle: {padding: 3},
     titleKey: 'projects.myPortfolio',
     descriptionKey: 'projects.myPortfolio.description',
     longDescriptionKey: 'projects.myPortfolio.longDescription',
@@ -129,7 +196,6 @@ export const projectsData: Project[] = [
       'Framer Motion',
       'Tailwind CSS',
     ],
-    imgStyle: {padding: 3},
   },
   {
     id: 6,
@@ -137,11 +203,11 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: 'https://i.postimg.cc/NMQPxK4s/Autocomplete-Shortcuts.webp',
     imageAlt: 'Autocomplete Shortcuts - Logo',
+    imgStyle: {padding: 7, paddingLeft: 8, paddingRight: 6},
     titleKey: 'projects.autocompleteShortcuts',
     descriptionKey: 'projects.autocompleteShortcuts.description',
     longDescriptionKey: 'projects.autocompleteShortcuts.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
-    imgStyle: {padding: 7},
   },
   {
     id: 7,
@@ -171,11 +237,11 @@ export const projectsData: Project[] = [
     icon: <Globe />,
     image: 'https://i.postimg.cc/7h6spjdj/Copa-Piston.webp',
     imageAlt: 'Copa Pistón - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
     titleKey: 'projects.copaPiston',
     descriptionKey: 'projects.copaPiston.description',
     longDescriptionKey: 'projects.copaPiston.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'SQL', 'Windows'],
-    imgStyle: {padding: 5},
   },
   {
     id: 10,
@@ -183,6 +249,7 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: 'https://i.postimg.cc/c195Q48W/GitHub.webp',
     imageAlt: 'Github Searcher - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
     titleKey: 'projects.githubSearcher',
     descriptionKey: 'projects.githubSearcher.description',
     longDescriptionKey: 'projects.githubSearcher.longDescription',
@@ -199,9 +266,8 @@ export const projectsData: Project[] = [
         url: 'https://webyven.github.io/Github-Searcher/',
       },
     ],
-    imgStyle: {padding: 3},
   },
-  {
+  /*{
     id: 11,
     categoryKey: 'projects.webDevelopment',
     icon: <Monitor />,
@@ -224,13 +290,14 @@ export const projectsData: Project[] = [
       },
     ],
     imgStyle: {padding: 7},
-  },
+  },*/
   {
     id: 12,
     categoryKey: 'projects.webDevelopment',
     icon: <Monitor />,
     image: PokeduxIcon,
     imageAlt: 'Pokedux - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
     titleKey: 'projects.pokedux',
     descriptionKey: 'projects.pokedux.description',
     longDescriptionKey: 'projects.pokedux.longDescription',
@@ -247,7 +314,6 @@ export const projectsData: Project[] = [
         url: 'https://webyven.github.io/Pokedux/',
       },
     ],
-    imgStyle: {padding: 3},
   },
   {
     id: 13,
@@ -259,5 +325,43 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.alternate.description',
     longDescriptionKey: 'projects.alternate.longDescription',
     technologies: ['C#', 'Unity', 'Windows', 'Android', 'Play Store'],
+  },
+  {
+    id: 14,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Globe />,
+    image: 'https://i.postimg.cc/Hsx8YBz0/Fedeteri-App.webp',
+    imageAlt: 'FedeteriApp - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
+    titleKey: 'projects.fedeteriApp',
+    descriptionKey: 'projects.fedeteriApp.description',
+    longDescriptionKey: 'projects.fedeteriApp.longDescription',
+    technologies: ['Next.JS', 'React.JS', 'Bootstrap', 'C#', '.NET', 'Swagger'],
+    links: [
+      {
+        icon: <Github size={20} />,
+        label: 'GitHub',
+        url: 'https://github.com/Grupo-41/FedeteriApp',
+      },
+    ],
+  },
+  {
+    id: 15,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Globe />,
+    image: 'https://i.postimg.cc/htnjJsb3/Isotipo-CEDICA.webp',
+    imageAlt: 'CEDICA - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
+    titleKey: 'projects.cedicaPrivate',
+    descriptionKey: 'projects.cedicaPrivate.description',
+    longDescriptionKey: 'projects.cedicaPrivate.longDescription',
+    technologies: ['Flask', 'Python', 'HTML', 'CSS', 'JavaScript'],
+    links: [
+      {
+        icon: <Github size={20} />,
+        label: 'GitHub',
+        url: 'https://github.com/EzequielReale/Proyecto-De-Software-2024-CEDICA',
+      },
+    ],
   },
 ]

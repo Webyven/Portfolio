@@ -43,7 +43,7 @@ const Modal = ({children, onClose}: ModalProps) => {
       }`}
     >
       <div
-        className={`relative max-w-5xl w-full mx-4 overflow-auto transition-all duration-300 ${
+        className={`relative max-w-6xl w-full mx-4 overflow-auto transition-all duration-300 ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >

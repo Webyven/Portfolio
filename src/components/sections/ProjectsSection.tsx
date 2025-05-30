@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {motion} from 'framer-motion'
 import {stagger, fadeInUp} from '../../animations/variants'
 import {useLanguage} from '../../hooks/LanguageContext'
 import ProjectCard from './ProjectCard'
 import {useWindowSize} from 'react-use'
 import Modal from '../common/Modal'
-import {projectsData} from '../../data/projects'
+import {GalleryImage, projectsData} from '../../data/projects'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
 
 interface Project {
@@ -25,6 +25,7 @@ interface Project {
     label?: string
   }>
   imgStyle?: React.CSSProperties
+  gallery?: GalleryImage[]
 }
 
 const ProjectsSection: React.FC = () => {
@@ -33,6 +34,8 @@ const ProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = React.useState<number | null>(
     null
   )
+  const [selectedProjectImage, setSelectedProjectImage] =
+    React.useState<GalleryImage | null>(null)
   const isMobile = width <= 768
 
   const projects: Project[] = projectsData.map((p) => ({
@@ -63,6 +66,22 @@ const ProjectsSection: React.FC = () => {
     selectedProject !== null
       ? projects.find((project) => project.id === selectedProject)
       : null
+
+  useEffect(() => {
+    if (selectedProject !== null && selectedProjectData) {
+      if (
+        !selectedProjectImage ||
+        !selectedProjectData.gallery?.some(
+          (img) => img === selectedProjectImage
+        )
+      ) {
+        const firstImage = selectedProjectData.gallery?.[0]
+        if (firstImage) {
+          setSelectedProjectImage(firstImage)
+        }
+      }
+    }
+  }, [selectedProject, selectedProjectData, selectedProjectImage])
 
   // Renderizar para móviles
   if (isMobile) {
@@ -268,33 +287,98 @@ const ProjectsSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex flex-row justify-center items-center w-[99%] h-full overflow-hidden mx-auto'>
-                <div className='h-full w-[70%] bg-[#0A0A0A] border-l-10 border-[#0C0C0C]'>
-                  <img
-                    src='https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2021/03/wide-angle-images-15-1.jpg?resize=600%2C400&ssl=1'
-                    alt='Placeholder photo'
-                    className='w-full h-[85%] object-cover'
-                  />
-                  <div className='h-[15%] w-full flex flex-row justify-between'>
-                    <div className='h-full bg px-2 cursor-pointer bg-[#070707] hover:bg-[#090909] transition-all flex justify-center items-center'>
-                      <ChevronLeft />
-                    </div>
-                    <div className='p-6 flex flex-row gap-4 h-full items-center justify-center'>
-                      {[1, 2, 3, 4, 5, 6].map((index) => (
+              <div className='flex flex-row justify-center items-center w-full h-full overflow-hidden mx-auto'>
+                {selectedProjectData.gallery &&
+                  selectedProjectData.gallery.length > 0 && (
+                    <div className='h-full w-[70%] bg-[#0A0A0A] border-l-10 border-[#0C0C0C]'>
+                      <div className='w-full h-[85%] relative'>
                         <img
-                          key={index}
-                          src={'https://picsum.photos/400/300' + index}
-                          alt='Placeholder'
-                          className='w-24 h-14 cursor-pointer border-2 border-[#252525] hover:border-[#aaa] transition-all object-cover'
+                          src={
+                            selectedProjectImage
+                              ? selectedProjectImage.src
+                              : selectedProjectData.image
+                          }
+                          alt={
+                            selectedProjectImage
+                              ? selectedProjectImage.alt
+                              : selectedProjectData.imageAlt
+                          }
+                          style={{
+                            objectFit: 'contain',
+                            ...(selectedProjectImage?.style || {}),
+                          }}
+                          className='w-full h-full'
                         />
-                      ))}
+                        {selectedProjectImage?.descriptionKey ? (
+                          <div
+                            className='absolute bottom-0 right-0 bg-[#000]/50 p-2 ps-5'
+                            style={{
+                              clipPath:
+                                'polygon(3% 0, 100% 0%, 100% 100%, 0 100%)',
+                            }}
+                          >
+                            <p className='text-[#aaa] text-sm'>
+                              {t(selectedProjectImage.descriptionKey)}
+                            </p>
+                          </div>
+                        ) : null}
+                      </div>
+                      <div className='h-[15%] w-full flex flex-row justify-between'>
+                        <div
+                          className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
+                          onClick={() => {
+                            const galleryContainer =
+                              document.querySelector('.gallery-container')
+                            if (galleryContainer) {
+                              galleryContainer.scrollLeft -= 200 // Ajusta este valor según necesites
+                            }
+                          }}
+                        >
+                          <ChevronLeft />
+                        </div>
+                        <div
+                          className='py-6 px-5 overflow-hidden flex flex-row gap-3 h-full items-center justify-start gallery-container bg-[#070707]'
+                          style={{
+                            scrollBehavior: 'smooth',
+                            scrollSnapAlign: 'start',
+                            scrollSnapType: 'x mandatory',
+                            scrollSnapStop: 'always',
+                          }}
+                        >
+                          {selectedProjectData.gallery &&
+                            selectedProjectData.gallery.map((x, index) => (
+                              <img
+                                onClick={() => setSelectedProjectImage(x)}
+                                key={index}
+                                src={x.src}
+                                alt={x.alt}
+                                className='w-24 h-14 cursor-pointer border-2 border-[#252525] hover:border-[#aaa] transition-all object-cover'
+                              />
+                            ))}
+                        </div>
+                        <div
+                          className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
+                          onClick={() => {
+                            const galleryContainer =
+                              document.querySelector('.gallery-container')
+                            if (galleryContainer) {
+                              galleryContainer.scrollLeft += 200 // Ajusta este valor según necesites
+                            }
+                          }}
+                        >
+                          <ChevronRight />
+                        </div>
+                      </div>
                     </div>
-                    <div className='h-full bg px-2 cursor-pointer bg-[#070707] hover:bg-[#090909] transition-all flex justify-center items-center'>
-                      <ChevronRight />
-                    </div>
-                  </div>
-                </div>
-                <div className='h-full w-[30%] bg-[#070707] backdrop-blur-2xl overflow-y-scroll p-4 border-l-6 border-[#0C0C0C]'>
+                  )}
+                <div
+                  className={`h-full ${
+                    selectedProjectData.gallery &&
+                    selectedProjectData.gallery.length > 0
+                      ? 'w-[35%]'
+                      : 'w-full'
+                  } bg-[#070707] backdrop-blur-2xl overflow-y-scroll p-5 border-l-6 border-[#0C0C0C]`}
+                >
                   <div className='mb-6'>
                     <h3 className='text-xl oswald-regular uppercase mb-2'>
                       {t('projects.description')}
@@ -344,14 +428,14 @@ const ProjectsSection: React.FC = () => {
               {/* Columna derecha: Lista de otros proyectos */}
               <div className='bg-[#121212] px-2 pt-2'>
                 <div className='bg-[#0C0C0C] p-2 px-5'>
-                  <h3 className='oswald-regular uppercase mt-1 text-[22px]'>
+                  <h3 className='oswald-regular uppercase mt-1 mb-1 text-[22px]'>
                     {t('projects.allOfMyProjects')}
                   </h3>
                   <div className='flex flex-row gap-3 overflow-x-scroll py-2'>
                     {projects.map((project) => (
                       <div
                         key={project.id}
-                        className={`flex items-center gap-4 p-0.5 cursor-pointer transition-colors ${
+                        className={`flex items-center gap-4 p-0.5 cursor-pointer select-none transition-colors ${
                           selectedProject === project.id
                             ? 'bg-[#0fa]/75'
                             : 'bg-[#070707] hover:bg-[#777]'

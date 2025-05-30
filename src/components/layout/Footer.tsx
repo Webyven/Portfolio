@@ -69,7 +69,7 @@ function Footer(): React.ReactElement {
           </div>
         </motion.div>
         <p
-          className='absolute inset-x-0 bottom-3 text-center font-bold text-[#777] text-sm'
+          className='absolute inset-x-0 bottom-2.5 text-center font-bold text-[#777] text-sm'
           style={{fontWeight: 200}}
         >
           {t('footer.message')}
