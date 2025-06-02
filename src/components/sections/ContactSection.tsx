@@ -149,6 +149,8 @@ const ContactSection: React.FC = () => {
                     <TextField
                       id='standard-multiline-static'
                       label={t('contact.message.name')}
+                      type='text'
+                      name='name'
                       rows={1}
                       variant='filled'
                       value={nameInputValue}
@@ -186,6 +188,8 @@ const ContactSection: React.FC = () => {
                       id='standard-multiline-static'
                       label={t('contact.message.email')}
                       rows={1}
+                      type='email'
+                      name='email'
                       variant='filled'
                       value={emailInputValue}
                       onChange={(e) => setEmailInputValue(e.target.value)}
@@ -223,6 +227,8 @@ const ContactSection: React.FC = () => {
                     id='standard-multiline-static'
                     label={t('contact.message.message')}
                     multiline
+                    type='text'
+                    name='message'
                     rows={5}
                     variant='filled'
                     value={messageInputValue}
