@@ -134,6 +134,7 @@ const ContactSection: React.FC = () => {
               <motion.form
                 method='POST'
                 data-netlify='true'
+                data-netlify-honeypot='bot-field'
                 name='contact'
                 variants={slideFromRight}
                 className='grow-3 text-start flex flex-col gap-3'
@@ -144,6 +145,8 @@ const ContactSection: React.FC = () => {
                 >
                   {t('contact.message.title')}
                 </h3>
+                <input type='hidden' name='form-name' value='contact' />
+                <input type='hidden' name='bot-field' />
                 <div className='w-full flex flex-col gap-3 pt-3'>
                   <div className='flex flex-row gap-3'>
                     <TextField
