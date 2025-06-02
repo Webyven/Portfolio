@@ -174,7 +174,7 @@ const ProjectsSection: React.FC = () => {
         </motion.div>
         <motion.div
           style={{gridArea: '1 / 3 / 3 / 6'}}
-          className='text-end flex items-start pt-3 pe-5 justify-end w-full h-full text-[#fff] font-bold oswald-regular'
+          className='text-end flex items-start pt-3 pe-5 justify-end w-full h-full text-[#fff] font-bold oswald-regular select-none cursor-pointer origin-right'
           variants={{
             hidden: {opacity: 0, x: 75},
             visible: {
@@ -182,6 +182,13 @@ const ProjectsSection: React.FC = () => {
               x: 0,
               transition: {duration: 0.5, ease: 'easeOut'},
             },
+          }}
+          whileHover={{
+            scale: 1.05,
+            transition: {duration: 0.2, ease: 'easeOut'},
+          }}
+          onClick={() => {
+            setSelectedProject(1)
           }}
         >
           <h1>{t('projects.title')}</h1>
@@ -291,7 +298,16 @@ const ProjectsSection: React.FC = () => {
                 {selectedProjectData.gallery &&
                   selectedProjectData.gallery.length > 0 && (
                     <div className='h-full w-[70%] bg-[#0A0A0A] border-l-10 border-[#0C0C0C]'>
-                      <div className='w-full h-[85%] relative'>
+                      <div
+                        className='w-full relative'
+                        style={{
+                          height:
+                            selectedProjectData.gallery &&
+                            selectedProjectData.gallery.length > 1
+                              ? '85%'
+                              : '100%',
+                        }}
+                      >
                         <img
                           src={
                             selectedProjectImage
@@ -304,17 +320,17 @@ const ProjectsSection: React.FC = () => {
                               : selectedProjectData.imageAlt
                           }
                           style={{
-                            objectFit: 'contain',
+                            objectFit: 'scale-down',
                             ...(selectedProjectImage?.style || {}),
                           }}
                           className='w-full h-full'
                         />
                         {selectedProjectImage?.descriptionKey ? (
                           <div
-                            className='absolute bottom-0 right-0 bg-[#000]/50 p-2 ps-5'
+                            className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/45 from-10% via-[#111]75 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
                             style={{
                               clipPath:
-                                'polygon(3% 0, 100% 0%, 100% 100%, 0 100%)',
+                                'polygon(13px 0, 100% 0%, 100% 100%, 0 100%)',
                             }}
                           >
                             <p className='text-[#aaa] text-sm'>
@@ -323,52 +339,60 @@ const ProjectsSection: React.FC = () => {
                           </div>
                         ) : null}
                       </div>
-                      <div className='h-[15%] w-full flex flex-row justify-between'>
-                        <div
-                          className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
-                          onClick={() => {
-                            const galleryContainer =
-                              document.querySelector('.gallery-container')
-                            if (galleryContainer) {
-                              galleryContainer.scrollLeft -= 200 // Ajusta este valor según necesites
-                            }
-                          }}
-                        >
-                          <ChevronLeft />
-                        </div>
-                        <div
-                          className='py-6 px-5 overflow-hidden flex flex-row gap-3 h-full items-center justify-start gallery-container bg-[#070707]'
-                          style={{
-                            scrollBehavior: 'smooth',
-                            scrollSnapAlign: 'start',
-                            scrollSnapType: 'x mandatory',
-                            scrollSnapStop: 'always',
-                          }}
-                        >
-                          {selectedProjectData.gallery &&
-                            selectedProjectData.gallery.map((x, index) => (
-                              <img
-                                onClick={() => setSelectedProjectImage(x)}
-                                key={index}
-                                src={x.src}
-                                alt={x.alt}
-                                className='w-24 h-14 cursor-pointer border-2 border-[#252525] hover:border-[#aaa] transition-all object-cover'
-                              />
-                            ))}
-                        </div>
-                        <div
-                          className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
-                          onClick={() => {
-                            const galleryContainer =
-                              document.querySelector('.gallery-container')
-                            if (galleryContainer) {
-                              galleryContainer.scrollLeft += 200 // Ajusta este valor según necesites
-                            }
-                          }}
-                        >
-                          <ChevronRight />
-                        </div>
-                      </div>
+                      {selectedProjectData.gallery &&
+                        selectedProjectData.gallery.length > 1 && (
+                          <div className='h-[15%] w-full flex flex-row justify-between bg-[#070707]'>
+                            <div
+                              className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
+                              onClick={() => {
+                                const galleryContainer =
+                                  document.querySelector('.gallery-container')
+                                if (galleryContainer) {
+                                  galleryContainer.scrollLeft -= 400 // Ajusta este valor según necesites
+                                }
+                              }}
+                            >
+                              <ChevronLeft />
+                            </div>
+                            <div
+                              className='py-6 px-5 overflow-hidden flex flex-row gap-3 h-full items-center justify-start gallery-container bg-[#070707]'
+                              style={{
+                                scrollBehavior: 'smooth',
+                                scrollSnapAlign: 'start',
+                                scrollSnapType: 'x mandatory',
+                                scrollSnapStop: 'always',
+                              }}
+                            >
+                              {selectedProjectData.gallery &&
+                                selectedProjectData.gallery.map((x, index) => (
+                                  <img
+                                    onClick={() => setSelectedProjectImage(x)}
+                                    key={index}
+                                    src={x.src}
+                                    alt={x.alt}
+                                    className={`w-22 h-14 cursor-pointer border-1 ${
+                                      selectedProjectImage &&
+                                      selectedProjectImage.src === x.src
+                                        ? 'border-[#0fa] opacity-100'
+                                        : 'border-[#252525] hover:border-[#aaa] opacity-40 hover:opacity-75'
+                                    } transition-all object-cover`}
+                                  />
+                                ))}
+                            </div>
+                            <div
+                              className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
+                              onClick={() => {
+                                const galleryContainer =
+                                  document.querySelector('.gallery-container')
+                                if (galleryContainer) {
+                                  galleryContainer.scrollLeft += 400 // Ajusta este valor según necesites
+                                }
+                              }}
+                            >
+                              <ChevronRight />
+                            </div>
+                          </div>
+                        )}
                     </div>
                   )}
                 <div

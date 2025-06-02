@@ -41,7 +41,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Having recently graduated as a University Programmer Analyst from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge, and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
 
     // Projects section
-    'projects.title': 'PROJECTS //',
+    'projects.title': 'PROJECTS >>',
     'projects.desktopDevelopment': 'DESKTOP DEVELOPMENT',
     'projects.webDevelopment': 'WEB DEVELOPMENT',
     'projects.gameDevelopment': 'GAME DEVELOPMENT',
@@ -55,12 +55,44 @@ const translations: Record<Language, Record<string, string>> = {
       'Voting organizer for movies with friends. Allows proposing, vetting and managing watched/unwatched lists. Made with love and care for my friends and me.',
     'projects.cinemaNight.longDescription':
       'Cinema Night is a collaborative movie voting platform made for a group of friends to decide what to watch together. Users can propose up to two movies per session, veto films they don’t want to see, and vote by ranking their interest. Once everyone has voted, the app generates a podium to declare the winner. It also includes features like auto-proposals, personalized vetoes, and persistent lists of watched and unwatched movies. The project is built with React.js and uses websockets for real-time updates. It was developed with real social use in mind and continues evolving based on group feedback.',
+    'projects.cinemaNight.gallery.descriptionHome':
+      'Home screen - With statistics about sessions and movie catalog',
+    'projects.cinemaNight.gallery.descriptionMovies':
+      'Movie description screen, with synopsis, genres and more',
+    'projects.cinemaNight.gallery.descriptionMovies2':
+      'Movie catalog screen, allows searching and filtering movies',
+    'projects.cinemaNight.gallery.descriptionUserConfig':
+      'User configuration screen - Allows configuring auto-proposals and vetoes',
+    'projects.cinemaNight.gallery.descriptionProposals':
+      'Proposals screen - Allows proposing movies',
+    'projects.cinemaNight.gallery.descriptionVotation':
+      'Voting screen - Allows voting by ordering movies according to interest',
+    'projects.cinemaNight.gallery.descriptionResults':
+      'Results screen - Shows the podium with the most voted movies',
+    'projects.cinemaNight.gallery.descriptionResults2':
+      'Results screen - Winner description and total votes',
+    'projects.cinemaNight.gallery.descriptionAdminLogin':
+      'Administration subsystem - Login screen',
+    'projects.cinemaNight.gallery.descriptionAdminUsers':
+      'Administration subsystem - Users screen',
+    'projects.cinemaNight.gallery.descriptionAdminMovies':
+      'Administration subsystem - Movies screen',
 
     'projects.poolCounters': 'Pool Counters',
     'projects.poolCounters.description':
       'App for LoL players. Helps choosing champions, tracks enemy spells and offers customizable stats.',
     'projects.poolCounters.longDescription':
       'Pool Counters is a desktop app designed to assist League of Legends players during champion select. It offers an intuitive interface to choose counter picks against enemy champions, keeps track of summoner spell cooldowns in real time, and lets users configure custom stats and preferences. Champion data is obtained via web scrapping, ensuring the app stays up to date without relying on third-party APIs. It’s a powerful companion for competitive players who want to stay ahead with fast, relevant decisions.',
+    'projects.poolCounters.gallery.descriptionHome':
+      "Main screen - Where counters are calculated for each champion entered based on the user's pool",
+    'projects.poolCounters.gallery.descriptionPoolScreen':
+      "User's pool - Allows the user to view and keep track of all champions they use",
+    'projects.poolCounters.gallery.descriptionCountersConfigScreen':
+      'Champion counters - Allows the user to configure which champions are "counters" for each champion',
+    'projects.poolCounters.gallery.descriptionPoolConfigScreen':
+      'Pool configuration - Allows the user to configure the champion pool they use',
+    'projects.poolCounters.gallery.descriptionChampionUpdaterScreen':
+      'Champion updater - Allows the user to update the champion database',
 
     'projects.multiTwitch': 'Multi Twitch',
     'projects.multiTwitch.description':
@@ -73,6 +105,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Tracks the price of Bitcoin from Binance, saves local history and allows customizing alerts.',
     'projects.btcTracker.longDescription':
       'BTC Tracker is a lightweight desktop utility that scrapes real-time Bitcoin price data from Binance and displays it in a clear interface. It stores daily historical prices locally for future analysis and allows users to configure alerts when the price crosses certain thresholds. The app starts with the system and runs quietly in the background, making it ideal for passive tracking. Built for personal use, it emphasizes simplicity, speed, and privacy.',
+    'projects.btcTracker.gallery.descriptionHome':
+      'Main screen, which allows viewing history and configuring alerts',
+    'projects.btcTracker.gallery.descriptionAlert':
+      'Alert screen, as an example',
+    'projects.btcTracker.gallery.descriptionDiscordNotifications':
+      'Notifications through Discord, using Webhooks',
 
     'projects.myPortfolio': 'My Portfolio',
     'projects.myPortfolio.description':
@@ -85,12 +123,20 @@ const translations: Record<Language, Record<string, string>> = {
       'Allows using autocomplete shortcuts for Windows. It allows you to create custom shortcuts for your passwords, making it easier to access them quickly and securely.',
     'projects.autocompleteShortcuts.longDescription':
       'Autocomplete Shortcuts is a Windows app that lets you create keyboard shortcuts to quickly paste text in any input field. Each shortcut has a trigger word and a value. When the trigger is typed, the app deletes it and pastes the corresponding value into the focused input. If the value contains "->", the app simulates a "tab" key press to move to the next input and continues pasting. It’s especially useful for filling login forms or entering repetitive data across apps. Users can add, remove, or copy shortcuts with ease.',
+    'projects.autocompleteShortcuts.gallery.descriptionHome':
+      'Main screen - Where shortcuts can be configured. Not very pretty... but functional',
+    'projects.autocompleteShortcuts.gallery.descriptionPreview':
+      'Example - With the word "preview" as trigger, it gets deleted and autocompletes with what is set in the application',
 
     'projects.filenameChanger': 'Filename Changer',
     'projects.filenameChanger.description':
       'A massive filename changer. Allows you to change the filename of thousands of files with a single click.',
     'projects.filenameChanger.longDescription':
       'Filename Changer is a simple bulk renamer tool for Windows. It allows selecting a folder and replacing parts of filenames based on two text inputs: the string to find and the one to replace it with. It includes two additional options to trim the beginning and/or end of filenames. While it doesn’t support regex or advanced patterns, its minimal interface makes it fast and effective for everyday file renaming tasks.',
+    'projects.filenameChanger.gallery.descriptionHome':
+      'Main screen - Allows selecting the folder and text fields for renaming',
+    'projects.filenameChanger.gallery.descriptionSuccessExample':
+      'Success screen, with the number of renamed files',
 
     'projects.reworkedTudu': 'Reworked Tudu',
     'projects.reworkedTudu.description':
@@ -103,6 +149,14 @@ const translations: Record<Language, Record<string, string>> = {
       'App to track the progress of the Copa Pistón tournament. A Karting tournament with my friends.',
     'projects.copaPiston.longDescription':
       'Copa Pistón is a Windows desktop app designed to track kart racing tournaments with friends. Users can register the top finishers of each race, log fastest laps, attach files per race, and manage all data through a cloud-hosted SQL database. It also calculates championship points and generates a leaderboard. What started as a fun way to bring structure to friendly races turned into a robust system tailored for real events.',
+    'projects.copaPiston.gallery.descriptionLoading': 'Loading screen',
+    'projects.copaPiston.gallery.descriptionRanking': 'Ranking screen',
+    'projects.copaPiston.gallery.descriptionRaces':
+      'Race information and management - Allows viewing, creating, editing and deleting races',
+    'projects.copaPiston.gallery.descriptionDrivers':
+      'Driver information and management - Allows viewing, creating and editing drivers',
+    'projects.copaPiston.gallery.descriptionLogin':
+      'Ranking configuration and login',
 
     'projects.githubSearcher': 'GitHub Searcher',
     'projects.githubSearcher.description':
@@ -185,7 +239,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Habiéndome graduado recientemente como Analista Programador Universitario de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
 
     // Projects section
-    'projects.title': 'PROYECTOS //',
+    'projects.title': 'PROYECTOS >>',
     'projects.desktopDevelopment': 'APLICACIÓN DE ESCRITORIO',
     'projects.webDevelopment': 'APLICACIÓN WEB',
     'projects.gameDevelopment': 'JUEGO',
@@ -199,12 +253,44 @@ const translations: Record<Language, Record<string, string>> = {
       'Organizador de votaciones para ver películas con amigos. Permite proponer, vetar y gestionar listas de vistas/no vistas. Hecha con mucho amor y cariño para mis amigos y yo.',
     'projects.cinemaNight.longDescription':
       'Noche de Cine es una aplicación web pensada para organizar votaciones de películas entre amigos. Cada usuario puede proponer películas, vetar aquellas que no desea ver si no participa, y gestionar sus listas de películas vistas y no vistas. Durante la fase de votación, los usuarios ordenan las películas según sus preferencias, y el sistema genera un podio una vez que todos han votado. El proyecto surgió de una necesidad real con mis amigos, y fue creciendo con el tiempo hasta convertirse en una herramienta completa hecha con React y WebSockets.',
+    'projects.cinemaNight.gallery.descriptionHome':
+      'Pantalla principal - Con estadísticas sobre las sesiones y el catálogo de películas',
+    'projects.cinemaNight.gallery.descriptionMovies':
+      'Pantalla de descripción películas, con sinopsis, géneros y más',
+    'projects.cinemaNight.gallery.descriptionMovies2':
+      'Pantalla de catálogo de películas, permite buscar y filtrar películas',
+    'projects.cinemaNight.gallery.descriptionUserConfig':
+      'Pantalla de configuración de usuario - Permite configurar auto-propuestas y vetos',
+    'projects.cinemaNight.gallery.descriptionProposals':
+      'Pantalla de propuestas - Permite proponer películas',
+    'projects.cinemaNight.gallery.descriptionVotation':
+      'Pantalla de votación - Permite votar ordenando las películas según su interés',
+    'projects.cinemaNight.gallery.descriptionResults':
+      'Pantalla de resultados - Muestra el podio con las películas más votadas',
+    'projects.cinemaNight.gallery.descriptionResults2':
+      'Pantalla de resultados - Descripción del ganador y votos totales',
+    'projects.cinemaNight.gallery.descriptionAdminLogin':
+      'Subsistema de administración - Pantalla de inicio de sesión',
+    'projects.cinemaNight.gallery.descriptionAdminUsers':
+      'Subsistema de administración - Pantalla de usuarios',
+    'projects.cinemaNight.gallery.descriptionAdminMovies':
+      'Subsistema de administración - Pantalla de películas',
 
     'projects.poolCounters': 'Pool Counters',
     'projects.poolCounters.description':
       'App para jugadores de LoL. Ayuda a elegir campeones, trackea hechizos enemigos y ofrece stats personalizables.',
     'projects.poolCounters.longDescription':
       'Pool Counters es una aplicación de escritorio creada para jugadores de League of Legends. Permite registrar campeones, configurarlos como "counters", y sugerir qué pickear según el enemigo. También incluye un sistema para hacer seguimiento del tiempo de reutilización (cooldown) de los hechizos de los enemigos, y ofrece estadísticas configurables. Fue una de mis aplicaciones más completas, con scrapping dinámico para mantener la base de datos actualizada y múltiples opciones de personalización.',
+    'projects.poolCounters.gallery.descriptionHome':
+      'Pantalla principal - Donde se calculan los counters de cada campeón ingresado según la pool del usuario',
+    'projects.poolCounters.gallery.descriptionPoolScreen':
+      'Pool del usuario - Permite al usuario ver y tener en cuenta todos los campeoones que utiliza',
+    'projects.poolCounters.gallery.descriptionCountersConfigScreen':
+      'Counters de campeones - Permite al usuario configurar qué campeones son "counters" para cada campeón',
+    'projects.poolCounters.gallery.descriptionPoolConfigScreen':
+      'Configuración de la pool - Permite al usuario configurar la pool de campeones que utiliza',
+    'projects.poolCounters.gallery.descriptionChampionUpdaterScreen':
+      'Actualizador de campeones - Permite al usuario actualizar la base de datos de campeones',
 
     'projects.multiTwitch': 'Multi Twitch',
     'projects.multiTwitch.description':
@@ -217,6 +303,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Trackea el precio del Bitcoin desde Binance, guarda historial local y permite configurar alertas personalizadas.',
     'projects.btcTracker.longDescription':
       'BTC Tracker es una app de escritorio para Windows que hace scrapping del precio del Bitcoin desde la web de Binance. Se inicia automáticamente con el sistema operativo y guarda un historial local con los precios diarios. Además, permite configurar alertas que notifican al usuario cuando el precio alcanza ciertos valores definidos. Es ideal para hacer seguimiento pasivo del mercado sin necesidad de tener una app abierta constantemente.',
+    'projects.btcTracker.gallery.descriptionHome':
+      'Pantalla principal, que permite visualizar el historial y configurar alertas',
+    'projects.btcTracker.gallery.descriptionAlert':
+      'Pantalla de alerta, a modo de ejemplo',
+    'projects.btcTracker.gallery.descriptionDiscordNotifications':
+      'Notificaciones a través de Discord, utilizando Webhooks',
 
     'projects.myPortfolio': 'Mi Portfolio',
     'projects.myPortfolio.description':
@@ -229,12 +321,20 @@ const translations: Record<Language, Record<string, string>> = {
       'Permite usar atajos de teclado para Windows. Permite crear shortcuts personalizados para tus contraseñas, haciendo más fácil acceder a ellas de forma rápida y segura.',
     'projects.autocompleteShortcuts.longDescription':
       'Autocomplete Shortcuts es una aplicación para Windows que permite crear atajos de teclado personalizados para pegar texto rápidamente en cualquier campo de entrada. Cada shortcut tiene una clave y un valor. Al tipear la clave, el programa la borra y pega el valor en el input enfocado. Si el valor contiene "->", simula la tecla "Tab" para pasar al siguiente campo y continuar pegando. Es ideal para completar formularios o ingresar datos repetitivos de forma rápida. Además, permite crear, borrar o copiar shortcuts fácilmente.',
+    'projects.autocompleteShortcuts.gallery.descriptionHome':
+      'Pantalla principal - Donde se pueden configurar los shortcuts. No es muy linda... pero es funcional',
+    'projects.autocompleteShortcuts.gallery.descriptionPreview':
+      'Ejemplo - Con la palabra "preview" como trigger, se borra y autocompleta con lo establecido en la aplicación',
 
     'projects.filenameChanger': 'Filename Changer',
     'projects.filenameChanger.description':
       'Un renombrador de archivos masivo. Permite cambiar el nombre de miles de archivos con un solo click.',
     'projects.filenameChanger.longDescription':
       'Filename Changer es una herramienta simple para renombrar archivos en masa en Windows. Permite seleccionar una carpeta y reemplazar partes del nombre de los archivos usando dos campos de texto: uno para lo que se quiere buscar y otro para con qué reemplazarlo. También incluye dos opciones para recortar el principio y/o final del nombre. Aunque no soporta expresiones regulares ni patrones avanzados, su interfaz minimalista lo hace ideal para tareas rápidas y cotidianas.',
+    'projects.filenameChanger.gallery.descriptionHome':
+      'Pantalla principal - Permite seleccionar la carpeta y los campos de texto para el renombre',
+    'projects.filenameChanger.gallery.descriptionSuccessExample':
+      'Pantalla de éxito, con la cantidad de archivos renombrados',
 
     'projects.reworkedTudu': 'Reworked Tudu',
     'projects.reworkedTudu.description':
@@ -247,6 +347,15 @@ const translations: Record<Language, Record<string, string>> = {
       'App para trackear el progreso de la Copa Pistón. Un torneo de Karting con amigos.',
     'projects.copaPiston.longDescription':
       'Copa Pistón es una aplicación de escritorio para Windows pensada para registrar torneos de karting entre amigos. Permite guardar quiénes fueron los primeros puestos de cada carrera, quién hizo la vuelta más rápida, adjuntar archivos por carrera, y almacenar toda la información en una base de datos SQL hosteada en la nube. También calcula los puntos de cada jugador y genera una tabla de posiciones. Fue creada para llevar un mejor control de nuestras carreras y terminó siendo un proyecto divertido y útil.',
+    'projects.copaPiston.gallery.descriptionLoading': 'Pantalla de carga',
+    'projects.copaPiston.gallery.descriptionRanking':
+      'Pantalla de clasificación',
+    'projects.copaPiston.gallery.descriptionRaces':
+      'Información y administración de las carreras - Permite ver, crear, editar y eliminar carreras',
+    'projects.copaPiston.gallery.descriptionDrivers':
+      'Información y administración de los pilotos - Permite ver, crear y editar pilotos',
+    'projects.copaPiston.gallery.descriptionLogin':
+      'Configuración de la clasificación e inicio de sesión',
 
     'projects.githubSearcher': 'GitHub Searcher',
     'projects.githubSearcher.description':

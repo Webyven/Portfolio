@@ -71,9 +71,39 @@ export const projectsData: Project[] = [
         descriptionKey: 'projects.cinemaNight.gallery.descriptionHome',
       },
       {
+        src: 'https://i.postimg.cc/bJZ0b4FH/Noche-de-cine-Pel-culas.png',
+        alt: 'Noche de cine - Movies',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies',
+      },
+      {
+        src: 'https://i.postimg.cc/vmqL4GXZ/Noche-de-cine-Pel-culas-3.png',
+        alt: 'Noche de cine - Movies',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies2',
+      },
+      {
         src: 'https://i.postimg.cc/Fzg4xCY1/Screenshot-2025-05-29-at-00-06-29-Noche-de-cine.png',
         alt: 'Noche de cine - User configuration',
         descriptionKey: 'projects.cinemaNight.gallery.descriptionUserConfig',
+      },
+      {
+        src: 'https://i.postimg.cc/13R9vScS/Screenshot-2025-05-29-at-00-21-19-Noche-de-cine.png',
+        alt: 'Noche de cine - Proposals',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionProposals',
+      },
+      {
+        src: 'https://i.postimg.cc/vHs86f4c/Screenshot-2025-05-29-at-00-23-16-Noche-de-cine.png',
+        alt: 'Noche de cine - Votation',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionVotation',
+      },
+      {
+        src: 'https://i.postimg.cc/2yv49hY1/Noche-de-cine-Resultados.png',
+        alt: 'Noche de cine - Results',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults',
+      },
+      {
+        src: 'https://i.postimg.cc/k4LQyw0r/Noche-de-cine-Resultados-2.png',
+        alt: 'Noche de cine - Results',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults2',
       },
       {
         src: 'https://i.postimg.cc/d1CvhVv2/Screenshot-2025-05-29-at-00-07-46-Noche-de-cine-Admin.png',
@@ -90,36 +120,6 @@ export const projectsData: Project[] = [
         src: 'https://i.postimg.cc/Z5fJgQVd/Screenshot-2025-05-29-at-00-09-57-Noche-de-cine-Admin.png',
         alt: 'Noche de cine - Admin Movies Page',
         descriptionKey: 'projects.cinemaNight.gallery.descriptionAdminMovies',
-      },
-      {
-        src: 'https://i.postimg.cc/13R9vScS/Screenshot-2025-05-29-at-00-21-19-Noche-de-cine.png',
-        alt: 'Noche de cine - Proposals',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionProposals',
-      },
-      {
-        src: 'https://i.postimg.cc/vHs86f4c/Screenshot-2025-05-29-at-00-23-16-Noche-de-cine.png',
-        alt: 'Noche de cine - Votation',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionVotation',
-      },
-      {
-        src: 'https://i.postimg.cc/bJZ0b4FH/Noche-de-cine-Pel-culas.png',
-        alt: 'Noche de cine - Movies',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies',
-      },
-      {
-        src: 'https://i.postimg.cc/vmqL4GXZ/Noche-de-cine-Pel-culas-3.png',
-        alt: 'Noche de cine - Movies',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies2',
-      },
-      {
-        src: 'https://i.postimg.cc/2yv49hY1/Noche-de-cine-Resultados.png',
-        alt: 'Noche de cine - Results',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults',
-      },
-      {
-        src: 'https://i.postimg.cc/k4LQyw0r/Noche-de-cine-Resultados-2.png',
-        alt: 'Noche de cine - Results',
-        descriptionKey: 'projects.cinemaNight.gallery.descriptionResults2',
       },
     ],
   },
@@ -138,12 +138,42 @@ export const projectsData: Project[] = [
       {
         icon: <Github size={20} />,
         label: 'GitHub',
-        url: 'https://github.com/tuusuario/pool-counters',
+        url: 'https://github.com/Webyven/PoolCounters',
       },
       {
         icon: <Download size={20} />,
         label: 'Drive',
         url: 'https://drive.google.com/file/d/1DekcVAHEMWxEllEVrDEmsMona_bAtInH/view?usp=drive_link',
+      },
+    ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/wMkR2gCS/Pool-Counters-a3-A5fp6u-Sg.png',
+        alt: 'Pool Counters - Home',
+        descriptionKey: 'projects.poolCounters.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/mZ39ByP8/Pool-Counters-FJCIf-Anc-GM.png',
+        alt: 'Pool Counters - Pool Screen',
+        descriptionKey: 'projects.poolCounters.gallery.descriptionPoolScreen',
+      },
+      {
+        src: 'https://i.postimg.cc/T1hv7cFf/Pool-Counters-Kfqvbrj-EB0.png',
+        alt: 'Pool Counters - Counters Configuration Screen',
+        descriptionKey:
+          'projects.poolCounters.gallery.descriptionCountersConfigScreen',
+      },
+      {
+        src: 'https://i.postimg.cc/HnKDfy15/Pool-Counters-Rjz-Dy-Ktybr.png',
+        alt: 'Pool Counters - Pool Configuration Screen',
+        descriptionKey:
+          'projects.poolCounters.gallery.descriptionPoolConfigScreen',
+      },
+      {
+        src: 'https://i.postimg.cc/h43BJHQj/Pool-Counters-XFe1jtwp-QU.png',
+        alt: 'Pool Counters - Champion Updater Screen',
+        descriptionKey:
+          'projects.poolCounters.gallery.descriptionChampionUpdaterScreen',
       },
     ],
   },
@@ -176,7 +206,31 @@ export const projectsData: Project[] = [
     titleKey: 'BTC Tracker',
     descriptionKey: 'projects.btcTracker.description',
     longDescriptionKey: 'projects.btcTracker.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
+    technologies: [
+      'C#',
+      '.NET Framework',
+      'Winforms',
+      'Web Scrapping',
+      'Webhooks',
+    ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/vZsSDzhT/BTC-Tracking-wqo7-QXRVy1.png',
+        alt: 'BTC Tracker - Home',
+        descriptionKey: 'projects.btcTracker.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/13r7Fq7H/BTC-Tracking-8-Zv4a1z-Xve.png',
+        alt: 'BTC Tracker - Alert',
+        descriptionKey: 'projects.btcTracker.gallery.descriptionAlert',
+      },
+      {
+        src: 'https://i.postimg.cc/Gp37xmZ1/image.png',
+        alt: 'BTC Tracker - Discord Notifications',
+        descriptionKey:
+          'projects.btcTracker.gallery.descriptionDiscordNotifications',
+      },
+    ],
   },
   // Los siguientes solo se mostrarán en el modal
   {
@@ -208,6 +262,20 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.autocompleteShortcuts.description',
     longDescriptionKey: 'projects.autocompleteShortcuts.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/XJ6YZtrm/Autocomplete-Shortcuts-n-Ao-Vy-Bfsu-M.png',
+        alt: 'Autocomplete Shortcuts - Home',
+        descriptionKey:
+          'projects.autocompleteShortcuts.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/LsYJgzNY/Preview-Auto-Complete.gif',
+        alt: 'Autocomplete Shortcuts - Preview',
+        descriptionKey:
+          'projects.autocompleteShortcuts.gallery.descriptionPreview',
+      },
+    ],
   },
   {
     id: 7,
@@ -219,6 +287,19 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.filenameChanger.description',
     longDescriptionKey: 'projects.filenameChanger.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/9M7Gd3Fh/Filename-Changer-p-Sttm284-FQ.png',
+        alt: 'Filename Changer - Home',
+        descriptionKey: 'projects.filenameChanger.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/SK56YQ4d/Filename-Changer-Dpo-LFXCHq-B.png',
+        alt: 'Filename Changer - Success Message',
+        descriptionKey:
+          'projects.filenameChanger.gallery.descriptionSuccessExample',
+      },
+    ],
   },
   {
     id: 8,
@@ -242,6 +323,38 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.copaPiston.description',
     longDescriptionKey: 'projects.copaPiston.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'SQL', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/rs7N68nz/Copa-Pist-n-ac-ZQYci-Qe2.png',
+        alt: 'Copa Pistón - Loading Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionLoading',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/RCYRJRS9/Copa-Pist-n-Erp4-FZq-IKJ.png',
+        alt: 'Copa Pistón - Ranking Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionRanking',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/Z58FgzrK/Copa-Pist-n-Wag-Wt-Ucra4.png',
+        alt: 'Copa Pistón - Races Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionRaces',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/htW1ptQ5/Copa-Pist-n-Pk-EMc8-NIdc.png',
+        alt: 'Copa Pistón - Drivers Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionDrivers',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/DybcrX0G/Copa-Pist-n-se-EBf-BZHyn.png',
+        alt: 'Copa Pistón - Login & Config Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionLogin',
+        style: {padding: '70px'},
+      },
+    ],
   },
   {
     id: 10,
@@ -312,6 +425,12 @@ export const projectsData: Project[] = [
         icon: <Globe size={20} />,
         label: 'Demo',
         url: 'https://webyven.github.io/Pokedux/',
+      },
+    ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/nc8mtwVs/Screenshot-2025-06-01-at-19-25-20-Pokedux.png',
+        alt: 'Pokedux - Home',
       },
     ],
   },

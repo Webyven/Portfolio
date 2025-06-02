@@ -131,7 +131,10 @@ const ContactSection: React.FC = () => {
                   </motion.div>
                 </div>
               </motion.div>
-              <motion.div
+              <motion.form
+                method='POST'
+                data-netlify='true'
+                name='contact'
                 variants={slideFromRight}
                 className='grow-3 text-start flex flex-col gap-3'
               >
@@ -254,7 +257,10 @@ const ContactSection: React.FC = () => {
                     }}
                   />
                 </div>
-                <div className='cursor-pointer w-fit select-none p-0.5 self-end'>
+                <button
+                  type='submit'
+                  className='cursor-pointer w-fit select-none p-0.5 self-end'
+                >
                   <div
                     className='w-full h-auto object-cover bg-[#222] hover:bg-[#0fa] transition-colors object-center p-[1px]'
                     style={{
@@ -273,8 +279,8 @@ const ContactSection: React.FC = () => {
                       {t('contact.message.send')}
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </button>
+              </motion.form>
             </motion.div>
           </div>
         </div>
