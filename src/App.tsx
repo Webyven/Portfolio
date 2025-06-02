@@ -9,6 +9,7 @@ import Header from './components/layout/Header'
 import Home from './pages/Home'
 import {LanguageProvider} from './hooks/LanguageContext'
 import Footer from './components/layout/Footer'
+import {Toaster} from 'react-hot-toast'
 
 // Definimos el componente App como un componente funcional de React con tipo de retorno explícito
 function App(): React.ReactElement {
@@ -35,6 +36,7 @@ function App(): React.ReactElement {
             <Footer />
           </div>
         </Router>
+        <Toaster position='bottom-right' />
       </LanguageProvider>
     </>
   )

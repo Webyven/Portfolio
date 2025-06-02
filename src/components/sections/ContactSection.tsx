@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
+import emailjs from '@emailjs/browser'
 import {motion} from 'framer-motion'
 import {useLanguage} from '../../hooks/LanguageContext'
 import {TextField} from '@mui/material'
+import toast from 'react-hot-toast'
 import {MapPin, Phone, Mail, Send} from 'lucide-react'
 import {
   stagger,
@@ -16,6 +18,35 @@ const ContactSection: React.FC = () => {
   const [nameInputValue, setNameInputValue] = useState('')
   const [emailInputValue, setEmailInputValue] = useState('')
   const [messageInputValue, setMessageInputValue] = useState('')
+  const form = useRef<HTMLFormElement>(null)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!form.current) return
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+          // Resetear el formulario después de enviar
+          setNameInputValue('')
+          setEmailInputValue('')
+          setMessageInputValue('')
+          toast.success(t('contact.success'))
+        },
+        (error) => {
+          console.log(error.text)
+          toast.error(t('contact.error'))
+        }
+      )
+  }
 
   return (
     <div
@@ -135,6 +166,8 @@ const ContactSection: React.FC = () => {
                 method='POST'
                 data-netlify='true'
                 name='contact'
+                ref={form}
+                onSubmit={handleSubmit}
                 variants={slideFromRight}
                 className='grow-3 text-start flex flex-col gap-3'
               >
