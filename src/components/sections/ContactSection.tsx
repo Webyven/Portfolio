@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import {useLanguage} from '../../hooks/LanguageContext'
 import {TextField} from '@mui/material'
 import toast from 'react-hot-toast'
-import {MapPin, Phone, Mail, Send} from 'lucide-react'
+import {MapPin, Phone, Mail, Send, LoaderCircle} from 'lucide-react'
 import {
   stagger,
   fadeInUp,
@@ -18,6 +18,7 @@ const ContactSection: React.FC = () => {
   const [nameInputValue, setNameInputValue] = useState('')
   const [emailInputValue, setEmailInputValue] = useState('')
   const [messageInputValue, setMessageInputValue] = useState('')
+  const [sending, setSending] = useState(false)
   const form = useRef<HTMLFormElement>(null)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,6 +26,7 @@ const ContactSection: React.FC = () => {
 
     if (!form.current) return
 
+    setSending(true)
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -33,17 +35,18 @@ const ContactSection: React.FC = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        () => {
           // Resetear el formulario después de enviar
           setNameInputValue('')
           setEmailInputValue('')
           setMessageInputValue('')
-          toast.success(t('contact.success'))
+          toast.success(t('contact.message.success'))
+          setSending(false)
         },
         (error) => {
           console.log(error.text)
-          toast.error(t('contact.error'))
+          toast.error(t('contact.message.error'))
+          setSending(false)
         }
       )
   }
@@ -184,6 +187,7 @@ const ContactSection: React.FC = () => {
                       label={t('contact.message.name')}
                       type='text'
                       name='name'
+                      required
                       rows={1}
                       variant='filled'
                       value={nameInputValue}
@@ -223,6 +227,7 @@ const ContactSection: React.FC = () => {
                       rows={1}
                       type='email'
                       name='email'
+                      required
                       variant='filled'
                       value={emailInputValue}
                       onChange={(e) => setEmailInputValue(e.target.value)}
@@ -262,6 +267,7 @@ const ContactSection: React.FC = () => {
                     multiline
                     type='text'
                     name='message'
+                    required
                     rows={5}
                     variant='filled'
                     value={messageInputValue}
@@ -299,23 +305,37 @@ const ContactSection: React.FC = () => {
                 <button
                   type='submit'
                   className='cursor-pointer w-fit select-none p-0.5 self-end'
+                  disabled={sending}
                 >
                   <div
                     className='w-full h-auto object-cover bg-[#222] hover:bg-[#0fa] transition-colors object-center p-[1px]'
                     style={{
                       clipPath:
-                        'polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 80%)',
+                        'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
                     }}
                   >
                     <div
                       className='w-full flex flex-row gap-3 items-center justify-center h-10 bg-[#090909] hover:bg-[#050505] transition-colors object-center px-4 pe-5'
                       style={{
                         clipPath:
-                          'polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 80%)',
+                          'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
                       }}
                     >
-                      <Send size={18} />
-                      {t('contact.message.send')}
+                      {sending ? (
+                        <>
+                          <LoaderCircle
+                            size={20}
+                            color='#0fa'
+                            className='animate-spin'
+                          />
+                          {t('contact.message.sending')}
+                        </>
+                      ) : (
+                        <>
+                          <Send size={18} />
+                          {t('contact.message.send')}
+                        </>
+                      )}
                     </div>
                   </div>
                 </button>

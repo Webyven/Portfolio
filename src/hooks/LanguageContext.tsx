@@ -200,9 +200,12 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message.email': 'Email',
     'contact.message.message': 'Message',
     'contact.message.send': 'Send',
+    'contact.message.sending': 'Sending...',
 
-    'contact.message.success': 'Message sent!',
-    'contact.message.error': 'Error sending message.',
+    'contact.message.success':
+      'Mensaje recibido. Muchas gracias por contactarte!',
+    'contact.message.error':
+      'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
 
     'contact.p1':
       'I am interested in freelance web development opportunities, either full-time or part-time.',
@@ -400,9 +403,11 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message.email': 'Correo electrónico',
     'contact.message.message': 'Mensaje',
     'contact.message.send': 'Enviar',
-
-    'contact.message.success': 'Mensaje enviado!',
-    'contact.message.error': 'Error al enviar el mensaje.',
+    'contact.message.sending': 'Enviando...',
+    'contact.message.success':
+      'Mensaje recibido. Muchas gracias por contactarte!',
+    'contact.message.error':
+      'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
 
     'contact.p1':
       'Estoy interesado en oportunidades de desarrollo web, tanto freelance como en relación de dependencia.',
