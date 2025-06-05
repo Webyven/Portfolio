@@ -71,6 +71,11 @@ export const projectsData: Project[] = [
         descriptionKey: 'projects.cinemaNight.gallery.descriptionHome',
       },
       {
+        src: 'https://i.postimg.cc/Qdk52sWM/Whats-App-Image-2025-06-02-at-16-29-37-1.jpg',
+        alt: 'Noche de cine - Mobile Home',
+        descriptionKey: 'projects.cinemaNight.gallery.descriptionMobileHome',
+      },
+      {
         src: 'https://i.postimg.cc/bJZ0b4FH/Noche-de-cine-Pel-culas.png',
         alt: 'Noche de cine - Movies',
         descriptionKey: 'projects.cinemaNight.gallery.descriptionMovies',
@@ -94,6 +99,12 @@ export const projectsData: Project[] = [
         src: 'https://i.postimg.cc/vHs86f4c/Screenshot-2025-05-29-at-00-23-16-Noche-de-cine.png',
         alt: 'Noche de cine - Votation',
         descriptionKey: 'projects.cinemaNight.gallery.descriptionVotation',
+      },
+      {
+        src: 'https://i.postimg.cc/fRhmqkyF/Whats-App-Image-2025-06-02-at-16-29-37.jpg',
+        alt: 'Noche de cine - Mobile Votation',
+        descriptionKey:
+          'projects.cinemaNight.gallery.descriptionMobileVotation',
       },
       {
         src: 'https://i.postimg.cc/2yv49hY1/Noche-de-cine-Resultados.png',

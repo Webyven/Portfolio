@@ -57,6 +57,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Cinema Night is a collaborative movie voting platform made for a group of friends to decide what to watch together. Users can propose up to two movies per session, veto films they don’t want to see, and vote by ranking their interest. Once everyone has voted, the app generates a podium to declare the winner. It also includes features like auto-proposals, personalized vetoes, and persistent lists of watched and unwatched movies. The project is built with React.js and uses websockets for real-time updates. It was developed with real social use in mind and continues evolving based on group feedback.',
     'projects.cinemaNight.gallery.descriptionHome':
       'Home screen - With statistics about sessions and movie catalog',
+    'projects.cinemaNight.gallery.descriptionMobileHome':
+      'Mobile home screen - Adaptable design for mobile devices',
     'projects.cinemaNight.gallery.descriptionMovies':
       'Movie description screen, with synopsis, genres and more',
     'projects.cinemaNight.gallery.descriptionMovies2':
@@ -67,6 +69,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Proposals screen - Allows proposing movies',
     'projects.cinemaNight.gallery.descriptionVotation':
       'Voting screen - Allows voting by ordering movies according to interest',
+    'projects.cinemaNight.gallery.descriptionMobileVotation':
+      'Mobile voting screen - Adaptable design for mobile devices',
     'projects.cinemaNight.gallery.descriptionResults':
       'Results screen - Shows the podium with the most voted movies',
     'projects.cinemaNight.gallery.descriptionResults2':

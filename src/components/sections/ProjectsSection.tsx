@@ -28,6 +28,11 @@ interface Project {
   gallery?: GalleryImage[]
 }
 
+const preloadImage = (src: string) => {
+  const img = new Image()
+  img.src = src
+}
+
 const ProjectsSection: React.FC = () => {
   const {t} = useLanguage()
   const {width} = useWindowSize()
@@ -82,6 +87,21 @@ const ProjectsSection: React.FC = () => {
       }
     }
   }, [selectedProject, selectedProjectData, selectedProjectImage])
+
+  useEffect(() => {
+    // Precargar todas las imágenes de los proyectos
+    projects.forEach((project) => {
+      // Precargar imagen principal
+      preloadImage(project.image)
+
+      // Precargar imágenes de la galería
+      if (project.gallery) {
+        project.gallery.forEach((galleryImage) => {
+          preloadImage(galleryImage.src)
+        })
+      }
+    })
+  }, [projects])
 
   // Renderizar para móviles
   if (isMobile) {
@@ -327,7 +347,7 @@ const ProjectsSection: React.FC = () => {
                         />
                         {selectedProjectImage?.descriptionKey ? (
                           <div
-                            className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/45 from-10% via-[#111]75 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
+                            className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/50 from-10% via-[#111]75 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
                             style={{
                               clipPath:
                                 'polygon(13px 0, 100% 0%, 100% 100%, 0 100%)',
