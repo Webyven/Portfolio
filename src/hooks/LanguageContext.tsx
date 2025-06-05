@@ -154,7 +154,8 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.copaPiston.longDescription':
       'Copa Pistón is a Windows desktop app designed to track kart racing tournaments with friends. Users can register the top finishers of each race, log fastest laps, attach files per race, and manage all data through a cloud-hosted SQL database. It also calculates championship points and generates a leaderboard. What started as a fun way to bring structure to friendly races turned into a robust system tailored for real events.',
     'projects.copaPiston.gallery.descriptionLoading': 'Loading screen',
-    'projects.copaPiston.gallery.descriptionRanking': 'Ranking screen',
+    'projects.copaPiston.gallery.descriptionRanking':
+      'Ranking screen - Showing the championship podium and detailed points for each driver',
     'projects.copaPiston.gallery.descriptionRaces':
       'Race information and management - Allows viewing, creating, editing and deleting races',
     'projects.copaPiston.gallery.descriptionDrivers':
@@ -184,6 +185,16 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.alternate.description': 'My first game, published on Play Store.',
     'projects.alternate.longDescription':
       'Alternate is my first game, developed in Unity with C# and published on the Play Store. It combines elements from Flappy Bird and Geometry Dash—players control a ball that alternates gravity to avoid obstacles and score points. The game features Google Play achievements and leaderboards to compete with other users. With nearly 20 active players, it was a passion project that taught me about game design, physics, and mobile publishing.',
+    'projects.alternate.gallery.descriptionHome':
+      'Main screen - Where the game starts',
+    'projects.alternate.gallery.descriptionCustomization':
+      'Customization screen - Where the player can customize the game changing the colors',
+    'projects.alternate.gallery.descriptionGameplay':
+      'PC Gameplay - Recorded on PC for better quality',
+    'projects.alternate.gallery.descriptionGooglePlayAchievements':
+      'Integration with Google Play Achievements, where the player can earn achievements',
+    'projects.alternate.gallery.descriptionGooglePlayLeaderboards':
+      'Integration with Google Play Leaderboards, where the player can compete with other players',
 
     'projects.fedeteriApp': 'FedeteriApp',
 
@@ -262,6 +273,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Noche de Cine es una aplicación web pensada para organizar votaciones de películas entre amigos. Cada usuario puede proponer películas, vetar aquellas que no desea ver si no participa, y gestionar sus listas de películas vistas y no vistas. Durante la fase de votación, los usuarios ordenan las películas según sus preferencias, y el sistema genera un podio una vez que todos han votado. El proyecto surgió de una necesidad real con mis amigos, y fue creciendo con el tiempo hasta convertirse en una herramienta completa hecha con React y WebSockets.',
     'projects.cinemaNight.gallery.descriptionHome':
       'Pantalla principal - Con estadísticas sobre las sesiones y el catálogo de películas',
+    'projects.cinemaNight.gallery.descriptionMobileHome':
+      'Pantalla principal móvil - Diseño adaptable para dispositivos móviles',
     'projects.cinemaNight.gallery.descriptionMovies':
       'Pantalla de descripción películas, con sinopsis, géneros y más',
     'projects.cinemaNight.gallery.descriptionMovies2':
@@ -272,6 +285,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Pantalla de propuestas - Permite proponer películas',
     'projects.cinemaNight.gallery.descriptionVotation':
       'Pantalla de votación - Permite votar ordenando las películas según su interés',
+    'projects.cinemaNight.gallery.descriptionMobileVotation':
+      'Pantalla de votación móvil - Diseño adaptable para dispositivos móviles',
     'projects.cinemaNight.gallery.descriptionResults':
       'Pantalla de resultados - Muestra el podio con las películas más votadas',
     'projects.cinemaNight.gallery.descriptionResults2':
@@ -356,7 +371,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Copa Pistón es una aplicación de escritorio para Windows pensada para registrar torneos de karting entre amigos. Permite guardar quiénes fueron los primeros puestos de cada carrera, quién hizo la vuelta más rápida, adjuntar archivos por carrera, y almacenar toda la información en una base de datos SQL hosteada en la nube. También calcula los puntos de cada jugador y genera una tabla de posiciones. Fue creada para llevar un mejor control de nuestras carreras y terminó siendo un proyecto divertido y útil.',
     'projects.copaPiston.gallery.descriptionLoading': 'Pantalla de carga',
     'projects.copaPiston.gallery.descriptionRanking':
-      'Pantalla de clasificación',
+      'Pantalla de clasificación - Muestra el podio del campeonato y los puntos detallados de cada piloto',
     'projects.copaPiston.gallery.descriptionRaces':
       'Información y administración de las carreras - Permite ver, crear, editar y eliminar carreras',
     'projects.copaPiston.gallery.descriptionDrivers':
@@ -387,8 +402,20 @@ const translations: Record<Language, Record<string, string>> = {
       'Mi primer juego, publicado en Play Store.',
     'projects.alternate.longDescription':
       'Alternate fue mi primer juego, desarrollado en Unity con C# y publicado en la Play Store. Es una mezcla entre Flappy Bird y Geometry Dash, donde controlás una pelotita que alterna la gravedad para esquivar obstáculos y sumar puntos. Incluye sistema de logros y tabla de puntuaciones mediante Google Play Juegos. Fue jugado por casi 20 personas, y fue una experiencia muy valiosa que me permitió aprender sobre diseño de juegos, físicas y publicación en Android.',
+    'projects.alternate.gallery.descriptionHome':
+      'Pantalla principal - Donde comienza el juego',
+    'projects.alternate.gallery.descriptionCustomization':
+      'Pantalla de personalización - Donde el jugador puede personalizar el juego cambiando los colores',
+    'projects.alternate.gallery.descriptionGameplay':
+      'Gameplay en PC - Grabado en PC para mejor calidad',
+    'projects.alternate.gallery.descriptionGooglePlayAchievements':
+      'Integración con logros de Google Play, donde el jugador puede ganar logros',
+    'projects.alternate.gallery.descriptionGooglePlayLeaderboards':
+      'Integración con tablas de clasificación de Google Play, donde el jugador puede competir con otros jugadores',
 
     'projects.fedeteriApp': 'FedeteriApp',
+    'projects.fedeteriApp.description':
+      'Una app de trueques de ferreteria para una compañía de ferreterías ficticia para una materia de la universidad.',
 
     'projects.cedicaPrivate': 'CEDICA',
 

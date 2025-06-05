@@ -14,6 +14,7 @@ export interface GalleryImage {
   alt: string
   descriptionKey?: string
   style?: React.CSSProperties
+  thumbnailSrc?: string
 }
 
 export interface Project {
@@ -455,6 +456,40 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.alternate.description',
     longDescriptionKey: 'projects.alternate.longDescription',
     technologies: ['C#', 'Unity', 'Windows', 'Android', 'Play Store'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/cHwHk6MC/Whats-App-Image-2025-06-02-at-16-29-38.jpg',
+        alt: 'Alternate - Home',
+        descriptionKey: 'projects.alternate.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/XYGsP0hm/Alternate-py-CU7-NYlx8.png',
+        alt: 'Alternate - Customization',
+        descriptionKey: 'projects.alternate.gallery.descriptionCustomization',
+      },
+      {
+        src: 'https://i.imgur.com/MhL4y4I.mp4',
+        alt: 'Alternate - Gameplay',
+        descriptionKey: 'projects.alternate.gallery.descriptionGameplay',
+        thumbnailSrc: 'https://i.postimg.cc/R0x2QFFX/MhL4y4I.jpg',
+      },
+      {
+        src: 'https://i.postimg.cc/GmWXw5n2/Whats-App-Image-2025-06-02-at-16-29-37-2.jpg',
+        alt: 'Alternate - Pause Screen',
+      },
+      {
+        src: 'https://i.postimg.cc/SKcDyfmG/Whats-App-Image-2025-06-02-at-16-29-38-1.jpg',
+        alt: 'Alternate - Google Play Achievements',
+        descriptionKey:
+          'projects.alternate.gallery.descriptionGooglePlayAchievements',
+      },
+      {
+        src: 'https://i.postimg.cc/NM4DXG99/Whats-App-Image-2025-06-02-at-16-29-38-2.jpg',
+        alt: 'Alternate - Google Play Leaderboards',
+        descriptionKey:
+          'projects.alternate.gallery.descriptionGooglePlayLeaderboards',
+      },
+    ],
   },
   {
     id: 14,

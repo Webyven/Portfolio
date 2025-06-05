@@ -33,6 +33,12 @@ const preloadImage = (src: string) => {
   img.src = src
 }
 
+const preloadVideo = (src: string) => {
+  const video = document.createElement('video')
+  video.src = src
+  video.load()
+}
+
 const ProjectsSection: React.FC = () => {
   const {t} = useLanguage()
   const {width} = useWindowSize()
@@ -97,7 +103,11 @@ const ProjectsSection: React.FC = () => {
       // Precargar imágenes de la galería
       if (project.gallery) {
         project.gallery.forEach((galleryImage) => {
-          preloadImage(galleryImage.src)
+          if (galleryImage.src.endsWith('.mp4')) {
+            preloadVideo(galleryImage.src)
+          } else {
+            preloadImage(galleryImage.src)
+          }
         })
       }
     })
@@ -328,23 +338,38 @@ const ProjectsSection: React.FC = () => {
                               : '100%',
                         }}
                       >
-                        <img
-                          src={
-                            selectedProjectImage
-                              ? selectedProjectImage.src
-                              : selectedProjectData.image
-                          }
-                          alt={
-                            selectedProjectImage
-                              ? selectedProjectImage.alt
-                              : selectedProjectData.imageAlt
-                          }
-                          style={{
-                            objectFit: 'scale-down',
-                            ...(selectedProjectImage?.style || {}),
-                          }}
-                          className='w-full h-full'
-                        />
+                        {selectedProjectImage?.src.endsWith('.mp4') ? (
+                          <video
+                            src={selectedProjectImage.src}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            style={{
+                              objectFit: 'scale-down',
+                              ...(selectedProjectImage?.style || {}),
+                            }}
+                            className='w-full h-full py-10'
+                          ></video>
+                        ) : (
+                          <img
+                            src={
+                              selectedProjectImage
+                                ? selectedProjectImage.src
+                                : selectedProjectData.image
+                            }
+                            alt={
+                              selectedProjectImage
+                                ? selectedProjectImage.alt
+                                : selectedProjectData.imageAlt
+                            }
+                            style={{
+                              objectFit: 'scale-down',
+                              ...(selectedProjectImage?.style || {}),
+                            }}
+                            className='w-full h-full'
+                          />
+                        )}
                         {selectedProjectImage?.descriptionKey ? (
                           <div
                             className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/50 from-10% via-[#111]75 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
@@ -384,20 +409,46 @@ const ProjectsSection: React.FC = () => {
                               }}
                             >
                               {selectedProjectData.gallery &&
-                                selectedProjectData.gallery.map((x, index) => (
-                                  <img
-                                    onClick={() => setSelectedProjectImage(x)}
-                                    key={index}
-                                    src={x.src}
-                                    alt={x.alt}
-                                    className={`w-22 h-14 cursor-pointer border-1 ${
-                                      selectedProjectImage &&
-                                      selectedProjectImage.src === x.src
-                                        ? 'border-[#0fa] opacity-100'
-                                        : 'border-[#252525] hover:border-[#aaa] opacity-40 hover:opacity-75'
-                                    } transition-all object-cover`}
-                                  />
-                                ))}
+                                selectedProjectData.gallery.map((x, index) =>
+                                  x.src.endsWith('.mp4') ? (
+                                    <div
+                                      onClick={() => setSelectedProjectImage(x)}
+                                      key={index}
+                                      className={`w-22 h-14 cursor-pointer border-1 relative ${
+                                        selectedProjectImage &&
+                                        selectedProjectImage.src === x.src
+                                          ? 'border-[#0fa] opacity-100'
+                                          : 'border-[#252525] hover:border-[#aaa] opacity-40 hover:opacity-75'
+                                      } transition-all`}
+                                    >
+                                      {/* Imagen de previsualización para videos */}
+                                      <img
+                                        src={x.thumbnailSrc || ''}
+                                        alt={x.alt}
+                                        className='w-full h-full object-cover'
+                                      />
+                                      {/* Indicador de video */}
+                                      <div className='absolute inset-0 flex items-center justify-center'>
+                                        <div className='w-5 h-5 bg-black/50 rounded-full flex items-center justify-center'>
+                                          <div className='w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-l-white border-b-[4px] border-b-transparent ml-0.5'></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <img
+                                      onClick={() => setSelectedProjectImage(x)}
+                                      key={index}
+                                      src={x.src}
+                                      alt={x.alt}
+                                      className={`w-22 h-14 cursor-pointer border-1 ${
+                                        selectedProjectImage &&
+                                        selectedProjectImage.src === x.src
+                                          ? 'border-[#0fa] opacity-100'
+                                          : 'border-[#252525] hover:border-[#aaa] opacity-40 hover:opacity-75'
+                                      } transition-all object-cover`}
+                                    />
+                                  )
+                                )}
                             </div>
                             <div
                               className='h-full bg px-2 cursor-pointer bg-[#050505] hover:bg-[#090909] transition-all flex justify-center items-center'
