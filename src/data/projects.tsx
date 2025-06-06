@@ -55,12 +55,12 @@ export const projectsData: Project[] = [
     ],
     links: [
       {
-        icon: <Github size={20} />,
+        icon: <Github size={18} />,
         label: 'GitHub',
         url: 'https://github.com/Webyven/CinemaNight',
       },
       {
-        icon: <Globe size={20} />,
+        icon: <Globe size={18} />,
         label: 'Demo',
         url: 'https://noche-de-cine.vercel.app',
       },
@@ -148,12 +148,12 @@ export const projectsData: Project[] = [
     technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
     links: [
       {
-        icon: <Github size={20} />,
+        icon: <Github size={18} />,
         label: 'GitHub',
         url: 'https://github.com/Webyven/PoolCounters',
       },
       {
-        icon: <Download size={20} />,
+        icon: <Download size={18} />,
         label: 'Drive',
         url: 'https://drive.google.com/file/d/1DekcVAHEMWxEllEVrDEmsMona_bAtInH/view?usp=drive_link',
       },
@@ -202,7 +202,7 @@ export const projectsData: Project[] = [
     technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
     links: [
       {
-        icon: <Download size={20} />,
+        icon: <Download size={18} />,
         label: 'Drive',
         url: 'https://drive.google.com/file/d/1jpAcCNzUgzaCoO17usvMSSw6_5yO5C6e/view?usp=drive_link',
       },
@@ -288,211 +288,6 @@ export const projectsData: Project[] = [
   // Los siguientes solo se mostrarán en el modal
   {
     id: 5,
-    categoryKey: 'projects.webDevelopment',
-    icon: <Globe />,
-    image: 'https://i.postimg.cc/c1XPXB2V/My-Portfolio.webp',
-    imageAlt: 'Portfolio - Logo',
-    imgStyle: {padding: 3},
-    titleKey: 'projects.myPortfolio',
-    descriptionKey: 'projects.myPortfolio.description',
-    longDescriptionKey: 'projects.myPortfolio.longDescription',
-    technologies: [
-      'Vite',
-      'React',
-      'TypeScript',
-      'Framer Motion',
-      'Tailwind CSS',
-    ],
-  },
-  {
-    id: 6,
-    categoryKey: 'projects.desktopDevelopment',
-    icon: <Monitor />,
-    image: 'https://i.postimg.cc/NMQPxK4s/Autocomplete-Shortcuts.webp',
-    imageAlt: 'Autocomplete Shortcuts - Logo',
-    imgStyle: {padding: 7, paddingLeft: 8, paddingRight: 6},
-    titleKey: 'projects.autocompleteShortcuts',
-    descriptionKey: 'projects.autocompleteShortcuts.description',
-    longDescriptionKey: 'projects.autocompleteShortcuts.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
-    gallery: [
-      {
-        src: 'https://i.postimg.cc/XJ6YZtrm/Autocomplete-Shortcuts-n-Ao-Vy-Bfsu-M.png',
-        alt: 'Autocomplete Shortcuts - Home',
-        descriptionKey:
-          'projects.autocompleteShortcuts.gallery.descriptionHome',
-      },
-      {
-        src: 'https://i.postimg.cc/LsYJgzNY/Preview-Auto-Complete.gif',
-        alt: 'Autocomplete Shortcuts - Preview',
-        descriptionKey:
-          'projects.autocompleteShortcuts.gallery.descriptionPreview',
-      },
-    ],
-  },
-  {
-    id: 7,
-    categoryKey: 'projects.desktopDevelopment',
-    icon: <Monitor />,
-    image: 'https://i.postimg.cc/cCb9ZXNC/Filename-Changer.webp',
-    imageAlt: 'Filename Changer - Logo',
-    titleKey: 'projects.filenameChanger',
-    descriptionKey: 'projects.filenameChanger.description',
-    longDescriptionKey: 'projects.filenameChanger.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
-    gallery: [
-      {
-        src: 'https://i.postimg.cc/9M7Gd3Fh/Filename-Changer-p-Sttm284-FQ.png',
-        alt: 'Filename Changer - Home',
-        descriptionKey: 'projects.filenameChanger.gallery.descriptionHome',
-      },
-      {
-        src: 'https://i.postimg.cc/SK56YQ4d/Filename-Changer-Dpo-LFXCHq-B.png',
-        alt: 'Filename Changer - Success Message',
-        descriptionKey:
-          'projects.filenameChanger.gallery.descriptionSuccessExample',
-      },
-    ],
-  },
-  {
-    id: 8,
-    categoryKey: 'projects.desktopDevelopment',
-    icon: <Monitor />,
-    image: 'https://i.postimg.cc/FHJqF5z4/Reworked-Tudu.webp',
-    imageAlt: 'Reworked Tudú - Logo',
-    titleKey: 'projects.reworkedTudu',
-    descriptionKey: 'projects.reworkedTudu.description',
-    longDescriptionKey: 'projects.reworkedTudu.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
-  },
-  {
-    id: 9,
-    categoryKey: 'projects.desktopDevelopment',
-    icon: <Globe />,
-    image: 'https://i.postimg.cc/7h6spjdj/Copa-Piston.webp',
-    imageAlt: 'Copa Pistón - Logo',
-    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
-    titleKey: 'projects.copaPiston',
-    descriptionKey: 'projects.copaPiston.description',
-    longDescriptionKey: 'projects.copaPiston.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'SQL', 'Windows'],
-    gallery: [
-      {
-        src: 'https://i.postimg.cc/rs7N68nz/Copa-Pist-n-ac-ZQYci-Qe2.png',
-        alt: 'Copa Pistón - Loading Screen',
-        descriptionKey: 'projects.copaPiston.gallery.descriptionLoading',
-        style: {padding: '70px'},
-      },
-      {
-        src: 'https://i.postimg.cc/RCYRJRS9/Copa-Pist-n-Erp4-FZq-IKJ.png',
-        alt: 'Copa Pistón - Ranking Screen',
-        descriptionKey: 'projects.copaPiston.gallery.descriptionRanking',
-        style: {padding: '70px'},
-      },
-      {
-        src: 'https://i.postimg.cc/Z58FgzrK/Copa-Pist-n-Wag-Wt-Ucra4.png',
-        alt: 'Copa Pistón - Races Screen',
-        descriptionKey: 'projects.copaPiston.gallery.descriptionRaces',
-        style: {padding: '70px'},
-      },
-      {
-        src: 'https://i.postimg.cc/htW1ptQ5/Copa-Pist-n-Pk-EMc8-NIdc.png',
-        alt: 'Copa Pistón - Drivers Screen',
-        descriptionKey: 'projects.copaPiston.gallery.descriptionDrivers',
-        style: {padding: '70px'},
-      },
-      {
-        src: 'https://i.postimg.cc/DybcrX0G/Copa-Pist-n-se-EBf-BZHyn.png',
-        alt: 'Copa Pistón - Login & Config Screen',
-        descriptionKey: 'projects.copaPiston.gallery.descriptionLogin',
-        style: {padding: '70px'},
-      },
-    ],
-  },
-  {
-    id: 10,
-    categoryKey: 'projects.webDevelopment',
-    icon: <Monitor />,
-    image: 'https://i.postimg.cc/c195Q48W/GitHub.webp',
-    imageAlt: 'Github Searcher - Logo',
-    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
-    titleKey: 'projects.githubSearcher',
-    descriptionKey: 'projects.githubSearcher.description',
-    longDescriptionKey: 'projects.githubSearcher.longDescription',
-    technologies: ['React', 'Vite', 'JavaScript', 'HTML', 'CSS'],
-    links: [
-      {
-        icon: <Github size={20} />,
-        label: 'GitHub',
-        url: 'https://github.com/Webyven/Github-Searcher',
-      },
-      {
-        icon: <Globe size={20} />,
-        label: 'Demo',
-        url: 'https://webyven.github.io/Github-Searcher/',
-      },
-    ],
-  },
-  /*{
-    id: 11,
-    categoryKey: 'projects.webDevelopment',
-    icon: <Monitor />,
-    image: 'https://i.postimg.cc/8P7XwQh6/Google.webp',
-    imageAlt: 'Google Clone - Logo',
-    titleKey: 'projects.googleClone',
-    descriptionKey: 'projects.googleClone.description',
-    longDescriptionKey: 'projects.googleClone.longDescription',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    links: [
-      {
-        icon: <Github size={20} />,
-        label: 'GitHub',
-        url: 'https://github.com/Webyven/Google-Clone',
-      },
-      {
-        icon: <Globe size={20} />,
-        label: 'Demo',
-        url: 'https:/webyven.github.io/Google-Clone/',
-      },
-    ],
-    imgStyle: {padding: 7},
-  },*/
-  {
-    id: 12,
-    categoryKey: 'projects.webDevelopment',
-    icon: <Monitor />,
-    image: PokeduxIcon,
-    imageAlt: 'Pokedux - Logo',
-    imgStyle: {
-      padding: 5,
-      paddingLeft: 6,
-      paddingRight: 4,
-    },
-    titleKey: 'projects.pokedux',
-    descriptionKey: 'projects.pokedux.description',
-    longDescriptionKey: 'projects.pokedux.longDescription',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    links: [
-      {
-        icon: <Github size={20} />,
-        label: 'GitHub',
-        url: 'https://github.com/Webyven/Pokedux',
-      },
-      {
-        icon: <Globe size={20} />,
-        label: 'Demo',
-        url: 'https://webyven.github.io/Pokedux/',
-      },
-    ],
-    gallery: [
-      {
-        src: 'https://i.postimg.cc/nc8mtwVs/Screenshot-2025-06-01-at-19-25-20-Pokedux.png',
-        alt: 'Pokedux - Home',
-      },
-    ],
-  },
-  {
-    id: 13,
     categoryKey: 'projects.gameDevelopment',
     icon: <Joystick />,
     image: 'https://i.postimg.cc/BvTVDT27/Alternate.webp',
@@ -537,7 +332,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 14,
+    id: 6,
     categoryKey: 'projects.webDevelopment',
     icon: <Globe />,
     image: 'https://i.postimg.cc/Hsx8YBz0/Fedeteri-App.webp',
@@ -549,14 +344,14 @@ export const projectsData: Project[] = [
     technologies: ['Next.JS', 'React.JS', 'Bootstrap', 'C#', '.NET', 'Swagger'],
     links: [
       {
-        icon: <Github size={20} />,
+        icon: <Github size={18} />,
         label: 'GitHub',
         url: 'https://github.com/Grupo-41/FedeteriApp',
       },
     ],
   },
   {
-    id: 15,
+    id: 7,
     categoryKey: 'projects.webDevelopment',
     icon: <Globe />,
     image: 'https://i.postimg.cc/htnjJsb3/Isotipo-CEDICA.webp',
@@ -568,10 +363,215 @@ export const projectsData: Project[] = [
     technologies: ['Flask', 'Python', 'HTML', 'CSS', 'JavaScript'],
     links: [
       {
-        icon: <Github size={20} />,
+        icon: <Github size={18} />,
         label: 'GitHub',
         url: 'https://github.com/EzequielReale/Proyecto-De-Software-2024-CEDICA',
       },
     ],
   },
+  {
+    id: 8,
+    categoryKey: 'projects.desktopDevelopment',
+    icon: <Globe />,
+    image: 'https://i.postimg.cc/7h6spjdj/Copa-Piston.webp',
+    imageAlt: 'Copa Pistón - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
+    titleKey: 'projects.copaPiston',
+    descriptionKey: 'projects.copaPiston.description',
+    longDescriptionKey: 'projects.copaPiston.longDescription',
+    technologies: ['C#', '.NET Framework', 'Winforms', 'SQL', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/rs7N68nz/Copa-Pist-n-ac-ZQYci-Qe2.png',
+        alt: 'Copa Pistón - Loading Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionLoading',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/RCYRJRS9/Copa-Pist-n-Erp4-FZq-IKJ.png',
+        alt: 'Copa Pistón - Ranking Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionRanking',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/Z58FgzrK/Copa-Pist-n-Wag-Wt-Ucra4.png',
+        alt: 'Copa Pistón - Races Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionRaces',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/htW1ptQ5/Copa-Pist-n-Pk-EMc8-NIdc.png',
+        alt: 'Copa Pistón - Drivers Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionDrivers',
+        style: {padding: '70px'},
+      },
+      {
+        src: 'https://i.postimg.cc/DybcrX0G/Copa-Pist-n-se-EBf-BZHyn.png',
+        alt: 'Copa Pistón - Login & Config Screen',
+        descriptionKey: 'projects.copaPiston.gallery.descriptionLogin',
+        style: {padding: '70px'},
+      },
+    ],
+  },
+  {
+    id: 9,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Globe />,
+    image: 'https://i.postimg.cc/c1XPXB2V/My-Portfolio.webp',
+    imageAlt: 'Portfolio - Logo',
+    imgStyle: {padding: 3},
+    titleKey: 'projects.myPortfolio',
+    descriptionKey: 'projects.myPortfolio.description',
+    longDescriptionKey: 'projects.myPortfolio.longDescription',
+    technologies: [
+      'Vite',
+      'React',
+      'TypeScript',
+      'Framer Motion',
+      'Tailwind CSS',
+    ],
+  },
+  {
+    id: 10,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Monitor />,
+    image: PokeduxIcon,
+    imageAlt: 'Pokedux - Logo',
+    imgStyle: {
+      padding: 5,
+      paddingLeft: 6,
+      paddingRight: 4,
+    },
+    titleKey: 'projects.pokedux',
+    descriptionKey: 'projects.pokedux.description',
+    longDescriptionKey: 'projects.pokedux.longDescription',
+    technologies: ['JavaScript', 'HTML', 'CSS'],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/Pokedux',
+      },
+      {
+        icon: <Globe size={18} />,
+        label: 'Demo',
+        url: 'https://webyven.github.io/Pokedux/',
+      },
+    ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/nc8mtwVs/Screenshot-2025-06-01-at-19-25-20-Pokedux.png',
+        alt: 'Pokedux - Home',
+      },
+    ],
+  },
+  {
+    id: 11,
+    categoryKey: 'projects.desktopDevelopment',
+    icon: <Monitor />,
+    image: 'https://i.postimg.cc/NMQPxK4s/Autocomplete-Shortcuts.webp',
+    imageAlt: 'Autocomplete Shortcuts - Logo',
+    imgStyle: {padding: 7, paddingLeft: 8, paddingRight: 6},
+    titleKey: 'projects.autocompleteShortcuts',
+    descriptionKey: 'projects.autocompleteShortcuts.description',
+    longDescriptionKey: 'projects.autocompleteShortcuts.longDescription',
+    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/XJ6YZtrm/Autocomplete-Shortcuts-n-Ao-Vy-Bfsu-M.png',
+        alt: 'Autocomplete Shortcuts - Home',
+        descriptionKey:
+          'projects.autocompleteShortcuts.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/LsYJgzNY/Preview-Auto-Complete.gif',
+        alt: 'Autocomplete Shortcuts - Preview',
+        descriptionKey:
+          'projects.autocompleteShortcuts.gallery.descriptionPreview',
+      },
+    ],
+  },
+  {
+    id: 12,
+    categoryKey: 'projects.desktopDevelopment',
+    icon: <Monitor />,
+    image: 'https://i.postimg.cc/cCb9ZXNC/Filename-Changer.webp',
+    imageAlt: 'Filename Changer - Logo',
+    titleKey: 'projects.filenameChanger',
+    descriptionKey: 'projects.filenameChanger.description',
+    longDescriptionKey: 'projects.filenameChanger.longDescription',
+    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/9M7Gd3Fh/Filename-Changer-p-Sttm284-FQ.png',
+        alt: 'Filename Changer - Home',
+        descriptionKey: 'projects.filenameChanger.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/SK56YQ4d/Filename-Changer-Dpo-LFXCHq-B.png',
+        alt: 'Filename Changer - Success Message',
+        descriptionKey:
+          'projects.filenameChanger.gallery.descriptionSuccessExample',
+      },
+    ],
+  },
+  {
+    id: 13,
+    categoryKey: 'projects.desktopDevelopment',
+    icon: <Monitor />,
+    image: 'https://i.postimg.cc/FHJqF5z4/Reworked-Tudu.webp',
+    imageAlt: 'Reworked Tudú - Logo',
+    titleKey: 'projects.reworkedTudu',
+    descriptionKey: 'projects.reworkedTudu.description',
+    longDescriptionKey: 'projects.reworkedTudu.longDescription',
+    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+  },
+  {
+    id: 14,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Monitor />,
+    image: 'https://i.postimg.cc/c195Q48W/GitHub.webp',
+    imageAlt: 'Github Searcher - Logo',
+    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
+    titleKey: 'projects.githubSearcher',
+    descriptionKey: 'projects.githubSearcher.description',
+    longDescriptionKey: 'projects.githubSearcher.longDescription',
+    technologies: ['React', 'Vite', 'JavaScript', 'HTML', 'CSS'],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/Github-Searcher',
+      },
+      {
+        icon: <Globe size={18} />,
+        label: 'Demo',
+        url: 'https://webyven.github.io/Github-Searcher/',
+      },
+    ],
+  },
+  /*{
+    id: 15,
+    categoryKey: 'projects.webDevelopment',
+    icon: <Monitor />,
+    image: 'https://i.postimg.cc/8P7XwQh6/Google.webp',
+    imageAlt: 'Google Clone - Logo',
+    titleKey: 'projects.googleClone',
+    descriptionKey: 'projects.googleClone.description',
+    longDescriptionKey: 'projects.googleClone.longDescription',
+    technologies: ['JavaScript', 'HTML', 'CSS'],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/Google-Clone',
+      },
+      {
+        icon: <Globe size={18} />,
+        label: 'Demo',
+        url: 'https:/webyven.github.io/Google-Clone/',
+      },
+    ],
+    imgStyle: {padding: 7},
+  },*/
 ]

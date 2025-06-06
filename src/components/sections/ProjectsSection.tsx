@@ -494,43 +494,48 @@ const ProjectsSection: React.FC = () => {
                     <h3 className='text-xl oswald-regular uppercase mb-2'>
                       {t('projects.description')}
                     </h3>
-                    <p>
+                    <p className='leading-6'>
                       {selectedProjectData.longDescription ||
                         selectedProjectData.description}
                     </p>
                   </div>
                   {selectedProjectData.technologies && (
                     <div className='mb-6'>
-                      <h3 className='text-xl oswald-regular uppercase mb-2'>
+                      <h3 className='text-xl oswald-regular uppercase mb-3'>
                         {t('projects.technologies')}
                       </h3>
                       <div className='flex flex-wrap gap-2'>
                         {selectedProjectData.technologies.map((tech, index) => (
-                          <span
+                          <div
                             key={index}
-                            className='bg-[#000]/25 border border-[#000]/35 px-3 py-1 rounded-md text-sm'
+                            className='bg-[#000]/25 px-3 py-1 text-sm border-1 border-[#252525]/50 border-l-[#097] border-l-3'
                           >
                             {tech}
-                          </span>
+                          </div>
                         ))}
                       </div>
                     </div>
                   )}
                   {selectedProjectData.links &&
                     selectedProjectData.links.length > 0 && (
-                      <div className='flex gap-4 mt-4'>
-                        {selectedProjectData.links.map((link, index) => (
-                          <a
-                            key={index}
-                            href={link.url}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className='flex items-center gap-2 bg-[#070707] hover:bg-[#0fa]/20 transition-colors px-4 py-2 rounded-md'
-                          >
-                            {link.icon}
-                            {link.label && <span>{link.label}</span>}
-                          </a>
-                        ))}
+                      <div className='mb-6'>
+                        <h3 className='text-xl oswald-regular uppercase mb-3'>
+                          {t('projects.links')}
+                        </h3>
+                        <div className='flex gap-4 mt-4'>
+                          {selectedProjectData.links.map((link, index) => (
+                            <a
+                              key={index}
+                              href={link.url}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='bg-[#070707] flex items-center gap-2 border-l-[#097] border-l-3 transition-colors px-3 py-1 border-1 border-[#252525]/50 hover:border-[#097] hover:bg-[#097]/10 hover:text-[#097] text-sm text-[#aaa]'
+                            >
+                              {link.icon}
+                              {link.label && <span>{link.label}</span>}
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     )}
                 </div>

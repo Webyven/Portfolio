@@ -49,6 +49,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.description': 'Description',
     'projects.allOfMyProjects': 'All my projects',
     'projects.technologies': 'Technologies',
+    'projects.links': 'Links',
 
     'projects.cinemaNight': 'Cinema Night',
     'projects.cinemaNight.description':
@@ -279,6 +280,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.description': 'Descripción',
     'projects.allOfMyProjects': 'Todos mis proyectos',
     'projects.technologies': 'Tecnologías',
+    'projects.links': 'Enlaces',
 
     'projects.cinemaNight': 'Noche de cine',
     'projects.cinemaNight.description':
