@@ -360,7 +360,7 @@ export const projectsData: Project[] = [
     titleKey: 'projects.cedicaPrivate',
     descriptionKey: 'projects.cedicaPrivate.description',
     longDescriptionKey: 'projects.cedicaPrivate.longDescription',
-    technologies: ['Flask', 'Python', 'HTML', 'CSS', 'JavaScript'],
+    technologies: ['Flask', 'Python', 'HTML', 'CSS', 'JavaScript', 'Vue.JS'],
     links: [
       {
         icon: <Github size={18} />,
