@@ -207,6 +207,47 @@ export const projectsData: Project[] = [
         url: 'https://drive.google.com/file/d/1jpAcCNzUgzaCoO17usvMSSw6_5yO5C6e/view?usp=drive_link',
       },
     ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/FHK2VwGf/Multi-Twitch-48j7g-Jb-Ami.png',
+        alt: 'Multi-Twitch - Home',
+        descriptionKey: 'projects.multiTwitch.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/prxShSpL/Multi-Twitch-Bnc-Qx5-ZRya.png',
+        alt: 'Multi-Twitch - Two Streams',
+        descriptionKey: 'projects.multiTwitch.gallery.descriptionTwoStreams',
+      },
+      {
+        src: 'https://i.postimg.cc/HxbKLmWN/Multi-Twitch-e-Xuxc79-Sgb.png',
+        alt: 'Multi-Twitch - Two Streams and a page',
+        descriptionKey:
+          'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPage',
+      },
+      {
+        src: 'https://i.postimg.cc/YCVyf0hV/Multi-Twitch-5-PYFNDA5-G3.png',
+        alt: 'Multi-Twitch - Two Streams, a page and a chat',
+        descriptionKey:
+          'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPageAndAChat',
+      },
+      {
+        src: 'https://i.postimg.cc/Dy7QWXP6/Multi-Twitch-pxq-SOwh-GHZ.png',
+        alt: 'Multi-Twitch - About Screen',
+        descriptionKey: 'projects.multiTwitch.gallery.descriptionAboutScreen',
+      },
+      {
+        src: 'https://i.postimg.cc/RVG7wZPB/Multi-Twitch-M36-UGG6-Xx7.png',
+        alt: 'Multi-Twitch - Tutorial Screen',
+        descriptionKey:
+          'projects.multiTwitch.gallery.descriptionTutorialScreen',
+      },
+      {
+        src: 'https://i.postimg.cc/KcPrvNB4/Multi-Twitch-pkf-Ye-Ct-UGg.png',
+        alt: 'Multi-Twitch - Shortcuts Screen',
+        descriptionKey:
+          'projects.multiTwitch.gallery.descriptionShortcutsScreen',
+      },
+    ],
   },
   {
     id: 4,
@@ -422,7 +463,11 @@ export const projectsData: Project[] = [
     icon: <Monitor />,
     image: PokeduxIcon,
     imageAlt: 'Pokedux - Logo',
-    imgStyle: {padding: 5, paddingLeft: 6, paddingRight: 4},
+    imgStyle: {
+      padding: 5,
+      paddingLeft: 6,
+      paddingRight: 4,
+    },
     titleKey: 'projects.pokedux',
     descriptionKey: 'projects.pokedux.description',
     longDescriptionKey: 'projects.pokedux.longDescription',

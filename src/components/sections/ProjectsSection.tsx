@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import {stagger, fadeInUp} from '../../animations/variants'
 import {useLanguage} from '../../hooks/LanguageContext'
 import ProjectCard from './ProjectCard'
@@ -338,41 +338,57 @@ const ProjectsSection: React.FC = () => {
                               : '100%',
                         }}
                       >
-                        {selectedProjectImage?.src.endsWith('.mp4') ? (
-                          <video
-                            src={selectedProjectImage.src}
-                            controls
-                            autoPlay
-                            loop
-                            muted
-                            style={{
-                              objectFit: 'scale-down',
-                              ...(selectedProjectImage?.style || {}),
-                            }}
-                            className='w-full h-full py-10'
-                          ></video>
-                        ) : (
-                          <img
-                            src={
-                              selectedProjectImage
-                                ? selectedProjectImage.src
-                                : selectedProjectData.image
-                            }
-                            alt={
-                              selectedProjectImage
-                                ? selectedProjectImage.alt
-                                : selectedProjectData.imageAlt
-                            }
-                            style={{
-                              objectFit: 'scale-down',
-                              ...(selectedProjectImage?.style || {}),
-                            }}
-                            className='w-full h-full'
-                          />
-                        )}
+                        <AnimatePresence mode='wait'>
+                          {selectedProjectImage?.src.endsWith('.mp4') ? (
+                            <motion.video
+                              key={selectedProjectImage.src} // Importante para que Framer Motion detecte el cambio
+                              initial={{opacity: 0}}
+                              animate={{opacity: 1}}
+                              exit={{opacity: 0}}
+                              transition={{duration: 0.3}}
+                              src={selectedProjectImage.src}
+                              controls
+                              autoPlay
+                              loop
+                              muted
+                              style={{
+                                objectFit: 'scale-down',
+                                ...(selectedProjectImage?.style || {}),
+                              }}
+                              className='w-full h-full py-10'
+                            ></motion.video>
+                          ) : (
+                            <motion.img
+                              key={
+                                selectedProjectImage
+                                  ? selectedProjectImage.src
+                                  : selectedProjectData.image
+                              } // Importante para que Framer Motion detecte el cambio
+                              initial={{opacity: 0}}
+                              animate={{opacity: 1}}
+                              exit={{opacity: 0}}
+                              transition={{duration: 0.3}}
+                              src={
+                                selectedProjectImage
+                                  ? selectedProjectImage.src
+                                  : selectedProjectData.image
+                              }
+                              alt={
+                                selectedProjectImage
+                                  ? selectedProjectImage.alt
+                                  : selectedProjectData.imageAlt
+                              }
+                              style={{
+                                objectFit: 'scale-down',
+                                ...(selectedProjectImage?.style || {}),
+                              }}
+                              className='w-full h-full'
+                            />
+                          )}
+                        </AnimatePresence>
                         {selectedProjectImage?.descriptionKey ? (
                           <div
-                            className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/50 from-10% via-[#111]75 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
+                            className='absolute bottom-0 right-0 -bg-linear-240 from-[#111]/90 from-10% via-[#111]/95 via-30% to-[#111] to-90% p-2 ps-5 pe-3'
                             style={{
                               clipPath:
                                 'polygon(13px 0, 100% 0%, 100% 100%, 0 100%)',

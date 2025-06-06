@@ -98,11 +98,25 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.poolCounters.gallery.descriptionChampionUpdaterScreen':
       'Champion updater - Allows the user to update the champion database',
 
-    'projects.multiTwitch': 'Multi Twitch',
+    'projects.multiTwitch': 'Multi-Twitch',
     'projects.multiTwitch.description':
       'Allows viewing multiple Twitch streams at once, with keyboard shortcuts and customizable design.',
     'projects.multiTwitch.longDescription':
       "Multi-Twitch is a desktop application that allows users to watch multiple Twitch streams at once in a clean, customizable layout. It supports adding custom URLs, keyboard shortcuts to quickly mute/unmute or switch focus between streams, and layout presets to suit different preferences. Users can personalize both the Twitch embed and the app's interface to optimize their viewing experience. Perfect for esports enthusiasts or anyone who enjoys following multiple streamers simultaneously.",
+    'projects.multiTwitch.gallery.descriptionHome':
+      'Main screen - Where streams are displayed',
+    'projects.multiTwitch.gallery.descriptionTwoStreams':
+      'Main screen with 2 streams',
+    'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPage':
+      'Main screen with streams and page - Allows opening any other page, like a browser',
+    'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPageAndAChat':
+      'Main screen with streams, pages and pinned chat - Allows pinning streamer chats to keep them in view',
+    'projects.multiTwitch.gallery.descriptionAboutScreen':
+      'Information screen - Allows viewing information about the application',
+    'projects.multiTwitch.gallery.descriptionTutorialScreen':
+      'Tutorial - Has a tutorial so users can learn how to use the application',
+    'projects.multiTwitch.gallery.descriptionShortcutsScreen':
+      'Keyboard shortcuts - Allows users to configure keyboard shortcuts to mute or pause streams',
 
     'projects.btcTracker': 'BTC Tracker',
     'projects.btcTracker.description':
@@ -314,11 +328,25 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.poolCounters.gallery.descriptionChampionUpdaterScreen':
       'Actualizador de campeones - Permite al usuario actualizar la base de datos de campeones',
 
-    'projects.multiTwitch': 'Multi Twitch',
+    'projects.multiTwitch': 'Multi-Twitch',
     'projects.multiTwitch.description':
       'Permite ver múltiples streamings de Twitch a la vez, con atajos de teclado y opciones de diseño personalizadas.',
     'projects.multiTwitch.longDescription':
       'Multi-Twitch es una aplicación de escritorio que permite ver múltiples transmisiones de Twitch (u otras páginas) al mismo tiempo. Incluye atajos de teclado para mutear o pausar transmisiones, cambiar el diseño y ajustar la experiencia según la preferencia del usuario. También ofrece opciones para personalizar tanto la interfaz como el comportamiento de cada reproductor. Fue pensada para quienes disfrutan seguir varios streamers a la vez de forma cómoda y organizada.',
+    'projects.multiTwitch.gallery.descriptionHome':
+      'Pantalla principal - Donde se muestran los streams',
+    'projects.multiTwitch.gallery.descriptionTwoStreams':
+      'Pantalla principal con 2 streams',
+    'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPage':
+      'Pantalla principal con streams y página - Permite abrir cualquier otra página, como si fuera un navegador',
+    'projects.multiTwitch.gallery.descriptionTwoStreamsAndAPageAndAChat':
+      'Pantalla principal con streams, páginas y chat anclado - Permite anclar chats de streamers para no perderlos de vista',
+    'projects.multiTwitch.gallery.descriptionAboutScreen':
+      'Pantalla de información - Permite ver información sobre la aplicación',
+    'projects.multiTwitch.gallery.descriptionTutorialScreen':
+      'Tutorial - Posee un tutorial para que el usuario pueda aprender a usar la aplicación',
+    'projects.multiTwitch.gallery.descriptionShortcutsScreen':
+      'Atajos de teclado - Permite al usuario configurar atajos de teclado para mutear o pausar transmisiones',
 
     'projects.btcTracker': 'BTC Tracker',
     'projects.btcTracker.description':
