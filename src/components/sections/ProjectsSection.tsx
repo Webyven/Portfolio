@@ -522,7 +522,7 @@ const ProjectsSection: React.FC = () => {
                         <h3 className='text-xl oswald-regular uppercase mb-3'>
                           {t('projects.links')}
                         </h3>
-                        <div className='flex gap-4 mt-4'>
+                        <div className='flex gap-4'>
                           {selectedProjectData.links.map((link, index) => (
                             <a
                               key={index}

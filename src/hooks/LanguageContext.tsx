@@ -212,8 +212,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Integration with Google Play Leaderboards, where the player can compete with other players',
 
     'projects.fedeteriApp': 'FedeteriApp',
+    'projects.fedeteriApp.description': 'Work in progress',
+    'projects.fedeteriApp.longDescription': 'Work in progress',
 
     'projects.cedicaPrivate': 'CEDICA',
+    'projects.cedicaPrivate.description': 'Work in progress',
+    'projects.cedicaPrivate.longDescription': 'Work in progress',
 
     'contact.title': 'Contact',
     'contact.info.title': 'Contact Information',
@@ -444,10 +448,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Integración con tablas de clasificación de Google Play, donde el jugador puede competir con otros jugadores',
 
     'projects.fedeteriApp': 'FedeteriApp',
-    'projects.fedeteriApp.description':
-      'Una app de trueques de ferreteria para una compañía de ferreterías ficticia para una materia de la universidad.',
+    'projects.fedeteriApp.description': 'Work in progress',
+    'projects.fedeteriApp.longDescription': 'Work in progress',
 
     'projects.cedicaPrivate': 'CEDICA',
+    'projects.cedicaPrivate.description': 'Work in progress',
+    'projects.cedicaPrivate.longDescription': 'Work in progress',
 
     'contact.title': 'Contacto',
     'contact.info.title': 'Información de contacto',
