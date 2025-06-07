@@ -402,6 +402,11 @@ export const projectsData: Project[] = [
         alt: 'FedeteriApp - User trades',
         descriptionKey: 'projects.fedeteriApp.gallery.descriptionUserTrades',
       },
+      {
+        src: 'https://i.postimg.cc/XY1xxd5k/Screenshot-2025-06-06-at-20-58-587-Fedeteri-App.png',
+        alt: 'FedeteriApp - Statistics',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionStatistics',
+      },
     ],
   },
   {

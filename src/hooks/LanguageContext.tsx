@@ -236,6 +236,8 @@ const translations: Record<Language, Record<string, string>> = {
       'You can view user profiles to see their posts, trades and reputation',
     'projects.fedeteriApp.gallery.descriptionUserTrades':
       "You can also view another user's trade history",
+    'projects.fedeteriApp.gallery.descriptionStatistics':
+      'Statistics - Allows viewing sales, trades, ratings of branches and earnings from featured items',
 
     'projects.cedicaPrivate': 'CEDICA',
     'projects.cedicaPrivate.description': 'Work in progress',
@@ -494,6 +496,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Es posible ver los perfiles de los usuarios para ver sus publicaciones, sus trueques y su reputación',
     'projects.fedeteriApp.gallery.descriptionUserTrades':
       'También se puede ver el historial de trueques de otro usuario',
+    'projects.fedeteriApp.gallery.descriptionStatistics':
+      'Estadísticas - Permite ver ventas, trueques, calificaciones de las sucursales y gananacias por artículos destacados',
 
     'projects.cedicaPrivate': 'CEDICA',
     'projects.cedicaPrivate.description': 'Work in progress',
