@@ -349,6 +349,60 @@ export const projectsData: Project[] = [
         url: 'https://github.com/Grupo-41/FedeteriApp',
       },
     ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/XvTL6WQZ/Screenshot-2025-06-06-at-20-58-57-Fedeteri-App.png',
+        alt: 'FedeteriApp - Home',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/QNc4sBLj/Screenshot-2025-06-06-at-21-12-26-Fedeteri-App.png',
+        alt: 'FedeteriApp - Search',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionSearch',
+      },
+      {
+        src: 'https://i.postimg.cc/3w6SrmJx/Screenshot-2025-06-06-at-21-12-39-Fedeteri-App.png',
+        alt: 'FedeteriApp - Filters',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionFilters',
+      },
+      {
+        src: 'https://i.postimg.cc/hGJsYvbW/Screenshot-2025-06-06-at-21-01-25-Fedeteri-App.png',
+        alt: 'FedeteriApp - Branches',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionBranches',
+      },
+      {
+        src: 'https://i.postimg.cc/Wbn5FQbK/Screenshot-2025-06-06-at-21-08-32-Fedeteri-App.png',
+        alt: 'FedeteriApp - Employee Sign Up',
+        descriptionKey:
+          'projects.fedeteriApp.gallery.descriptionEmployeeSignUp',
+      },
+      {
+        src: 'https://i.postimg.cc/RhxgKmtr/Screenshot-2025-06-06-at-21-10-59-Fedeteri-App.png',
+        alt: 'FedeteriApp - Your products',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionYourProducts',
+      },
+      {
+        src: 'https://i.postimg.cc/7ZZmgm5L/Screenshot-2025-06-06-at-21-09-00-Fedeteri-App.png',
+        alt: 'FedeteriApp - Your trades',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionYourTrades',
+      },
+      {
+        src: 'https://i.postimg.cc/NfYN0gYm/Screenshot-2025-06-06-at-21-09-15-Fedeteri-App.png',
+        alt: 'FedeteriApp - Qualifications',
+        descriptionKey:
+          'projects.fedeteriApp.gallery.descriptionQualifications',
+      },
+      {
+        src: 'https://i.postimg.cc/zBgdyvVS/Screenshot-2025-06-06-at-21-10-06-Fedeteri-App.png',
+        alt: 'FedeteriApp - User profile',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionUserProfile',
+      },
+      {
+        src: 'https://i.postimg.cc/hv8p0Y8X/Screenshot-2025-06-06-at-21-09-47-Fedeteri-App.png',
+        alt: 'FedeteriApp - User trades',
+        descriptionKey: 'projects.fedeteriApp.gallery.descriptionUserTrades',
+      },
+    ],
   },
   {
     id: 7,

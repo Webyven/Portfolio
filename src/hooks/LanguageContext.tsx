@@ -212,8 +212,30 @@ const translations: Record<Language, Record<string, string>> = {
       'Integration with Google Play Leaderboards, where the player can compete with other players',
 
     'projects.fedeteriApp': 'FedeteriApp',
-    'projects.fedeteriApp.description': 'Work in progress',
-    'projects.fedeteriApp.longDescription': 'Work in progress',
+    'projects.fedeteriApp.description':
+      'FedeteriApp is a web application developed as a final project for Software Engineering II. The system was designed for a fictional hardware store chain called Fedetería, with the goal of increasing sales through a barter system. Users can post personal items to exchange with others, but the exchange must take place in physical company branches, which encouraged cross-selling of actual store products.',
+    'projects.fedeteriApp.longDescription':
+      'FedeteriApp is a web application developed as a final project for Software Engineering II. The system was designed for a fictional hardware store chain called Fedetería, with the goal of increasing sales through a barter system. Users can post personal items to exchange with others, but the exchange must take place in physical company branches, which encouraged cross-selling of actual store products.',
+    'projects.fedeteriApp.gallery.descriptionHome':
+      'Home screen - Where user posts and latest trades appear',
+    'projects.fedeteriApp.gallery.descriptionSearch':
+      'Search screen - Where users can search for items by name or brand',
+    'projects.fedeteriApp.gallery.descriptionFilters':
+      'Search screen - Users can also filter items by brand and/or condition',
+    'projects.fedeteriApp.gallery.descriptionBranches':
+      'Branches screen - Shows company branches, their addresses and business hours',
+    'projects.fedeteriApp.gallery.descriptionEmployeeSignUp':
+      'Employee registration screen - One of the many forms in the application',
+    'projects.fedeteriApp.gallery.descriptionYourProducts':
+      'Your posts - Where users can view their posts, edit them, delete them or pay to highlight them',
+    'projects.fedeteriApp.gallery.descriptionYourTrades':
+      'Trade history - Allows users to view their completed and incomplete trades',
+    'projects.fedeteriApp.gallery.descriptionQualifications':
+      'After making a trade, users can rate both the branch and the other user',
+    'projects.fedeteriApp.gallery.descriptionUserProfile':
+      'You can view user profiles to see their posts, trades and reputation',
+    'projects.fedeteriApp.gallery.descriptionUserTrades':
+      "You can also view another user's trade history",
 
     'projects.cedicaPrivate': 'CEDICA',
     'projects.cedicaPrivate.description': 'Work in progress',
@@ -448,8 +470,30 @@ const translations: Record<Language, Record<string, string>> = {
       'Integración con tablas de clasificación de Google Play, donde el jugador puede competir con otros jugadores',
 
     'projects.fedeteriApp': 'FedeteriApp',
-    'projects.fedeteriApp.description': 'Work in progress',
-    'projects.fedeteriApp.longDescription': 'Work in progress',
+    'projects.fedeteriApp.description':
+      'FedeteriApp es una aplicación web desarrollada como proyecto final para la materia Ingeniería de Software II. El sistema fue diseñado para una cadena ficticia de ferreterías llamada Fedetería, con el objetivo de aumentar sus ventas mediante un sistema de trueques. Los usuarios pueden publicar objetos personales para intercambiarlos con otros, pero el intercambio debe realizarse en sucursales físicas de la empresa, lo que incentivaba la venta cruzada de productos reales en tienda.',
+    'projects.fedeteriApp.longDescription':
+      'FedeteriApp es una aplicación web desarrollada como proyecto final para la materia Ingeniería de Software II. El sistema fue diseñado para una cadena ficticia de ferreterías llamada Fedetería, con el objetivo de aumentar sus ventas mediante un sistema de trueques. Los usuarios pueden publicar objetos personales para intercambiarlos con otros, pero el intercambio debe realizarse en sucursales físicas de la empresa, lo que incentivaba la venta cruzada de productos reales en tienda.',
+    'projects.fedeteriApp.gallery.descriptionHome':
+      'Pantalla principal - Donde aparecen las publicaciones de los usuarios y los últimos trueques realizados',
+    'projects.fedeteriApp.gallery.descriptionSearch':
+      'Pantalla de búsqueda - Donde el usuario puede buscar objetos por nombre o marca',
+    'projects.fedeteriApp.gallery.descriptionFilters':
+      'Pantalla de búsqueda - El usuario también puede filtrar objetos por marca y/o estado',
+    'projects.fedeteriApp.gallery.descriptionBranches':
+      'Pantalla de sucursales - Muestra las sucursales de la empresa, sus direcciones y sus horarios de atención',
+    'projects.fedeteriApp.gallery.descriptionEmployeeSignUp':
+      'Pantalla de registro de empleados - Uno de los tantos formularios de la aplicación',
+    'projects.fedeteriApp.gallery.descriptionYourProducts':
+      'Tus publicaciones - Donde el usuario puede ver sus publicaciones, editarlas, eliminarlas o pagar para destacarlas',
+    'projects.fedeteriApp.gallery.descriptionYourTrades':
+      'Historial de trueques - Permite al usuario ver sus trueques realizados y no realizados',
+    'projects.fedeteriApp.gallery.descriptionQualifications':
+      'Luego de hacer un trueque, el usuario puede calificar tanto a la sucursal como al usuario',
+    'projects.fedeteriApp.gallery.descriptionUserProfile':
+      'Es posible ver los perfiles de los usuarios para ver sus publicaciones, sus trueques y su reputación',
+    'projects.fedeteriApp.gallery.descriptionUserTrades':
+      'También se puede ver el historial de trueques de otro usuario',
 
     'projects.cedicaPrivate': 'CEDICA',
     'projects.cedicaPrivate.description': 'Work in progress',
