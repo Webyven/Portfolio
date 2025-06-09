@@ -1,6 +1,7 @@
 import {X} from 'lucide-react'
 import React, {useEffect, useState} from 'react'
 import {createPortal} from 'react-dom'
+import {motion} from 'framer-motion'
 
 interface ModalProps {
   children: React.ReactNode
@@ -49,14 +50,17 @@ const Modal = ({children, onClose}: ModalProps) => {
       >
         {children}
       </div>
-      <div
+      <motion.div
         className={`cursor-pointer select-none flex items-center justify-center font-bold text-2xl absolute w-12 h-12 top-3 right-3 text-white hover:text-[#0fa] transition-colors ${
           isOpen ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={onClose}
+        whileHover={{scale: 1.2}}
+        transition={{duration: 0.2}}
+        whileTap={{scale: 1}}
       >
         <X size={36} strokeWidth={3} />
-      </div>
+      </motion.div>
     </div>,
     document.getElementById('portal-root') || document.body
   )

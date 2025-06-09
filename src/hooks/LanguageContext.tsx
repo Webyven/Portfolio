@@ -1,4 +1,4 @@
-import React, {createContext, useState, useContext, ReactNode} from 'react'
+import React, { createContext, useState, useContext, ReactNode } from 'react'
 
 // Definir los idiomas disponibles
 export type Language = 'en' | 'es'
@@ -32,13 +32,13 @@ const translations: Record<Language, Record<string, string>> = {
     // About section
     'about.title': '// About me',
     'about.p1':
-      "Since I was a child, I've been fascinated by technology as a tool for bringing ideas to life. My path led me to graduate as an Electromechanical Technician, but it was in the world of web development where I truly found my calling.",
+      "Since I was a child, I've been fascinated by technology as a tool for bringing ideas to life. My path led me to graduate as an <b>Electromechanical Technician</b>, but it was in the world of web development where I truly found my calling.",
     'about.p2':
-      "Over the past few years, I've enjoyed creating functional and engaging solutions, with a particular focus on developing dynamic user interfaces using React. I'm passionate about the logic behind code and the ability to build intuitive user experiences.",
+      "Over the past few years, I've enjoyed creating functional and engaging solutions, with a particular focus on developing dynamic user interfaces using <b>React</b>. I'm passionate about the logic behind code and the ability to build intuitive user experiences.",
     'about.p3':
-      'In my free time, I explore new technologies and apply them to personal projects like "Noche de cine" an app that reflects my interest in collaboration and practical problem-solving.',
+      'In my free time, I explore new technologies and apply them to personal projects like <b>Noche de cine</b> an app that reflects my interest in collaboration and practical problem-solving.',
     'about.p4':
-      'Having recently graduated as a University Programmer Analyst from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge, and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
+      'Having recently graduated as a <b>University Programmer Analyst</b> from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge, and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
 
     // Projects section
     'projects.title': 'PROJECTS >>',
@@ -47,7 +47,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.gameDevelopment': 'GAME DEVELOPMENT',
 
     'projects.description': 'Description',
-    'projects.allOfMyProjects': 'All my projects',
+    'projects.allOfMyProjects': 'More projects',
     'projects.technologies': 'Technologies',
     'projects.links': 'Links',
 
@@ -239,9 +239,32 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.fedeteriApp.gallery.descriptionStatistics':
       'Statistics - Allows viewing sales, trades, ratings of branches and earnings from featured items',
 
-    'projects.cedicaPrivate': 'CEDICA',
-    'projects.cedicaPrivate.description': 'Work in progress',
-    'projects.cedicaPrivate.longDescription': 'Work in progress',
+    'projects.cedica': 'CEDICA',
+    'projects.cedica.description': 'System developed for CEDICA as a final project for the "Proyecto de Software" subject, a real foundation dedicated to equine therapy',
+    'projects.cedica.longDescription':
+      'System developed for CEDICA as a final project for the "Proyecto de Software" subject, a real foundation dedicated to equine therapy. The goal was to create a comprehensive solution that included: <ul class="list-disc list-inside mt-1"><li class="mb-1">A private management panel to track horses, trainers, patients (riders), documentation and payments.</li><li class="mb-1">A public institutional portal with information about the foundation and its activities, including a contact form linked to the internal system.</li></ul>This experience was very significant for me, as it represented my first approach to a real project with a database and a complex user interface. Given the size of the system, only some of the most representative screens are shown in this portfolio, in which I worked exclusively.',
+    'projects.cedica.gallery.descriptionPublicHome':
+      'Public home - Information about the foundation and its activities',
+    'projects.cedica.gallery.descriptionPublicContact':
+      'Public contact - Contact form linked to the internal system',
+    'projects.cedica.gallery.descriptionHome':
+      'Private home - Where horses, trainers, patients, documentation and payments are managed',
+    'projects.cedica.gallery.descriptionEcuestre':
+      'Horse management - Where horses of the institution are managed',
+    'projects.cedica.gallery.descriptionHorseRegistration':
+      'Horse registration - Where horses are registered',
+    'projects.cedica.gallery.descriptionHorseRegistration2':
+      'Second part of the horse registration - Here it is possible to assign activities and members',
+    'projects.cedica.gallery.descriptionViewHorse':
+      'Horse view - Where the horse information is displayed',
+    'projects.cedica.gallery.descriptionPublicContent':
+      'Public content - Where the articles of the portal are managed',
+    'projects.cedica.gallery.descriptionViewArticle':
+      'Article view - Displays the complete article in markdown format',
+    'projects.cedica.gallery.descriptionEditArticle':
+      'Article editing - Allows editing the article content, with real-time preview',
+    'projects.cedica.gallery.descriptionProfile':
+      'Profile - Allows viewing user information',
 
     'contact.title': 'Contact',
     'contact.info.title': 'Contact Information',
@@ -291,13 +314,13 @@ const translations: Record<Language, Record<string, string>> = {
     // About section
     'about.title': '// Sobre mí',
     'about.p1':
-      'Desde niño, me ha fascinado la tecnología como herramienta para dar vida a ideas. Mi camino me llevó a graduarme como Técnico Electromecánico, pero fue en el mundo del desarrollo web donde realmente encontré mi vocación.',
+      'Desde niño, me ha fascinado la tecnología como herramienta para dar vida a ideas. Mi camino me llevó a graduarme como <b>Técnico Electromecánico</b>, pero fue en el mundo del desarrollo web donde realmente encontré mi vocación.',
     'about.p2':
-      'Durante los últimos años, he disfrutado creando soluciones funcionales y atractivas, con un enfoque particular en el desarrollo de interfaces de usuario dinámicas usando React. Me apasiona la lógica detrás del código y la capacidad de construir experiencias de usuario intuitivas.',
+      'Durante los últimos años, he disfrutado creando soluciones funcionales y atractivas, con un enfoque particular en el desarrollo de interfaces de usuario dinámicas usando <b>React</b>. Me apasiona la lógica detrás del código y la capacidad de construir experiencias de usuario intuitivas.',
     'about.p3':
-      'En mi tiempo libre, exploro nuevas tecnologías y las aplico a proyectos personales como "Noche de cine", una aplicación que refleja mi interés en la colaboración y la resolución práctica de problemas.',
+      'En mi tiempo libre, exploro nuevas tecnologías y las aplico a proyectos personales como <b>Noche de cine</b>, una aplicación que refleja mi interés en la colaboración y la resolución práctica de problemas.',
     'about.p4':
-      'Habiéndome graduado recientemente como Analista Programador Universitario de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
+      'Habiéndome graduado recientemente como <b>Analista Programador Universitario</b> de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
 
     // Projects section
     'projects.title': 'PROYECTOS >>',
@@ -306,7 +329,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.gameDevelopment': 'JUEGO',
 
     'projects.description': 'Descripción',
-    'projects.allOfMyProjects': 'Todos mis proyectos',
+    'projects.allOfMyProjects': 'Más proyectos',
     'projects.technologies': 'Tecnologías',
     'projects.links': 'Enlaces',
 
@@ -314,7 +337,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.cinemaNight.description':
       'Organizador de votaciones para ver películas con amigos. Permite proponer, vetar y gestionar listas de vistas/no vistas. Hecha con mucho amor y cariño para mis amigos y yo.',
     'projects.cinemaNight.longDescription':
-      'Noche de Cine es una aplicación web pensada para organizar votaciones de películas entre amigos. Cada usuario puede proponer películas, vetar aquellas que no desea ver si no participa, y gestionar sus listas de películas vistas y no vistas. Durante la fase de votación, los usuarios ordenan las películas según sus preferencias, y el sistema genera un podio una vez que todos han votado. El proyecto surgió de una necesidad real con mis amigos, y fue creciendo con el tiempo hasta convertirse en una herramienta completa hecha con React y WebSockets.',
+      'Noche de Cine es una aplicación web pensada para organizar votaciones de películas entre amigos. Cada usuario puede proponer hasta 2 películas por votación, vetar aquellas que no desea ver si no participa, y gestionar sus listas de películas vistas y no vistas. Durante la fase de votación, los usuarios ordenan las películas según sus preferencias, y el sistema genera un podio una vez que todos han votado. El proyecto surgió de una necesidad real con mis amigos, y fue creciendo con el tiempo hasta convertirse en una herramienta completa hecha con React y WebSockets.',
     'projects.cinemaNight.gallery.descriptionHome':
       'Pantalla principal - Con estadísticas sobre las sesiones y el catálogo de películas',
     'projects.cinemaNight.gallery.descriptionMobileHome':
@@ -350,7 +373,7 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.poolCounters.gallery.descriptionHome':
       'Pantalla principal - Donde se calculan los counters de cada campeón ingresado según la pool del usuario',
     'projects.poolCounters.gallery.descriptionPoolScreen':
-      'Pool del usuario - Permite al usuario ver y tener en cuenta todos los campeoones que utiliza',
+      'Pool del usuario - Permite al usuario ver y tener en cuenta todos los campeones que utiliza',
     'projects.poolCounters.gallery.descriptionCountersConfigScreen':
       'Counters de campeones - Permite al usuario configurar qué campeones son "counters" para cada campeón',
     'projects.poolCounters.gallery.descriptionPoolConfigScreen':
@@ -499,9 +522,32 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.fedeteriApp.gallery.descriptionStatistics':
       'Estadísticas - Permite ver ventas, trueques, calificaciones de las sucursales y gananacias por artículos destacados',
 
-    'projects.cedicaPrivate': 'CEDICA',
-    'projects.cedicaPrivate.description': 'Work in progress',
-    'projects.cedicaPrivate.longDescription': 'Work in progress',
+    'projects.cedica': 'CEDICA',
+    'projects.cedica.description': 'Sistema desarrollado para CEDICA como proyecto final de la materia "Proyecto de Software", una fundación real dedicada a la equinoterapia',
+    'projects.cedica.longDescription':
+      'Sistema desarrollado para CEDICA como proyecto final de la materia "Proyecto de Software", una fundación real dedicada a la equinoterapia. El objetivo fue crear una solución integral que incluyera: <ul class="list-disc list-inside mt-1"><li class="mb-1">Un panel privado de gestión para llevar el seguimiento de caballos, entrenadores, pacientes (jinetes y amazonas), documentación y pagos.</li><li class="mb-1">Un portal público institucional con información sobre la fundación y sus actividades, incluyendo un formulario de contacto vinculado al sistema interno.</li></ul>Esta experiencia fue muy significativa para mí, ya que representó mi primer acercamiento a un proyecto real con base de datos y una interfaz de usuario compleja. Dado el tamaño del sistema, en este portafolio se muestran solo algunas de las pantallas más representativas, en las que trabajé de forma exclusiva.',
+    'projects.cedica.gallery.descriptionPublicHome':
+      'Pantalla principal del portal público - Información sobre la fundación y sus actividades',
+    'projects.cedica.gallery.descriptionPublicContact':
+      'Pantalla de contacto del portal público - Formulario de contacto vinculado al sistema interno',
+    'projects.cedica.gallery.descriptionHome':
+      'Pantalla principal del panel privado - Donde se gestionan los caballos, entrenadores, pacientes, documentación y pagos',
+    'projects.cedica.gallery.descriptionEcuestre':
+      'Pantalla de ecuestre - Donde se gestionan los caballos de la institución',
+    'projects.cedica.gallery.descriptionHorseRegistration':
+      'Pantalla de registro de caballos - Donde se registran los caballos',
+    'projects.cedica.gallery.descriptionHorseRegistration2':
+      'Segunda parte del registro de caballos - Aquí es posible asignarle actividades y miembros',
+    'projects.cedica.gallery.descriptionViewHorse':
+      'Pantalla de vista de caballos - Donde se puede ver la información de los caballos',
+    'projects.cedica.gallery.descriptionPublicContent':
+      'Pantalla de contenido del portal público - Donde se gestionan los artículos del portal',
+    'projects.cedica.gallery.descriptionViewArticle':
+      'Pantalla de vista de artículos - Muestra el artículo completo con formato markdown',
+    'projects.cedica.gallery.descriptionEditArticle':
+      'Pantalla de edición de artículos - Permite editar el contenido de los artículos, con preview en tiempo real',
+    'projects.cedica.gallery.descriptionProfile':
+      'Pantalla de perfil - Permite ver la información del usuario',
 
     'contact.title': 'Contacto',
     'contact.info.title': 'Información de contacto',
@@ -538,7 +584,7 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 // Proveedor del contexto
-export const LanguageProvider: React.FC<{children: ReactNode}> = ({
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [language, setLanguage] = useState<Language>('en')
@@ -549,7 +595,7 @@ export const LanguageProvider: React.FC<{children: ReactNode}> = ({
   }
 
   return (
-    <LanguageContext.Provider value={{language, setLanguage, t}}>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   )
