@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react'
+import React, {createContext, useState, useContext, ReactNode} from 'react'
 
 // Definir los idiomas disponibles
 export type Language = 'en' | 'es'
@@ -162,6 +162,16 @@ const translations: Record<Language, Record<string, string>> = {
       'A to-do list app with a focus on simplicity and productivity.',
     'projects.reworkedTudu.longDescription':
       'Reworked Tudu is the enhanced version of my very first to-do app built with C# and WinForms. This iteration adds support for importing old task files, creating and exporting custom themes, and offers a highly customizable interface. The focus wasn’t on minimalism but on exploring features and building a more flexible system. It marks a personal milestone in my programming journey, connecting my beginnings with my growth.',
+    'projects.reworkedTudu.gallery.descriptionHome':
+      'Main screen - Allows adding, editing and deleting tasks',
+    'projects.reworkedTudu.gallery.descriptionThemes':
+      'Themes screen - Allows creating, editing, exporting and importing themes',
+    'projects.reworkedTudu.gallery.descriptionPresets':
+      'Presets - The application already has some presets, and allows users to create their own',
+    'projects.reworkedTudu.gallery.descriptionCustomColors':
+      'Main screen - But with custom colors',
+    'projects.reworkedTudu.gallery.descriptionEditTask':
+      'Task editing screen - Allows editing tasks',
 
     'projects.copaPiston': 'Copa Pistón',
     'projects.copaPiston.description':
@@ -240,7 +250,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Statistics - Allows viewing sales, trades, ratings of branches and earnings from featured items',
 
     'projects.cedica': 'CEDICA',
-    'projects.cedica.description': 'System developed for CEDICA as a final project for the "Proyecto de Software" subject, a real foundation dedicated to equine therapy',
+    'projects.cedica.description':
+      'System developed for CEDICA as a final project for the "Proyecto de Software" subject, a real foundation dedicated to equine therapy',
     'projects.cedica.longDescription':
       'System developed for CEDICA as a final project for the "Proyecto de Software" subject, a real foundation dedicated to equine therapy. The goal was to create a comprehensive solution that included: <ul class="list-disc list-inside mt-1"><li class="mb-1">A private management panel to track horses, trainers, patients (riders), documentation and payments.</li><li class="mb-1">A public institutional portal with information about the foundation and its activities, including a contact form linked to the internal system.</li></ul>This experience was very significant for me, as it represented my first approach to a real project with a database and a complex user interface. Given the size of the system, only some of the most representative screens are shown in this portfolio, in which I worked exclusively.',
     'projects.cedica.gallery.descriptionPublicHome':
@@ -444,6 +455,16 @@ const translations: Record<Language, Record<string, string>> = {
       'Una app de lista de tareas con un enfoque en la simplicidad y la productividad.',
     'projects.reworkedTudu.longDescription':
       'Reworked Tudú es una versión mejorada de mi primera aplicación de tareas hecha en C# con WinForms. Esta versión permite importar tareas de la versión antigua, crear y exportar temas personalizados, y ofrece muchas opciones de personalización visual. No está enfocada en la simplicidad, sino en explorar funcionalidades y construir un sistema más flexible. Representa un punto de conexión entre mis primeros pasos como programador y mi evolución actual.',
+    'projects.reworkedTudu.gallery.descriptionHome':
+      'Pantalla principal - Permite agregar, editar y eliminar tareas',
+    'projects.reworkedTudu.gallery.descriptionThemes':
+      'Pantalla de temas - Permite crear, editar, exportar e importar temas',
+    'projects.reworkedTudu.gallery.descriptionPresets':
+      'Presets - La aplicación ya tiene algunos presets, y permite al usuario crear los suyos',
+    'projects.reworkedTudu.gallery.descriptionCustomColors':
+      'Pantalla principal - Pero con colores personalizados',
+    'projects.reworkedTudu.gallery.descriptionEditTask':
+      'Pantalla de edición de tareas - Permite editar las tareas',
 
     'projects.copaPiston': 'Copa Pistón',
     'projects.copaPiston.description':
@@ -523,7 +544,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Estadísticas - Permite ver ventas, trueques, calificaciones de las sucursales y gananacias por artículos destacados',
 
     'projects.cedica': 'CEDICA',
-    'projects.cedica.description': 'Sistema desarrollado para CEDICA como proyecto final de la materia "Proyecto de Software", una fundación real dedicada a la equinoterapia',
+    'projects.cedica.description':
+      'Sistema desarrollado para CEDICA como proyecto final de la materia "Proyecto de Software", una fundación real dedicada a la equinoterapia',
     'projects.cedica.longDescription':
       'Sistema desarrollado para CEDICA como proyecto final de la materia "Proyecto de Software", una fundación real dedicada a la equinoterapia. El objetivo fue crear una solución integral que incluyera: <ul class="list-disc list-inside mt-1"><li class="mb-1">Un panel privado de gestión para llevar el seguimiento de caballos, entrenadores, pacientes (jinetes y amazonas), documentación y pagos.</li><li class="mb-1">Un portal público institucional con información sobre la fundación y sus actividades, incluyendo un formulario de contacto vinculado al sistema interno.</li></ul>Esta experiencia fue muy significativa para mí, ya que representó mi primer acercamiento a un proyecto real con base de datos y una interfaz de usuario compleja. Dado el tamaño del sistema, en este portafolio se muestran solo algunas de las pantallas más representativas, en las que trabajé de forma exclusiva.',
     'projects.cedica.gallery.descriptionPublicHome':
@@ -584,7 +606,7 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 // Proveedor del contexto
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
+export const LanguageProvider: React.FC<{children: ReactNode}> = ({
   children,
 }) => {
   const [language, setLanguage] = useState<Language>('en')
@@ -595,7 +617,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{language, setLanguage, t}}>
       {children}
     </LanguageContext.Provider>
   )

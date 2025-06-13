@@ -375,6 +375,18 @@ export const projectsData: Project[] = [
           'projects.alternate.gallery.descriptionGooglePlayLeaderboards',
       },
     ],
+    links: [
+      {
+        icon: <Download size={18} />,
+        label: 'Drive (Windows)',
+        url: 'https://drive.google.com/file/d/12bFzV9VU826R0_Y_qlxvQdwTAhwl0Kmt/view?usp=sharing',
+      },
+      {
+        icon: <Download size={18} />,
+        label: 'APKPure (Android)',
+        url: 'https://apkpure.com/es/alternate/com.WUG.Studios.Alternate/',
+      },
+    ],
   },
   {
     id: 6,
@@ -551,6 +563,13 @@ export const projectsData: Project[] = [
       'Framer Motion',
       'Tailwind CSS',
     ],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/Portfolio/',
+      },
+    ],
   },
   {
     id: 10,
@@ -622,6 +641,13 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.filenameChanger.description',
     longDescriptionKey: 'projects.filenameChanger.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/FilenameChanger',
+      },
+    ],
     gallery: [
       {
         src: 'https://i.postimg.cc/9M7Gd3Fh/Filename-Changer-p-Sttm284-FQ.png',
@@ -646,6 +672,40 @@ export const projectsData: Project[] = [
     descriptionKey: 'projects.reworkedTudu.description',
     longDescriptionKey: 'projects.reworkedTudu.longDescription',
     technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    links: [
+      {
+        icon: <Download size={18} />,
+        label: 'Drive',
+        url: 'https://drive.google.com/file/d/1LPPJVgo7zKaLFaHq3lmOphTzNVHSFk1Z/view?usp=drive_link',
+      },
+    ],
+    gallery: [
+      {
+        src: 'https://i.postimg.cc/GpFnrPrD/Reworked-Tud-u-TP98-EE3y-Q.png',
+        alt: 'Reworked Tudú - Home',
+        descriptionKey: 'projects.reworkedTudu.gallery.descriptionHome',
+      },
+      {
+        src: 'https://i.postimg.cc/bw2jVcB3/Reworked-Tud-R6ndv-Aw-Qbs.png',
+        alt: 'Reworked Tudú - Themes',
+        descriptionKey: 'projects.reworkedTudu.gallery.descriptionThemes',
+      },
+      {
+        src: 'https://i.postimg.cc/KzQX3Z1v/Reworked-Tud-O4-HVNv-Dn6-O.png',
+        alt: 'Reworked Tudú - Presets',
+        descriptionKey: 'projects.reworkedTudu.gallery.descriptionPresets',
+      },
+      {
+        src: 'https://i.postimg.cc/pdbMgcNx/Reworked-Tud-TKmg-Sdd-Jy-X.png',
+        alt: 'Reworked Tudú - Custom Colors',
+        descriptionKey: 'projects.reworkedTudu.gallery.descriptionCustomColors',
+      },
+      {
+        src: 'https://i.postimg.cc/9FkhBFJD/Reworked-Tud-Gd-V4-Yo24b6.png',
+        alt: 'Reworked Tudú - Edit Task',
+        descriptionKey: 'projects.reworkedTudu.gallery.descriptionEditTask',
+      },
+    ],
   },
   {
     id: 14,
