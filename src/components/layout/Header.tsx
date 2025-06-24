@@ -6,7 +6,7 @@ import {useWindowSize} from 'react-use'
 import {motion, AnimatePresence} from 'framer-motion'
 
 function Header(): React.ReactElement {
-  const {t} = useLanguage()
+  const {t, language, setLanguage} = useLanguage()
   const {width} = useWindowSize()
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
@@ -309,35 +309,44 @@ function Header(): React.ReactElement {
               initial={{height: 0}}
               animate={{height: '100%'}}
               transition={{duration: 0.4}}
-              className='fixed top-0 left-0 w-full h-full bg-[#101010]/99 backdrop-blur-2xl text-white z-5 gap-8 origin-top overflow-hidden'
+              className='fixed top-0 left-0 w-full h-full bg-[#101010]/90 backdrop-blur-2xl text-white z-5 gap-8 origin-top overflow-hidden'
             >
               <div className='absolute w-0 border-l-1 h-full bg-transparent left-12'></div>
-              <a className='w-full h-full text-2xl flex flex-col gap-8 p-22 font-bold items-start justify-center uppercase'>
-                <div
-                  className='cursor-pointer'
-                  onClick={() => handleScrollToId('home')}
-                >
-                  {t('nav.home')}
+              <div className='w-full h-full text-2xl flex flex-col ps-22 pb-12 pe-12 pt-32 font-bold items-start justify-between uppercase'>
+                <div></div>
+                <div className='flex flex-col gap-8 items-start'>
+                  <div
+                    className='cursor-pointer'
+                    onClick={() => handleScrollToId('home')}
+                  >
+                    {t('nav.home')}
+                  </div>
+                  <div
+                    className='cursor-pointer'
+                    onClick={() => handleScrollToId('about')}
+                  >
+                    {t('nav.about')}
+                  </div>
+                  <div
+                    className='cursor-pointer'
+                    onClick={() => handleScrollToId('projects')}
+                  >
+                    {t('nav.projects')}
+                  </div>
+                  <div
+                    className='cursor-pointer'
+                    onClick={() => handleScrollToId('contact')}
+                  >
+                    {t('nav.contact')}
+                  </div>
                 </div>
                 <div
-                  className='cursor-pointer'
-                  onClick={() => handleScrollToId('about')}
+                  className='cursor-pointer w-full text-end text-[20px] text-[#aaa]'
+                  onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
                 >
-                  {t('nav.about')}
+                  {t('nav.languageChange')} &gt;
                 </div>
-                <div
-                  className='cursor-pointer'
-                  onClick={() => handleScrollToId('projects')}
-                >
-                  {t('nav.projects')}
-                </div>
-                <div
-                  className='cursor-pointer'
-                  onClick={() => handleScrollToId('contact')}
-                >
-                  {t('nav.contact')}
-                </div>
-              </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

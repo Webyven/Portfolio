@@ -23,6 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
+    'nav.languageChange': 'Mostrar página en Español',
 
     // Home section
     'home.role': 'Software Developer',
@@ -317,6 +318,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'Sobre mí',
     'nav.projects': 'Proyectos',
     'nav.contact': 'Contacto',
+    'nav.languageChange': 'Show page in English',
 
     // Home section
     'home.role': 'Desarrollador de Software',
