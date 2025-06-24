@@ -56,7 +56,7 @@ function Header(): React.ReactElement {
       requestAnimationFrame(() => {
         const el = document.getElementById(id)
         if (el) {
-          const y = el.getBoundingClientRect().top + window.scrollY - 100
+          const y = el.getBoundingClientRect().top + window.scrollY - 25
           window.scrollTo({top: y, behavior: 'smooth'})
         }
       })
