@@ -201,7 +201,7 @@ function Header(): React.ReactElement {
       <>
         <motion.header
           className={
-            'fixed select-none w-full z-10 bg-[#101010]/95 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 top-0'
+            'fixed select-none w-full z-10 backdrop-blur-sm transition-all duration-700 ease-in-out left-0 top-0'
           }
           animate={{
             background: open ? '#101010' : '#101010fa',
@@ -216,12 +216,10 @@ function Header(): React.ReactElement {
             className='mx-auto'
           >
             <motion.nav
-              animate={{
-                borderBottom: open ? '1px solid #fff' : '1px solid transparent',
-              }}
               className={
-                'transition-all duration-500 ease-in-out h-22 flex flex-row items-center justify-between ring-3 ring-[#000]/25 uppercase min-w-[320px] rounded-none'
+                'transition-all duration-500 ease-in-out h-22 flex flex-row items-center justify-between uppercase min-w-[320px] rounded-none'
               }
+              style={{borderBottom: '1px solid #fff'}}
             >
               <div className='flex flex-row items-center justify-center overflow-visible h-22 min-w-[200px] flex-shrink-0'>
                 <div
@@ -308,6 +306,7 @@ function Header(): React.ReactElement {
               key='fullscreen-menu'
               initial={{height: 0}}
               animate={{height: '100%'}}
+              exit={{height: 0}}
               transition={{duration: 0.4}}
               className='fixed top-0 left-0 w-full h-full bg-[#101010]/90 backdrop-blur-2xl text-white z-5 gap-8 origin-top overflow-hidden'
             >

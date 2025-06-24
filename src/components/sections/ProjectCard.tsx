@@ -60,9 +60,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   <h3 className='text-xl uppercase'>{title}</h3>
                   <p className='text-[#0fa] text-xs font-[500]'>{category}</p>
                 </div>
-                <div className='me-2 text-[#777] flex justify-center items-center text-2xl font-normal'>
-                  &gt;
-                </div>
               </div>
               <p className='font-light'>{description}</p>
             </div>
