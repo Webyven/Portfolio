@@ -27,8 +27,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home section
     'home.role': 'Software Developer',
-    'home.university': 'University Programmer Analyst',
+    'home.university': 'Future University Programmer Analyst',
     'home.university.from': 'from the National University of La Plata',
+    'home.university.remaining':
+      '3 remaining subjects to complete - 90% completed',
     'home.resume': 'My Resume',
 
     // About section
@@ -40,7 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.p3':
       'In my free time, I explore new technologies and apply them to personal projects like <b>Noche de cine</b> an app that reflects my interest in collaboration and practical problem-solving.',
     'about.p4':
-      'Having recently graduated as a <b>University Programmer Analyst</b> from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge, and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
+      'Being close to graduating as a <b>University Programmer Analyst</b> from the National University of La Plata (UNLP), I am actively seeking opportunities to grow as a developer, contribute my knowledge and take on new challenges. I am convinced that my constant curiosity and dedication can be a valuable asset to any team.',
 
     // Projects section
     'projects.title': 'PROJECTS >>',
@@ -322,8 +324,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home section
     'home.role': 'Desarrollador de Software',
-    'home.university': 'Analista Programador Universitario',
+    'home.university': 'Futuro Analista Programador Universitario',
     'home.university.from': 'de la Universidad Nacional de La Plata',
+    'home.university.remaining': '3 materias restantes - 90% completado',
     'home.resume': 'Currículum',
 
     // About section
@@ -335,7 +338,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.p3':
       'En mi tiempo libre, exploro nuevas tecnologías y las aplico a proyectos personales como <b>Noche de cine</b>, una aplicación que refleja mi interés en la colaboración y la resolución práctica de problemas.',
     'about.p4':
-      'Habiéndome graduado recientemente como <b>Analista Programador Universitario</b> de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
+      'Estando a poco de graduarme como <b>Analista Programador Universitario</b> de la Universidad Nacional de La Plata (UNLP), estoy buscando activamente oportunidades para crecer como desarrollador, aportar mis conocimientos y asumir nuevos desafíos. Estoy convencido de que mi constante curiosidad y dedicación pueden ser un activo valioso para cualquier equipo.',
 
     // Projects section
     'projects.title': 'PROYECTOS >>',

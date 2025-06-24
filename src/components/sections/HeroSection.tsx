@@ -32,26 +32,31 @@ const HeroSection: React.FC = () => {
           <h1>LLAMAZARES</h1>
           <h1>NICOLAS</h1>
         </div>
-        <div className='flex flex-row items-center gap-4 text-[15px]'>
-          <div>
-            <p>{t('home.university')}</p>
-            <p>
-              {' '}
-              <a
-                className='font-bold'
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://unlp.edu.ar/'
-              >
-                {t('home.university.from')}
-              </a>
-            </p>
-          </div>
-          {width > 768 && (
-            <div className='rounded-full border-1 border-white p-2'>
-              <GraduationCap color='#0d9' strokeWidth={1} size={28} />
+        <div className='flex flex-col gap-2'>
+          <div className='flex flex-row items-center gap-4 text-[15px]'>
+            <div>
+              <p>{t('home.university')} (*)</p>
+              <p>
+                {' '}
+                <a
+                  className='font-bold'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='https://unlp.edu.ar/'
+                >
+                  {t('home.university.from')}
+                </a>
+              </p>
             </div>
-          )}
+            {width > 768 && (
+              <div className='rounded-full border-1 border-white p-2'>
+                <GraduationCap color='#0d9' strokeWidth={1} size={28} />
+              </div>
+            )}
+          </div>
+          <div className='text-[13px] text-[#777]'>
+            {t('home.university.remaining')} (*)
+          </div>
         </div>
         <ButtonCut
           onClick={handleDownload}
