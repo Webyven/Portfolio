@@ -26,8 +26,8 @@ function App(): React.ReactElement {
           <div className='app-container'>
             <Header />
             <main
-              className='container mx-auto py-12'
-              style={{maxWidth: '1280px'}}
+              className='container mx-auto py-12 overflow-x-hidden'
+              style={{maxWidth: 'min(100%, 1280px)'}}
             >
               <Routes>
                 <Route path='/' element={<Home />} />
