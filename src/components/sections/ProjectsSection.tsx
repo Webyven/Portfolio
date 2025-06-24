@@ -179,7 +179,7 @@ const ProjectsSection: React.FC = () => {
     <>
       <motion.div
         id='projects'
-        className='min-h-[85vh] grid grid-cols-4 grid-rows-9 gap-x-5 pt-25 pb-15 -me-5'
+        className='min-h-[85vh] grid grid-cols-4 grid-rows-9 gap-x-5 pt-25 pb-15 px-2 -me-5'
         variants={stagger}
         initial='hidden'
         whileInView='visible'
