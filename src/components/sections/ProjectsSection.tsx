@@ -494,10 +494,12 @@ const ProjectsSection: React.FC = () => {
                     <h3 className='text-xl oswald-regular uppercase mb-2'>
                       {t('projects.description')}
                     </h3>
-                    <p 
+                    <p
                       className='leading-6'
                       dangerouslySetInnerHTML={{
-                        __html: selectedProjectData.longDescription || selectedProjectData.description
+                        __html:
+                          selectedProjectData.longDescription ||
+                          selectedProjectData.description,
                       }}
                     />
                   </div>

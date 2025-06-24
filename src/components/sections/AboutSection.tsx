@@ -111,10 +111,16 @@ const AboutSection: React.FC = () => {
               },
             }}
             dangerouslySetInnerHTML={{
-              __html: t('about.p1') + '<div class="my-4"></div>' + t('about.p2') + '<div class="my-4"></div>' + t('about.p3') + '<div class="my-4"></div>' + t('about.p4')
+              __html:
+                t('about.p1') +
+                '<div class="my-4"></div>' +
+                t('about.p2') +
+                '<div class="my-4"></div>' +
+                t('about.p3') +
+                '<div class="my-4"></div>' +
+                t('about.p4'),
             }}
-          >
-          </motion.p>
+          ></motion.p>
         </motion.div>
       </motion.div>
     </div>

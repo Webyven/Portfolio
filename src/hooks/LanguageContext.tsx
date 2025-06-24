@@ -19,6 +19,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navbar
+    'nav.home': 'Home',
     'nav.about': 'About',
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
@@ -312,6 +313,7 @@ const translations: Record<Language, Record<string, string>> = {
   },
   es: {
     // Navbar
+    'nav.home': 'Inicio',
     'nav.about': 'Sobre mí',
     'nav.projects': 'Proyectos',
     'nav.contact': 'Contacto',
