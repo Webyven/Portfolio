@@ -50,8 +50,12 @@ export const projectsData: Project[] = [
       'Bootstrap',
       'C#',
       '.NET',
+      'REST API',
+      'Entity Framework',
+      'CRUD',
       'Swagger',
       'Supabase',
+      'PostgreSQL',
     ],
     links: [
       {
@@ -259,7 +263,17 @@ export const projectsData: Project[] = [
     titleKey: 'projects.cedica',
     descriptionKey: 'projects.cedica.description',
     longDescriptionKey: 'projects.cedica.longDescription',
-    technologies: ['Vue.JS', 'Flask', 'Python', 'HTML', 'CSS', 'JavaScript'],
+    technologies: [
+      'Vue.JS',
+      'Flask',
+      'Python',
+      'CRUD',
+      'PostgreSQL',
+      'SQLAlchemy',
+      'HTML',
+      'CSS',
+      'JavaScript',
+    ],
     links: [
       {
         icon: <Github size={18} />,
@@ -330,7 +344,7 @@ export const projectsData: Project[] = [
       },
     ],
   },
-  // A partir de aquí, los proyectos se muestran en el modal
+  // A partir de acá, los proyectos se muestran en el modal
   {
     id: 5,
     categoryKey: 'projects.gameDevelopment',
@@ -398,7 +412,16 @@ export const projectsData: Project[] = [
     titleKey: 'projects.fedeteriApp',
     descriptionKey: 'projects.fedeteriApp.description',
     longDescriptionKey: 'projects.fedeteriApp.longDescription',
-    technologies: ['Next.JS', 'React.JS', 'Bootstrap', 'C#', '.NET', 'Swagger'],
+    technologies: [
+      'Next.JS',
+      'React.JS',
+      'Bootstrap',
+      'C#',
+      '.NET',
+      'WebAPI',
+      'CRUD',
+      'Swagger',
+    ],
     links: [
       {
         icon: <Github size={18} />,
@@ -476,7 +499,14 @@ export const projectsData: Project[] = [
     titleKey: 'projects.copaPiston',
     descriptionKey: 'projects.copaPiston.description',
     longDescriptionKey: 'projects.copaPiston.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'SQL', 'Windows'],
+    technologies: [
+      'C#',
+      '.NET Framework',
+      'Winforms',
+      'SQL',
+      'CRUD',
+      'Windows',
+    ],
     gallery: [
       {
         src: 'https://i.postimg.cc/rs7N68nz/Copa-Pist-n-ac-ZQYci-Qe2.png',
@@ -585,7 +615,7 @@ export const projectsData: Project[] = [
     titleKey: 'projects.pokedux',
     descriptionKey: 'projects.pokedux.description',
     longDescriptionKey: 'projects.pokedux.longDescription',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
+    technologies: ['JavaScript', 'HTML', 'CSS', 'API Consumption'],
     links: [
       {
         icon: <Github size={18} />,
@@ -717,7 +747,14 @@ export const projectsData: Project[] = [
     titleKey: 'projects.githubSearcher',
     descriptionKey: 'projects.githubSearcher.description',
     longDescriptionKey: 'projects.githubSearcher.longDescription',
-    technologies: ['React', 'Vite', 'JavaScript', 'HTML', 'CSS'],
+    technologies: [
+      'React',
+      'Vite',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'API Consumption',
+    ],
     links: [
       {
         icon: <Github size={18} />,
