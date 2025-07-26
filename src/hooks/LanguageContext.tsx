@@ -141,6 +141,12 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.myPortfolio.longDescription':
       'My Portfolio is a fully responsive personal website built with React, Vite, TypeScript, Tailwind CSS, and Framer Motion. It showcases my projects, skills, and contact information in a modern and animated interface. The site supports multiple languages (English/Spanish), includes subtle entrance animations for every section, and is designed with custom shapes and a consistent visual identity. It serves both as a professional presentation and as a coding project where I implemented good practices like code modularization, context usage, and component reuse.',
 
+    'projects.dndSpellCardGenerator': 'D&D Spell Card Generator',
+    'projects.dndSpellCardGenerator.description':
+      'Generates spell cards for D&D. Allows customizing card appearance and saving them as images.',
+    'projects.dndSpellCardGenerator.longDescription':
+      'Desktop application developed in .NET WinForms that allows creating custom spell cards for Dungeons & Dragons 5e, with a quick reference card visual style. Allows entering spells manually or importing a JSON file to generate multiple cards in bulk. Cards can be exported as high-quality images ready for printing or sharing. This project combines file manipulation, dynamic image rendering, Windows Forms interface design and custom logic to adapt to D&D spell components (verbal, somatic, material, ritual, concentration).',
+
     'projects.autocompleteShortcuts': 'Autocomplete Shortcuts',
     'projects.autocompleteShortcuts.description':
       'Allows using autocomplete shortcuts for Windows. It allows you to create custom shortcuts for your passwords, making it easier to access them quickly and securely.',
@@ -436,6 +442,12 @@ const translations: Record<Language, Record<string, string>> = {
       'Mi sitio web personal. Hecho con Vite, React, TypeScript, Framer Motion y Tailwind CSS.',
     'projects.myPortfolio.longDescription':
       'Este portafolio personal fue desarrollado desde cero con Vite, React, TypeScript, Tailwind CSS y Framer Motion. Está diseñado para mostrar mis proyectos, mis habilidades y una forma de contacto directa. Tiene soporte multilenguaje (español e inglés), animaciones de entrada, diseño personalizado con bordes en clip-path y una estructura escalable dividida en componentes. Es una de mis páginas más trabajadas, pensada tanto para reflejar mi estilo como para mejorar continuamente.',
+
+    'projects.dndSpellCardGenerator': 'D&D Spell Card Generator',
+    'projects.dndSpellCardGenerator.description':
+      'Genera cartas de hechizos para D&D. Permite personalizar la apariencia de las cartas y guardarlas como imágenes.',
+    'projects.dndSpellCardGenerator.longDescription':
+      'Aplicación de escritorio desarrollada en .NET WinForms que permite crear cartas personalizadas de hechizos para Dungeons & Dragons 5e, con diseño visual estilo carta de referencia rápida. Permite ingresar hechizos manualmente o importar un archivo JSON para generar múltiples cartas de forma masiva. Las cartas pueden exportarse como imágenes en alta calidad listas para imprimir o compartir. Este proyecto combina manipulación de archivos, renderizado dinámico de imágenes, diseño de interfaces con Windows Forms y lógica personalizada para adaptarse a los componentes de los hechizos de D&D (verbal, somático, material, ritual, concentración).',
 
     'projects.autocompleteShortcuts': 'Autocomplete Shortcuts',
     'projects.autocompleteShortcuts.description':

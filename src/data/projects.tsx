@@ -149,7 +149,7 @@ export const projectsData: Project[] = [
     titleKey: 'Pool Counters',
     descriptionKey: 'projects.poolCounters.description',
     longDescriptionKey: 'projects.poolCounters.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
+    technologies: ['C#', '.NET Framework', 'WinForms', 'Web Scrapping'],
     links: [
       {
         icon: <Github size={18} />,
@@ -203,7 +203,7 @@ export const projectsData: Project[] = [
     titleKey: 'Multi-Twitch',
     descriptionKey: 'projects.multiTwitch.description',
     longDescriptionKey: 'projects.multiTwitch.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Web Scrapping'],
+    technologies: ['C#', '.NET Framework', 'WinForms', 'Web Scrapping'],
     links: [
       {
         icon: <Download size={18} />,
@@ -502,7 +502,7 @@ export const projectsData: Project[] = [
     technologies: [
       'C#',
       '.NET Framework',
-      'Winforms',
+      'WinForms',
       'SQL',
       'CRUD',
       'Windows',
@@ -544,6 +544,25 @@ export const projectsData: Project[] = [
     id: 8,
     categoryKey: 'projects.desktopDevelopment',
     icon: <Monitor />,
+    image: 'https://i.postimg.cc/0N48kBN7/Dn-D-Spell-Card-Generator.webp',
+    imageAlt: 'D&D Spell Card Generator - Logo',
+    imgStyle: {padding: 7},
+    titleKey: 'projects.dndSpellCardGenerator',
+    descriptionKey: 'projects.dndSpellCardGenerator.description',
+    longDescriptionKey: 'projects.dndSpellCardGenerator.longDescription',
+    technologies: ['C#', '.NET Framework', 'WinForms', 'JSON', 'Windows'],
+    links: [
+      {
+        icon: <Github size={18} />,
+        label: 'GitHub',
+        url: 'https://github.com/Webyven/DnD-Spell-Card-Generator',
+      },
+    ],
+  },
+  {
+    id: 9,
+    categoryKey: 'projects.desktopDevelopment',
+    icon: <Monitor />,
     image: 'https://i.postimg.cc/V64ZZzGj/BTC-Tracker.webp',
     imageAlt: 'BTC Tracker - Logo',
     imgStyle: {padding: 0},
@@ -553,7 +572,7 @@ export const projectsData: Project[] = [
     technologies: [
       'C#',
       '.NET Framework',
-      'Winforms',
+      'WinForms',
       'Web Scrapping',
       'Webhooks',
     ],
@@ -577,7 +596,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     categoryKey: 'projects.webDevelopment',
     icon: <Globe />,
     image: 'https://i.postimg.cc/c1XPXB2V/My-Portfolio.webp',
@@ -602,7 +621,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     categoryKey: 'projects.webDevelopment',
     icon: <Monitor />,
     image: PokeduxIcon,
@@ -636,7 +655,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     categoryKey: 'projects.desktopDevelopment',
     icon: <Monitor />,
     image: 'https://i.postimg.cc/NMQPxK4s/Autocomplete-Shortcuts.webp',
@@ -645,7 +664,7 @@ export const projectsData: Project[] = [
     titleKey: 'projects.autocompleteShortcuts',
     descriptionKey: 'projects.autocompleteShortcuts.description',
     longDescriptionKey: 'projects.autocompleteShortcuts.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    technologies: ['C#', '.NET Framework', 'WinForms', 'Windows'],
     gallery: [
       {
         src: 'https://i.postimg.cc/XJ6YZtrm/Autocomplete-Shortcuts-n-Ao-Vy-Bfsu-M.png',
@@ -662,7 +681,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     categoryKey: 'projects.desktopDevelopment',
     icon: <Monitor />,
     image: 'https://i.postimg.cc/cCb9ZXNC/Filename-Changer.webp',
@@ -670,7 +689,7 @@ export const projectsData: Project[] = [
     titleKey: 'projects.filenameChanger',
     descriptionKey: 'projects.filenameChanger.description',
     longDescriptionKey: 'projects.filenameChanger.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    technologies: ['C#', '.NET Framework', 'WinForms', 'Windows'],
     links: [
       {
         icon: <Github size={18} />,
@@ -693,7 +712,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     categoryKey: 'projects.desktopDevelopment',
     icon: <Monitor />,
     image: 'https://i.postimg.cc/FHJqF5z4/Reworked-Tudu.webp',
@@ -701,7 +720,7 @@ export const projectsData: Project[] = [
     titleKey: 'projects.reworkedTudu',
     descriptionKey: 'projects.reworkedTudu.description',
     longDescriptionKey: 'projects.reworkedTudu.longDescription',
-    technologies: ['C#', '.NET Framework', 'Winforms', 'Windows'],
+    technologies: ['C#', '.NET Framework', 'WinForms', 'Windows'],
     links: [
       {
         icon: <Download size={18} />,
@@ -738,7 +757,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     categoryKey: 'projects.webDevelopment',
     icon: <Monitor />,
     image: 'https://i.postimg.cc/c195Q48W/GitHub.webp',
@@ -769,7 +788,7 @@ export const projectsData: Project[] = [
     ],
   },
   /*{
-    id: 15,
+    id: 16,
     categoryKey: 'projects.webDevelopment',
     icon: <Monitor />,
     image: 'https://i.postimg.cc/8P7XwQh6/Google.webp',
