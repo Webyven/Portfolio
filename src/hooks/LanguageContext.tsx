@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.university': 'Future University Programmer Analyst',
     'home.university.from': 'from the National University of La Plata',
     'home.university.remaining':
-      '3 remaining subjects to complete - 90% completed',
+      '2 remaining subjects to complete - 92% completed',
     'home.resume': 'My Resume',
 
     // About section
@@ -332,7 +332,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.role': 'Desarrollador de Software',
     'home.university': 'Futuro Analista Programador Universitario',
     'home.university.from': 'de la Universidad Nacional de La Plata',
-    'home.university.remaining': '3 materias restantes - 90% completado',
+    'home.university.remaining': '2 materias restantes - 92% completado',
     'home.resume': 'Currículum',
 
     // About section

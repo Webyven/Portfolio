@@ -56,6 +56,7 @@ export const projectsData: Project[] = [
       'Swagger',
       'Supabase',
       'PostgreSQL',
+      'Cron Jobs',
     ],
     links: [
       {
